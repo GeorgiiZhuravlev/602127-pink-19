@@ -1,7 +1,7 @@
 # Личный проект «Пинк» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
 * Студент: [Георгий Журавлев](https://up.htmlacademy.ru/adaptive/19/user/602127).
-* Наставник: `Неизвестно`.
+* Наставник: [Алексей Перепелка](https://htmlacademy.ru/profile/id88866).
 
 ---
 
