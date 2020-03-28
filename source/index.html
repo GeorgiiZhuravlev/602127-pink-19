@@ -2,13 +2,119 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
-    <title>HTML Academy: Пинк</title>
+    <title>Главная</title>
   </head>
   <body>
+    <header class="header">
+      <div class="header-upside">
+        <img src="#" width="74" height="23" alt="Логотип Pink">
+        <input id="header-upside__input" type="checkbox" aria-label="Открыть выпадающее меню">
+        <label for="header-upside__input">
+          <!-- В зависимости от состояния чекбокса, будет показан
+          либо "бургер", либо "крестик" -->
+          <svg width="50" height="24"></svg>
+          <svg width="24" height="23"></svg>
+        </label>
+      </div>
+      <nav>
+        <ul class="header-upside__nav-list">
+          <li class="header-upside__nav-item">
+            <!-- Текущая страница - главная. Поэтому href отсутствует. -->
+            <a aria-hidden="true">Главная</a>
+          </li>
+          <li class="header-upside__nav-item">
+            <a href="photo.html" aria-label="Перейти к фотографиям">Фотографии</a>
+          </li>
+          <li class="header-upside__nav-item">
+            <a href="form.html" aria-label="Перейти к конкурсу">Конкурс</a>
+          </li>
+          <li class="header-upside__nav-item">
+            <a href="https://htmlacademy.ru/intensive/adaptive" aria-label="Перейти на страницу Эйч-Ти-Эм-Эл Академи">HTML Academy</a>
+          </li>
+        </ul>
+      </nav>
+      <!-- Фон будет "затянут" под прозрачную верхнюю часть хедера отрицательным маргином -->
+      <div class="header__title-bg">
+        <h2 class="header__title-text">Взгляните на жизнь иначе!</h2>
+        <!-- Телефон планирую отобразить либо как множественный фон,
+        либо псевдоэлементом "after" у "header__title-bg" -->
+      </div>
+      <!-- Предполагаю, что блок со скачиванием приложения,
+      может курсировать по разным страницам, как независимый блок -->
+      <article class="download">
+        <h2 class="visually-hidden">Скачать приложение</h2>
+        <a class="download__btn" href="https://www.apple.com/ru/ios/app-store/">Скачать приложение</a>
+        <ul class="download__list">
+          <!-- Иконки магазинов будут заданы фоном у ссылок -->
+          <li class="download__list-item">
+            <a href="https://www.apple.com/ru/ios/app-store/" aria-label="Перейти на страницу Эппл-Стор"></a>
+          </li>
+          <li class="download__list-item">
+            <a href="https://play.google.com/store?hl=ru" aria-label="Перейти на страницу Гугл-Плей"></a>
+          </li>
+          <li class="download__list-item">
+            <a href="https://www.microsoft.com/ru-ru/store/apps/windows-phone" aria-label="Перейти на страницу Виндоус-Фон-Стор"></a>
+          </li>
+        </ul>
+        <p class="download__desc">
+          Доступно для iPhone, iPad, Android,<br>
+          Windows Phone, OS X, Windows 8
+        </p>
+      </article>
+    </header>
 
-    <p>Репозиторий создан для обучения на профессиональном онлайн‑курсе «<a href="https://htmlacademy.ru/intensive/adaptive">HTML и CSS, уровень 2</a>».</p>
+    <main>
+      <h1 class="visually-hidden">Промо-блок</h1>
 
-    <p>Создаю master</p>
+      <section class="promo">
+        <h2 class="visually-hidden">Описание приложения</h2>
+        <div class="promo-upside">
+          <p class="msg--bigger">
+            Устали от серости<br>
+            мегаполиса?
+          </p>
+          <p class="msg--bigger">
+            Нам есть, что вам<br>
+            предложить!
+          </p>
+        </div>
+        <div class="promo-downside">
+          <ul class="promo-downside__feature-list">
+            <li class="promo-downside__feature">
+              <h3 class="promo-downside__title">Поднимает настроение</h3>
+              <p class="promo-downside__desc">
+                Приложение позволит вам победить<br>
+                осеннюю хандру и депрессию<br>
+                буквально в несколько кликов!
+              </p>
+            </li>
 
+            <li class="promo-downside__feature">
+              <h3 class="promo-downside__title">Меняет мир вокруг</h3>
+              <p class="promo-downside__desc">
+                Сделайте снимок и украсьте его<br>
+                смайликом или текстовой подписью,<br>
+                чтобы усилить эффект
+              </p>
+            </li>
+
+            <li class="promo-downside__feature">
+              <h3 class="promo-downside__title">Заводит новых друзей</h3>
+              <p class="promo-downside__desc">
+                Ставьте лайки, комментируйте,<br>
+                делитесь фотографиями с друзьями и<br>
+                заводите новых
+              </p>
+            </li>
+          </ul>
+          <!-- Изображение телефона будет фоном для div, экран - img -->
+          <div class="promo-downside__phone">
+            <img class="promo-downside__phone-screen" src="#" width="126" height="218" alt="">
+          </div>
+        </div>
+      </section>
+
+      <!-- НЕ ВЫПОЛНЯЕТСЯ ПО ТЕКУЩЕМУ ЗАДАНИЮ -->
+    </main>
   </body>
 </html>

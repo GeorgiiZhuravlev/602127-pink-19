@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>Фото галерея</title>
+  </head>
+  <body>
+    <header>
+      <div class="header-upside">
+        <a href="index.html" aria-label="Перейти на главную страницу">
+          <img src="#" width="74" height="23" alt="Логотип Pink">
+        </a>
+        <input id="header-upside__input" type="checkbox" aria-label="Открыть выпадающее меню">
+        <label for="header-upside__input">
+          <!-- В зависимости от состояния чекбокса, будет показан
+          либо "бургер", либо "крестик" -->
+          <svg width="50" height="24"></svg>
+          <svg width="24" height="23"></svg>
+        </label>
+      </div>
+      <nav>
+        <ul class="header-upside__nav-list">
+          <li class="header-upside__nav-item">
+            <a href="index.html" aria-label="Перейти на главную страницу">Главная</a>
+          </li>
+          <li class="header-upside__nav-item">
+            <!-- Текущая страница - фотогалерея. Поэтому href отсутствует. -->
+            <a aria-hidden="true">Фотографии</a>
+          </li>
+          <li class="header-upside__nav-item">
+            <a href="form.html" aria-label="Перейти к конкурсу">Конкурс</a>
+          </li>
+          <li class="header-upside__nav-item">
+            <a href="https://htmlacademy.ru/intensive/adaptive" aria-label="Перейти на страницу Эйч-Ти-Эм-Эл Академи">HTML Academy</a>
+          </li>
+        </ul>
+      </nav>
+      <!-- Фон будет "затянут" под прозрачную верхнюю часть хедера отрицательным маргином -->
+      <div class="header__title-bg">
+        <h2 class="header__title-text">Фотографии пользователей</h2>
+      </div>
+    </header>
+
+    <main>
+      <section class="gallery">
+        <h1 class="visually-hidden">Фотографии пользователей</h1>
+        <p class="msg">
+          Взгляните на фотографии, которые<br>
+          выкладывают пользователи!<br>
+          Видите, как не хватает ваших?
+        </p>
+        <ul class="gallery__list">
+          <li class="gallery__item">
+            <article class="post">
+              <h2 class="visually-hidden">Пост пользователя</h2>
+              <p class="post__mark">Панорама дня</p>
+              <a href="#" aria-label="Перейти на полноразмерную версию">
+                <img class="post__user-img panorama" src="#" alt="">
+              </a>
+              <div class="post__user">
+                <p class="post__user-name">Анна <span class="post__time">(5 минут назад)</span></p>
+                <p class="post__user-desc">
+                  Прыгать или нет? Напишите в комментарии свой совет и смотрите прямую трансляцию в перископе, задавайте свои
+                </p>
+                <form method="get" action="https://echo.htmlacademy.ru" name="reaction">
+                  <label class="post__like-text">
+                    <input class="visually-hidden" type="checkbox" name="like" value="liked" aria-label="Поставить лайк">
+                    <span class="post__like-input"></span>
+                    Нравится: <span class="post__like-count">215</span>
+                  </label>
+                </form>
+              </div>
+            </article>
+          </li>
+
+          <li class="gallery__item">
+            <article class="post">
+              <h2 class="visually-hidden">Пост пользователя</h2>
+              <a href="#" aria-label="Перейти на полноразмерную версию">
+                <img class="post__user-img" src="#" alt="">
+              </a>
+              <div class="post__user">
+                <p class="post__user-name">Левон <span class="post__time">(5 часов назад)</span></p>
+                <p class="post__user-desc">
+                  Вчера он на луну летал, сегодня в руки к нам попал.
+                </p>
+                <form method="get" action="https://echo.htmlacademy.ru" name="reaction">
+                  <label class="post__like-text">
+                    <input class="visually-hidden" type="checkbox" name="like" value="liked" aria-label="Поставить лайк">
+                    <span class="post__like-input"></span>
+                    Нравится: <span class="post__like-count">356</span>
+                  </label>
+                </form>
+              </div>
+            </article>
+          </li>
+
+          <li class="gallery__item">
+            <article class="post">
+              <h2 class="visually-hidden">Пост пользователя</h2>
+              <a href="#" aria-label="Перейти на полноразмерную версию">
+                <img class="post__user-img" src="#" alt="">
+              </a>
+              <div class="post__user">
+                <p class="post__user-name">Антон <span class="post__time">(12 часов назад)</span></p>
+                <p class="post__user-desc">
+                  Соседи будут рады!
+                </p>
+                <form method="get" action="https://echo.htmlacademy.ru" name="reaction">
+                  <label class="post__like-text">
+                    <input class="visually-hidden" type="checkbox" name="like" value="liked" aria-label="Поставить лайк">
+                    <span class="post__like-input"></span>
+                    Нравится: <span class="post__like-count">666</span>
+                  </label>
+                </form>
+              </div>
+            </article>
+          </li>
+
+          <li class="gallery__item">
+            <article class="post">
+              <h2 class="visually-hidden">Пост пользователя</h2>
+              <a href="#" aria-label="Перейти на полноразмерную версию">
+                <img class="post__user-img" src="#" alt="">
+              </a>
+              <div class="post__user">
+                <p class="post__user-name">Борис <span class="post__time">(20 часов назад)</span></p>
+                <p class="post__user-desc">
+                  Здесь могла быть ваша цитата о высоком и вечном.
+                </p>
+                <form method="get" action="https://echo.htmlacademy.ru" name="reaction">
+                  <label class="post__like-text">
+                    <input class="visually-hidden" type="checkbox" name="like" value="liked" aria-label="Поставить лайк">
+                    <span class="post__like-input"></span>
+                    Нравится: <span class="post__like-count">215</span>
+                  </label>
+                </form>
+              </div>
+            </article>
+          </li>
+
+          <li class="gallery__item">
+            <article class="post">
+              <h2 class="visually-hidden">Пост пользователя</h2>
+              <a href="#" aria-label="Перейти на полноразмерную версию">
+                <img class="post__user-img" src="#" alt="">
+              </a>
+              <div class="post__user">
+                <p class="post__user-name">Сергей <span class="post__time">(25 часов назад)</span></p>
+                <p class="post__user-desc">
+                  Самая кубанская в мире!
+                </p>
+                <form method="get" action="https://echo.htmlacademy.ru" name="reaction">
+                  <label class="post__like-text">
+                    <input class="visually-hidden" type="checkbox" name="like" value="liked" aria-label="Поставить лайк">
+                    <span class="post__like-input"></span>
+                    Нравится: <span class="post__like-count">4</span>
+                  </label>
+                </form>
+              </div>
+            </article>
+          </li>
+
+          <li class="gallery__item">
+            <article class="post">
+              <h2 class="visually-hidden">Пост пользователя</h2>
+              <a href="#" aria-label="Перейти на полноразмерную версию">
+                <img class="post__user-img" src="#" alt="">
+              </a>
+              <div class="post__user">
+                <p class="post__user-name">Максим <span class="post__time">(40 часов назад)</span></p>
+                <p class="post__user-desc">
+                  Где снег-то?
+                </p>
+                <form method="get" action="https://echo.htmlacademy.ru" name="reaction">
+                  <label class="post__like-text">
+                    <input class="visually-hidden" type="checkbox" name="like" value="liked" aria-label="Поставить лайк">
+                    <span class="post__like-input"></span>
+                    Нравится: <span class="post__like-count">150</span>
+                  </label>
+                </form>
+              </div>
+            </article>
+          </li>
+
+          <li class="gallery__item">
+            <article class="post">
+              <h2 class="visually-hidden">Пост пользователя</h2>
+              <a href="#" aria-label="Перейти на полноразмерную версию">
+                <img class="post__user-img" src="#" alt="">
+              </a>
+              <div class="post__user">
+                <p class="post__user-name">Надежда <span class="post__time">(45 часов назад)</span></p>
+                <p class="post__user-desc">
+                  Всем GM и взаимные лайки!
+                </p>
+                <form method="get" action="https://echo.htmlacademy.ru" name="reaction">
+                  <label class="post__like-text">
+                    <input class="visually-hidden" type="checkbox" name="like" value="liked" aria-label="Поставить лайк">
+                    <span class="post__like-input"></span>
+                    Нравится: <span class="post__like-count">2560</span>
+                  </label>
+                </form>
+              </div>
+            </article>
+          </li>
+        </ul>
+        <p class="msg">
+          Затмите их всех!<br>
+          Выкладывайте все, что накопилось в<br>
+          телефоне!
+        </p>
+      </section>
+      <!-- НЕ ВЫПОЛНЯЕТСЯ ПО ТЕКУЩЕМУ ЗАДАНИЮ -->
+    </main>
+
+    <footer>
+      <!-- Логотип в футере будет задан фоном -->
+      <a class="footer__logo" href="index.html" aria-label="Перейти на главную страницу"></a>
+      <ul>
+        <!-- Иконки сошл-кнопок будут заданы фоном -->
+        <li>
+          <a href="#" aria-label="Перейти на нашу страницу в Твиттере"></a>
+        </li>
+        <li>
+          <a href="#" aria-label="Перейти на нашу страницу в ФейсБуке"></a>
+        </li>
+        <li>
+          <a href="#" aria-label="Перейти на нашу страницу в Ютюбе"></a>
+        </li>
+      </ul>
+      <div class="footer__dev-wrapper">
+        <p class="footer__dev-by">Разработано</p>
+        <svg width="27" height="34"></svg>
+      </div>
+    </footer>
+  </body>
+</html>

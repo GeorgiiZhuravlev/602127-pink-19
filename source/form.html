@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>Конкурс</title>
+  </head>
+  <body>
+    <header>
+      <div class="header-upside">
+        <a href="index.html" aria-label="Перейти на главную страницу">
+          <img src="#" width="74" height="23" alt="Логотип Pink">
+        </a>
+        <input id="header-upside__input" type="checkbox" aria-label="Открыть выпадающее меню">
+        <label for="header-upside__input">
+          <!-- В зависимости от состояния чекбокса, будет показан
+          либо "бургер", либо "крестик" -->
+          <svg width="50" height="24"></svg>
+          <svg width="24" height="23"></svg>
+        </label>
+      </div>
+      <nav>
+        <ul class="header-upside__nav-list">
+          <li class="header-upside__nav-item">
+            <a href="index.html" aria-label="Перейти на главную страницу">Главная</a>
+          </li>
+          <li class="header-upside__nav-item">
+            <a href="photo.html" aria-label="Перейти к фотографиям">Фотографии</a>
+          </li>
+          <li class="header-upside__nav-item">
+            <!-- Текущая страница - конкурс. Поэтому href отсутствует. -->
+            <a aria-hidden="true">Конкурс</a>
+          </li>
+          <li class="header-upside__nav-item">
+            <a href="https://htmlacademy.ru/intensive/adaptive" aria-label="Перейти на страницу Эйч-Ти-Эм-Эл Академи">HTML Academy</a>
+          </li>
+        </ul>
+      </nav>
+      <!-- Фон будет "затянут" под прозрачную верхнюю часть хедера отрицательным маргином -->
+      <div class="header__title-bg">
+        <h2 class="header__title-text">
+          Конкурс на самое<br>
+          безбашенное<br>
+          путешествие с Пинк
+        </h2>
+      </div>
+    </header>
+
+    <!-- Не смотря на то, что верстать "main" было не нужно, я все равно сделал
+    так как не понимаю целесообразность данной страницы, если делать только хедер и футер
+    PS: к тому же это интересно -->
+
+    <main>
+      <section class="reg">
+        <h1 class="visually-hidden">Конкурс</h1>
+        <p class="msg">
+          Поделитесь своей историей и получите<br>
+          шанс выиграть ценный приз — 1000<br>
+          миль на вашу бонусную карту!
+        </p>
+        <form id="contest" method="post" action="https://echo.htmlacademy.ru" name="contest" autocomplete="on">
+          <fieldset class="section--white">
+            <label class="text--red">Фамилия:<br>
+              <input class="input--text" type="text" name="user-secname" placeholder="Укажите фамилию *" required>
+            </label>
+            <label class="text--red">Имя:<br>
+              <input class="input--text" type="text" name="user-name" placeholder="Введите ваше имя *" required>
+            </label>
+            <label class="text--red">Отчество:<br>
+              <input class="input--text" type="text" name="user-midname" placeholder="Ну и отчество тоже">
+            </label>
+          </fieldset>
+
+          <fieldset class="section--gray">
+              <legend class="text--red center">
+                Ваши безбашенные<br>
+                достижения в путешествии
+              </legend>
+              <label class="text--black">
+                <input class="visually-hidden" type="checkbox" name="achievement" value="selfi-with-shark">
+                <span class="input--checkbox"></span>
+                Сделал селфи с акулой
+              </label>
+              <label class="text--black">
+                <input class="visually-hidden" type="checkbox" name="achievement" value="burned-on-beach">
+                <span class="input--checkbox"></span>
+                Обгорел на пляже
+              </label>
+              <label class="text--black">
+                <input class="visually-hidden" type="checkbox" name="achievement" value="saw-chack-norris">
+                <span class="input--checkbox"></span>
+                Видел Чака Норриса
+              </label>
+              <label class="text--black">
+                <input class="visually-hidden" type="checkbox" name="achievement" value="bought-souvenirs">
+                <span class="input--checkbox"></span>
+                Накупил сувениров
+              </label>
+              <label class="text--black">
+                <input class="visually-hidden" type="checkbox" name="achievement" value="hold-the-tower">
+                <span class="input--checkbox"></span>
+                Удержал башню
+              </label>
+              <label class="text--black">
+                <input class="visually-hidden" type="checkbox" name="achievement" value="destroy-hotel">
+                <span class="input--checkbox"></span>
+                Разгромил отель
+              </label>
+          </fieldset>
+
+          <fieldset class="section--white">
+            <label class="text--red">Номер телефона
+              <input class="input--text" type="tel" name="tel" placeholder="Номер, пожалуйста">
+            </label>
+            <label class="text--red">Адрес почты
+              <input class="input--text" type="email" name="email" placeholder="Введите почту *" required>
+            </label>
+          </fieldset>
+
+          <fieldset class="section--gray">
+            <legend class="text--red center">
+              С каким приложением<br>
+              путешествовали?
+            </legend>
+            <label class="text--black">
+              <input class="visually-hidden" type="radio" name="app-traveling" value="ios" checked>
+              <span class="input--radio"></span>
+              Pink для iOS
+            </label>
+            <label class="text--black">
+              <input class="visually-hidden" type="radio" name="app-traveling" value="android">
+              <span class="input--radio"></span>
+              Pink для Android
+            </label>
+            <label class="text--black">
+              <input class="visually-hidden" type="radio" name="app-traveling" value="win-phone">
+              <span class="input--radio"></span>
+              Windows Phone
+            </label>
+          </fieldset>
+
+          <fieldset class="section--white">
+            <legend class="text--red center">Опишите свои эмоции</legend>
+            <textarea class="text--black" form="contest" name="user-msg" placeholder="Можно прям в красках, не стесняясь в выражениях" aria-label="Опишите свои эмоции"></textarea>
+          </fieldset>
+
+          <input class="reg__submit" type="submit" value="Отправить форму">
+
+          <p class="msg"><span class="text--red">*</span> — обязательные поля</p>
+        </form>
+      </section>
+    </main>
+
+    <footer>
+      <!-- Логотип в футере будет задан фоном -->
+      <a class="footer__logo" href="index.html"></a>
+      <ul>
+        <!-- Иконки сошл-кнопок будут заданы фоном -->
+        <li>
+          <a href="#" aria-label="Перейти на нашу страницу в Твиттере"></a>
+        </li>
+        <li>
+          <a href="#" aria-label="Перейти на нашу страницу в ФейсБуке"></a>
+        </li>
+        <li>
+          <a href="#" aria-label="Перейти на нашу страницу в Ютюбе"></a>
+        </li>
+      </ul>
+      <div class="footer__dev-wrapper">
+        <p class="footer__dev-by">Разработано</p>
+        <svg width="27" height="34"></svg>
+      </div>
+    </footer>
+  </body>
+</html>
