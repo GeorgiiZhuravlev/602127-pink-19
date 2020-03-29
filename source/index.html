@@ -16,20 +16,20 @@
           <svg width="24" height="23"></svg>
         </label>
       </div>
-      <nav>
+      <nav class="header-upside__nav">
         <ul class="header-upside__nav-list">
-          <li class="header-upside__nav-item">
+          <li>
             <!-- Текущая страница - главная. Поэтому href отсутствует. -->
-            <a aria-hidden="true">Главная</a>
+            <a class="header-upside__nav-item" aria-hidden="true">Главная</a>
           </li>
-          <li class="header-upside__nav-item">
-            <a href="photo.html" aria-label="Перейти к фотографиям">Фотографии</a>
+          <li>
+            <a class="header-upside__nav-item" href="photo.html" aria-label="Перейти к фотографиям">Фотографии</a>
           </li>
-          <li class="header-upside__nav-item">
-            <a href="form.html" aria-label="Перейти к конкурсу">Конкурс</a>
+          <li>
+            <a class="header-upside__nav-item" href="form.html" aria-label="Перейти к конкурсу">Конкурс</a>
           </li>
-          <li class="header-upside__nav-item">
-            <a href="https://htmlacademy.ru/intensive/adaptive" aria-label="Перейти на страницу Эйч-Ти-Эм-Эл Академи">HTML Academy</a>
+          <li>
+            <a class="header-upside__nav-item" href="https://htmlacademy.ru/intensive/adaptive" aria-label="Перейти на страницу Эйч-Ти-Эм-Эл Академи">HTML Academy</a>
           </li>
         </ul>
       </nav>
@@ -43,7 +43,7 @@
       может курсировать по разным страницам, как независимый блок -->
       <article class="download">
         <h2 class="visually-hidden">Скачать приложение</h2>
-        <a class="download__btn" href="https://www.apple.com/ru/ios/app-store/">Скачать приложение</a>
+        <a class="btn btn--white" href="https://www.apple.com/ru/ios/app-store/">Скачать приложение</a>
         <ul class="download__list">
           <!-- Иконки магазинов будут заданы фоном у ссылок -->
           <li class="download__list-item">
@@ -57,52 +57,54 @@
           </li>
         </ul>
         <p class="download__desc">
-          Доступно для iPhone, iPad, Android,<br>
+          Доступно для iPhone, iPad, Android,
           Windows Phone, OS X, Windows 8
         </p>
       </article>
     </header>
 
-    <main>
+    <main class="main">
       <h1 class="visually-hidden">Промо-блок</h1>
 
       <section class="promo">
         <h2 class="visually-hidden">Описание приложения</h2>
         <div class="promo-upside">
-          <p class="msg--bigger">
-            Устали от серости<br>
+          <p class="msg msg--bigger">
+            Устали от серости
             мегаполиса?
           </p>
-          <p class="msg--bigger">
-            Нам есть, что вам<br>
+          <p class="msg msg--bigger">
+            Нам есть, что вам
             предложить!
           </p>
         </div>
+        <!-- Срезанный угол будет реализован через фоновую картинку с белым углом слева-сверху
+        фон будет серый -->
         <div class="promo-downside">
           <ul class="promo-downside__feature-list">
             <li class="promo-downside__feature">
               <h3 class="promo-downside__title">Поднимает настроение</h3>
-              <p class="promo-downside__desc">
-                Приложение позволит вам победить<br>
-                осеннюю хандру и депрессию<br>
+              <p class="promo-downside__desc msg">
+                Приложение позволит вам победить
+                осеннюю хандру и депрессию
                 буквально в несколько кликов!
               </p>
             </li>
 
             <li class="promo-downside__feature">
               <h3 class="promo-downside__title">Меняет мир вокруг</h3>
-              <p class="promo-downside__desc">
-                Сделайте снимок и украсьте его<br>
-                смайликом или текстовой подписью,<br>
+              <p class="promo-downside__desc msg">
+                Сделайте снимок и украсьте его
+                смайликом или текстовой подписью,
                 чтобы усилить эффект
               </p>
             </li>
 
             <li class="promo-downside__feature">
               <h3 class="promo-downside__title">Заводит новых друзей</h3>
-              <p class="promo-downside__desc">
-                Ставьте лайки, комментируйте,<br>
-                делитесь фотографиями с друзьями и<br>
+              <p class="promo-downside__desc msg">
+                Ставьте лайки, комментируйте,
+                делитесь фотографиями с друзьями и
                 заводите новых
               </p>
             </li>
@@ -114,7 +116,125 @@
         </div>
       </section>
 
-      <!-- НЕ ВЫПОЛНЯЕТСЯ ПО ТЕКУЩЕМУ ЗАДАНИЮ -->
+      <section class="feedback slider">
+        <h2 class="visually-hidden">Отзывы</h2>
+        <ul class="feedback__list">
+          <li class="feedback__item">
+            <h3 class="feedback__username">Николай Петров</h3>
+            <blockquote class="msg">
+              &laquo;Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!&raquo;
+            </blockquote>
+          </li>
+        </ul>
+        <ul class="slider__bullet-list">
+          <li>
+            <input class="visually-hidden js-slider__input" type="radio" name="feedback-slider-bullet" checked disabled>
+            <span class="slider__bullet"></span>
+          </li>
+          <li>
+            <input class="visually-hidden js-slider__input" type="radio" name="feedback-slider-bullet" disabled>
+            <span class="slider__bullet"></span>
+          </li>
+          <li>
+            <input class="visually-hidden js-slider__input" type="radio" name="feedback-slider-bullet" disabled>
+            <span class="slider__bullet"></span>
+          </li>
+        </ul>
+      </section>
+
+      <!-- Срезанный угол будет реализован через фоновую картинку с белым углом слева-сверху
+      фон будет серый -->
+      <section class="prices slider">
+        <h2 class="visually-hidden">Цена</h2>
+        <table class="prices-table slider">
+          <!-- "хит" будет задан как фон по классу "hit" -->
+          <tr>
+            <th class="prices-table__header">
+              <p class="prices-table__title">База</p>
+              <p class="prices-table__desc">1,99 USD</p>
+            </th>
+            <th class="prices-table__header hit">
+              <p class="prices-table__title">Стандарт</p>
+              <p class="prices-table__desc">3,99 USD</p>
+            </th>
+            <th class="prices-table__header">
+              <p class="prices-table__title">Анлим</p>
+              <p class="prices-table__desc">9,99 USD</p>
+            </th>
+          </tr>
+
+          <!-- Галочки и крестики будут заданы фоном, по классам "yes" и "no" -->
+          <tr>
+            <td class="prices-table__cell yes">Розовый фильтр</td>
+            <td class="prices-table__cell yes">Розовый фильтр</td>
+            <td class="prices-table__cell yes">Розовый фильтр</td>
+          </tr>
+
+          <tr>
+            <td class="prices-table__cell no">Смайлики</td>
+            <td class="prices-table__cell yes">Смайлики</td>
+            <td class="prices-table__cell yes">Смайлики</td>
+          </tr>
+
+          <tr>
+            <td class="prices-table__cell no">Комментарии</td>
+            <td class="prices-table__cell no">Комментарии</td>
+            <td class="prices-table__cell yes">Комментарии</td>
+          </tr>
+        </table>
+
+        <ul class="slider__bullet-list">
+          <li>
+            <input class="visually-hidden js-slider__input" type="radio" name="prices-slider-bullet" disabled>
+            <span class="slider__bullet"></span>
+          </li>
+          <li>
+            <input class="visually-hidden js-slider__input" type="radio" name="prices-slider-bullet" checked disabled>
+            <span class="slider__bullet"></span>
+          </li>
+          <li>
+            <input class="visually-hidden js-slider__input" type="radio" name="prices-slider-bullet" disabled>
+            <span class="slider__bullet"></span>
+          </li>
+        </ul>
+      </section>
+
+      <section class="contacts">
+        <h2 class="visually-hidden">Обратная связь</h2>
+        <p class="msg msg--bigger">
+          Остались вопросы?
+          Свяжитесь с нами!
+        </p>
+        <ul class="contacts__list">
+          <li class="contacts__item">
+            <h3 class="contacts__title">Звоните:</h3>
+            <a class="msg msg--bigger text text--red" href="tel:+78125556666">+7 (812) 555-66-66</a>
+          </li>
+          <li class="contacts__item">
+            <h3 class="contacts__title">Пишите:</h3>
+            <a class="msg msg--bigger text text--red" href="mail@htmlacademy.ru">mail@htmlacademy.ru</a>
+          </li>
+          <li class="contacts__item">
+            <h3 class="contacts__title">Приезжайте в гости:</h3>
+            <address class="msg msg--bigger text text--red">ул. Большая Конюшенная, 19/8</address>
+          </li>
+        </ul>
+        <!-- Верхний треугольник - будет псевдоэлемент before,
+        Маркер - after. Нажатие по мини-карте будет вызывать модальный iframe с сервисом карт. -->
+        <button class="contacts__map-wrapper" type="button">
+          <img class="contacts__map" src="#" alt="Мы находимся по адресу: улица Большая Конюшенная, 19 дробь 8">
+        </button>
+      </section>
+
+      <!-- Ну а футера, похоже нет. Можно было бы последний section сделать футером,
+      но как по мне это больше контентная часть, чем копирайтная. -->
     </main>
+
+    <div class="modal bg-off">
+      <article class="map">
+        <h2 class="visually-hidden">Интерактивная карта в модальном окне</h2>
+        <iframe class="map__iframe" src="https://yandex.ru/map-widget/v1/?um=constructor%3A15bb44642f873f0b7a4f3c99b7872dd4f185d22650452c548a204545d78f9e35&amp;source=constructor" height="400"></iframe>
+      </article>
+    </div>
   </body>
 </html>

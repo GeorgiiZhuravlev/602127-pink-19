@@ -5,7 +5,7 @@
     <title>Фото галерея</title>
   </head>
   <body>
-    <header>
+    <header class="header">
       <div class="header-upside">
         <a href="index.html" aria-label="Перейти на главную страницу">
           <img src="#" width="74" height="23" alt="Логотип Pink">
@@ -18,7 +18,7 @@
           <svg width="24" height="23"></svg>
         </label>
       </div>
-      <nav>
+      <nav class="header-upside__nav">
         <ul class="header-upside__nav-list">
           <li class="header-upside__nav-item">
             <a href="index.html" aria-label="Перейти на главную страницу">Главная</a>
@@ -30,8 +30,8 @@
           <li class="header-upside__nav-item">
             <a href="form.html" aria-label="Перейти к конкурсу">Конкурс</a>
           </li>
-          <li class="header-upside__nav-item">
-            <a href="https://htmlacademy.ru/intensive/adaptive" aria-label="Перейти на страницу Эйч-Ти-Эм-Эл Академи">HTML Academy</a>
+          <li>
+            <a class="header-upside__nav-item" href="https://htmlacademy.ru/intensive/adaptive" aria-label="Перейти на страницу Эйч-Ти-Эм-Эл Академи">HTML Academy</a>
           </li>
         </ul>
       </nav>
@@ -41,12 +41,12 @@
       </div>
     </header>
 
-    <main>
+    <main class="main">
       <section class="gallery">
         <h1 class="visually-hidden">Фотографии пользователей</h1>
         <p class="msg">
-          Взгляните на фотографии, которые<br>
-          выкладывают пользователи!<br>
+          Взгляните на фотографии, которые
+          выкладывают пользователи!
           Видите, как не хватает ваших?
         </p>
         <ul class="gallery__list">
@@ -206,27 +206,67 @@
           </li>
         </ul>
         <p class="msg">
-          Затмите их всех!<br>
-          Выкладывайте все, что накопилось в<br>
+          Затмите их всех!
+          Выкладывайте все, что накопилось в
           телефоне!
         </p>
       </section>
-      <!-- НЕ ВЫПОЛНЯЕТСЯ ПО ТЕКУЩЕМУ ЗАДАНИЮ -->
+
+      <section class="handling">
+        <h2 class="visually-hidden">Отправить обработанную фотографию</h2>
+        <form method="get" action="https://echo.htmlacademy.ru" name="user-img-handling" autocomplete="off">
+          <img class="handling__user-img" src="#" alt="Ваша фотография">
+          <ul class="handling__option-list">
+            <li>
+              <button class="handling__option-item crop selected" type="button" aria-label="Выбрать виньетирование"></button>
+            </li>
+            <li>
+              <button class="handling__option-item fill" type="button" aria-label="Выбрать цветофильтр"></button>
+            </li>
+            <li>
+              <button class="handling__option-item contrast" type="button" aria-label="Выбрать контрастность"></button>
+            </li>
+          </ul>
+
+          <ul class="handling__range-list">
+            <!-- Временно отображаю непосредственно инпуты, в дальнейшем будут заменяться на
+            стилизованные версии, но это требует экспериментов, сейчас не могу однозначно
+            продемонстрировать окончательную разметку. -->
+
+            <!-- В полноразмерной версии отображаются сразу все три ползунка для каждой опции,
+            в мобильной будет показываться только та, которая соответствует выбранной опции выше. -->
+            <li>
+              <input class="handling__range-item crop selected" type="range" name="range-vignette" min="0" max="100" step="1" value="0" aria-label="Ползунок виньетки">
+            </li>
+            <li>
+              <input class="handling__range-item fill" type="range" name="range-fill" min="0" max="100" step="1" value="0" aria-label="Ползунок цветофильтра">
+            </li>
+            <li>
+              <input class="handling__range-item contrast" type="range" name="range-contrast" min="0" max="100" step="1" value="0" aria-label="Ползунок контраста">
+            </li>
+          </ul>
+          <hr>
+          <div class="handling__btn-wrapper">
+            <button class="btn btn--red" type="submit">Запостить</button>
+            <button class="btn btn--cancel" type="reset">Отмена</button>
+          </div>
+        </form>
+      </section>
     </main>
 
-    <footer>
+    <footer class="footer">
       <!-- Логотип в футере будет задан фоном -->
       <a class="footer__logo" href="index.html" aria-label="Перейти на главную страницу"></a>
-      <ul>
+      <ul class="footer__social-list">
         <!-- Иконки сошл-кнопок будут заданы фоном -->
         <li>
-          <a href="#" aria-label="Перейти на нашу страницу в Твиттере"></a>
+          <a class="footer__social-item" href="#" aria-label="Перейти на нашу страницу в Твиттере"></a>
         </li>
         <li>
-          <a href="#" aria-label="Перейти на нашу страницу в ФейсБуке"></a>
+          <a class="footer__social-item" href="#" aria-label="Перейти на нашу страницу в ФейсБуке"></a>
         </li>
         <li>
-          <a href="#" aria-label="Перейти на нашу страницу в Ютюбе"></a>
+          <a class="footer__social-item" href="#" aria-label="Перейти на нашу страницу в Ютюбе"></a>
         </li>
       </ul>
       <div class="footer__dev-wrapper">
