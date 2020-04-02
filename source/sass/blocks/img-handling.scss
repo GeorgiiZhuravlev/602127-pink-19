@@ -1,0 +1,75 @@
+.img-handling {
+  padding: 20px 0 40px;
+  background-color: $c_gray;
+}
+
+.img-handling__user-img {
+  display: block;
+  width: calc(100% - 40px);
+  margin: 0 auto;
+  margin-bottom: 42px;
+}
+
+.img-handling__option-list {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  margin-bottom: 30px;
+  padding: 0;
+  list-style: none;
+}
+
+.img-handling__option-item:not(:last-child) {
+  margin-right: 40px;
+}
+
+.img-handling__option {
+  background-color: transparent;
+}
+
+.img-handling__option.vignette {
+  width: 44px;
+  height: 44px;
+}
+
+.img-handling__option.fill {
+  width: 48px;
+  height: 43px;
+}
+
+.img-handling__option.contrast {
+  width: 32px;
+  height: 32px;
+}
+
+.img-handling__range-list {
+  margin: 0;
+  margin-bottom: 28px;
+  padding: 0;
+  list-style: none;
+}
+
+.img-handling__range-item {
+  width: calc(100% - 80px);
+  height: 15px;
+  margin: 0 auto;
+}
+
+.img-handling__hr {
+  margin-bottom: 37px;
+}
+
+.img-handling__btn-submit {
+  @include btnGrand($c_red);
+  width: calc(100% - 40px);
+  margin: 0 auto;
+  margin-bottom: 13px;
+}
+
+.img-handling__btn-reset {
+  @include btnGrand(#dee0e1);
+  width: calc(100% - 40px);
+  margin: 0 auto;
+}

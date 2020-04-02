@@ -1,0 +1,45 @@
+.contest-achievements {
+  margin: 0;
+  padding: 37px 0 45px;
+  background-color: $c_gray;
+  border: none;
+}
+
+.contest-achievements__intro {
+  width: calc(100% - 80px);
+  margin: 0 auto;
+  margin-bottom: 40px;
+  padding: 0;
+  font: $f_light14;
+  color: $c_red;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+}
+
+.contest-achievements__list {
+  width: calc(100% - 40px);
+  margin: 0 auto;
+  padding: 0;
+  list-style: none;
+}
+
+.contest-achievements__item:not(:last-child) {
+  margin-bottom: 47px;
+}
+
+.contest-achievements__label {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font: $f_regular18;
+  color: $c_darkBlue;
+}
+
+.custom__checkbox {
+  display: block;
+  width: 35px;
+  height: 35px;
+  margin-right: 34px;
+}
+

@@ -1,0 +1,24 @@
+.contest-emotions {
+  padding: 37px 0 49px;
+  border: none;
+}
+
+.contest-emotions__intro {
+  width: calc(100% - 40px);
+  margin: 0 auto;
+  margin-bottom: 16px;
+  font: $f_light14;
+  color: $c_red;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+}
+
+.contest-emotions__user-msg {
+  display: block;
+  width: calc(100% - 40px);
+  min-height: 200px;
+  margin: 0 auto;
+  padding: 16px;
+  line-height: 29px;
+}

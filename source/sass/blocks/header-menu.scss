@@ -1,0 +1,37 @@
+.header-menu {
+  position: relative;
+  z-index: 10;
+  background-color: $c_darkBlue;
+}
+
+.header-menu__list {
+  width: 100%;
+  margin: 0;
+  margin-top: -1px;
+  padding: 0;
+  list-style: none;
+  box-shadow: 0 1px 0 0 #000000;
+}
+
+.header-menu__item {
+  width: 100%;
+  padding: 19px 0;
+  text-align: center;
+  border-top: 1px solid #455260;
+  border-bottom: 1px solid #020203;
+}
+
+.header-menu__item.panel {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 20px 24px;
+}
+
+.header-menu__link {
+  font: $f_bold18;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: $c_white;
+}

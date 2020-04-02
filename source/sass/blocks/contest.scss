@@ -1,0 +1,41 @@
+.contest {
+  padding: 46px 0 5px;
+}
+
+.contest__intro {
+  width: calc(100% - 40px);
+  margin: 0 auto;
+  margin-bottom: 39px;
+  font: $f_light14;
+  color: $c_darkBlue;
+  text-align: center;
+  line-height: 30px;
+  letter-spacing: 0.2px;
+}
+
+.contest__btn-submit {
+  display: block;
+  width: calc(100% - 40px);
+  margin: 0 auto;
+  margin-bottom: 39px;
+  padding: 20px 0;
+  font: $f_bold18;
+  color: $c_white;
+  text-transform: uppercase;
+  background-color: #2aab6d;
+  border: none;
+}
+
+.contest__annotation {
+  font: $f_light14;
+  color: $c_darkBlue;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+}
+
+.contest__annotation-red {
+  color: $c_red;
+}
+
+

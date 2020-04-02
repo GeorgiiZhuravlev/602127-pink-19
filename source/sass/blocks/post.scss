@@ -1,0 +1,84 @@
+.post {
+
+}
+
+.post__link-img {
+  position: relative;
+  display: block;
+}
+
+.post__mark {
+  position: absolute;
+  z-index: 10;
+  top: 0;
+  right: 20px;
+  margin: 0;
+  padding: 9px 20px;
+  font: 600 12px "Open Sans", sans-serif;
+  color: $c_white;
+  text-transform: uppercase;
+  letter-spacing: 0.2px;
+  background-color: $c_red;
+}
+
+.post__user-img {
+  display: block;
+  width: calc(100% - 40px);
+  margin: 0 auto;
+}
+
+.post__user-img.panorama {
+  display: block;
+  width: 100%;
+}
+
+.post__msg-wrapper {
+  width: calc(100% - 40px);
+  margin: 0 auto;
+  padding: 19px 18px 25px;
+  background-color: $c_gray;
+}
+
+.post__username {
+  margin: 0;
+  margin-bottom: 3px;
+  padding: 0;
+  font: 700 14px "Open Sans", sans-serif;
+  color: $c_darkBlue;
+}
+
+.post__time {
+  font: $f_light12;
+  color: $c_darkBlue;
+  text-transform: uppercase;
+}
+
+.post__msg {
+  margin: 0;
+  margin-bottom: 13px;
+  padding: 0;
+  font: 100 14px "Open Sans", sans-serif;
+  color: $c_darkBlue;
+  line-height: 24px;
+  letter-spacing: 0.3px;
+}
+
+.post__btn-like {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  font: $f_light12;
+  color: $c_red;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+}
+
+.post__decor-like {
+  display: block;
+  width: 13px;
+  height: 12px;
+  margin-right: 18px;
+}
+

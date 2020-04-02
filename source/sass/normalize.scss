@@ -1,0 +1,15 @@
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  // ВРЕМЕННО:
+  width: 320px;
+}
+
+img {
+  max-width: 100%;
+}

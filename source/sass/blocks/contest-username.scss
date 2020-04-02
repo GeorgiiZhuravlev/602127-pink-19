@@ -1,0 +1,24 @@
+.contest-username {
+  margin: 0;
+  margin-bottom: 22px;
+  padding: 0;
+  border: none;
+}
+
+.contest-username__label {
+  display: block;
+  width: calc(100% - 84px);
+  margin: 0 auto;
+  margin-bottom: 10px;
+  font: $f_light14;
+  color: $c_red;
+  text-transform: uppercase;
+  letter-spacing: 0.7px;
+}
+
+.contest-username__input {
+  display: block;
+  width: calc(100% - 40px);
+  margin: 0 auto;
+  margin-bottom: 20px;
+}
