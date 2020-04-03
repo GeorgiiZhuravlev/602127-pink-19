@@ -1,0 +1,30 @@
+@mixin btnGrand($color) {
+  display: block;
+  padding: 15px;
+  font: $f_bold18;
+  text-align: center;
+  text-decoration: none;
+  color: $color;
+  line-height: 18px;
+  background-color: transparent;
+  border: 3px solid $color;
+  border-radius: 25px;
+}
+
+@mixin slider-bullet($background) {
+  display: block;
+  width: 12px;
+  height: 12px;
+  background-color: #bfc3c8;
+  border: 3px solid $background;
+  border-radius: 50%;
+}
+
+@mixin slider-bullet-active($background) {
+  display: block;
+  width: 12px;
+  height: 12px;
+  background-color: $background;
+  border: 3px solid $c_darkBlue;
+  border-radius: 50%;
+}

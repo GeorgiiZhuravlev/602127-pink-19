@@ -1,0 +1,23 @@
+.contest-contacts {
+  margin: 0;
+  padding: 36px 0 20px;
+  border: none;
+}
+
+.contest-contacts__label {
+  display: block;
+  width: calc(100% - 85px);
+  margin: 0 auto;
+  margin-bottom: 11px;
+  font: $f_light14;
+  color: $c_red;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+}
+
+.contest-contacts__input {
+  display: block;
+  width: calc(100% - 40px);
+  margin: 0 auto;
+  margin-bottom: 21px;
+}

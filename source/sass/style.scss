@@ -1,0 +1,33 @@
+@import "variables.scss";
+@import "mixins.scss";
+@import "normalize.scss";
+@import "visually-hidden.scss";
+@import "blocks/header.scss";
+@import "blocks/header-menu.scss";
+@import "blocks/app-download.scss";
+@import "blocks/promo-intro.scss";
+@import "blocks/promo-features.scss";
+@import "blocks/feedback.scss";
+@import "blocks/slider-bullets.scss";
+@import "blocks/prices.scss";
+@import "blocks/prices-table.scss";
+@import "blocks/contacts.scss";
+@import "blocks/user-posts.scss";
+@import "blocks/post.scss";
+@import "blocks/img-handling.scss";
+@import "blocks/custom.scss";
+@import "blocks/contest.scss";
+@import "blocks/contest-username.scss";
+@import "blocks/contest-achievements.scss";
+@import "blocks/contest-contacts.scss";
+@import "blocks/contest-quastionnaire.scss";
+@import "blocks/contest-emotions.scss";
+@import "blocks/footer.scss";
+
+body {
+  width: 320px;
+}
+
+.TEMP {
+  border: 1px dashed red;
+}
