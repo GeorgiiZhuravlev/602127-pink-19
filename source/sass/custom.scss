@@ -1,0 +1,48 @@
+// Input Text
+.custom__input-text {
+  padding: 18px;
+  font: $f_reg18;
+  color: $c_darkBlue1;
+  border: 2px solid #e5e5e5;
+}
+
+// Text Area
+.custom__textarea {
+  font: $f_reg18;
+  color: $c_darkBlue1;
+  border: 2px solid #e5e5e5;
+  resize: none;
+}
+
+// Input checkbox
+.custom__checkbox {
+  display: block;
+  width: 35px;
+  height: 35px;
+}
+
+// Input radio
+.custom__radio {
+  display: block;
+  width: 39px;
+  height: 39px;
+}
+
+// Slider
+.custom__slider-bullets {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.custom__slider-bullets-item:not(:last-child) {
+  margin-right: 13px;
+}
+
+// Horizontal line
+.custom__hr {
+  border: 1px solid $c_darkGray1;
+}

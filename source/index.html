@@ -1,220 +1,245 @@
 <!DOCTYPE html>
 <html lang="ru">
   <head>
-    <meta charset="utf-8">
     <title>Pink: Главная</title>
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&display=swap&subset=cyrillic,cyrillic-ext,greek,greek-ext,latin-ext,vietnamese" rel="stylesheet">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
     <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
-    <header class="header">
-      <nav class="header-menu">
-        <ul class="header-menu__list">
-          <li class="header-menu__item panel">
-            <img class="header-menu__logo" src="img/logo-pink-white-mobile.svg" width="74" height="23" alt="Логотип Pink">
-            <input class="visually-hidden" id="header-menu__input" type="checkbox" aria-label="Открыть выпадающее меню">
-            <label for="header-menu__input">
-              <svg class="TEMP" width="50" height="23"></svg>
-              <svg class="visually-hidden" width="24" height="23"></svg>
-            </label>
-          </li>
-          <li class="header-menu__item">
-            <a class="header-menu__link" aria-hidden="true">Главная</a>
-          </li>
-          <li class="header-menu__item">
-            <a class="header-menu__link" href="photo.html" aria-label="Перейти к фотографиям">Фотографии</a>
-          </li>
-          <li class="header-menu__item">
-            <a class="header-menu__link" href="form.html" aria-label="Перейти к конкурсу">Конкурс</a>
-          </li>
-          <li class="header-menu__item">
-            <a class="header-menu__link" href="https://htmlacademy.ru/intensive/adaptive" aria-label="Перейти на страницу Эйч-Ти-Эм-Эл Академи">HTML Academy</a>
-          </li>
-        </ul>
-      </nav>
-
-      <div class="header__title-bg--index">
-        <h2 class="header__title">Взгляните на жизнь иначе!</h2>
+    <header class="header index">
+      <div class="header-upside">
+        <div class="header-upside__wrapper">
+          <div class="header-upside__menu opened">
+            <a class="TEMP header-upside__logo"></a>
+            <button class="TEMP header-upside__nav-btn ff-no-large" type="button" aria-label="Открыть выпадающее меню"></button>
+          </div>
+          <nav class="header-upside__nav">
+            <ul class="header-upside__nav-list">
+              <li class="header-upside__nav-item">
+                <a class="header-upside__nav-link" aria-hidden="true">Главная</a>
+              </li>
+              <li class="header-upside__nav-item">
+                <a class="header-upside__nav-link" href="photo.html" aria-label="Перейти на страницу фотографий">Фотографии</a>
+              </li>
+              <li class="header-upside__nav-item">
+                <a class="header-upside__nav-link" href="form.html" aria-label="Перейти на страницу конкурса">Конкурс</a>
+              </li>
+              <li class="header-upside__nav-item">
+                <a class="header-upside__nav-link" href="https://htmlacademy.ru/intensive/adaptive" aria-label="Перейти на страницу Эйч-Ти-Эм-Эл Академи">HTML Academy</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
       </div>
 
-      <article class="app-download">
-        <h2 class="visually-hidden">Скачать приложение</h2>
-        <a class="btn-grand--white" href="https://www.apple.com/ru/ios/app-store/">Скачать приложение</a>
-        <ul class="app-download__link-list">
-          <li class="app-download__link-item">
-            <a class="app-download__link apple" href="https://www.apple.com/ru/ios/app-store/" aria-label="Перейти на страницу Эппл-Стор"></a>
-          </li>
-          <li class="app-download__link-item">
-            <a class="app-download__link android" href="https://play.google.com/store?hl=ru" aria-label="Перейти на страницу Гугл-Плей"></a>
-          </li>
-          <li class="app-download__link-item">
-            <a class="app-download__link windows" href="https://www.microsoft.com/ru-ru/store/apps/windows-phone" aria-label="Перейти на страницу Виндоус-Фон-Стор"></a>
-          </li>
-        </ul>
-        <p class="app-download__desc">
-          Доступно для iPhone, iPad, Android,
-          Windows Phone, OS X, Windows 8
-        </p>
-      </article>
+      <div class="header-downside index">
+        <div class="header-downside__alignment">
+          <h3 class="header-downside__intro">Взгляните на жизнь иначе!</h3>
+
+          <article class="app-download">
+            <h2 class="visually-hidden">Скачать приложение Pink</h2>
+            <a class="app-download__btn-download" href="https://www.apple.com/ru/ios/app-store/" aria-label="Перейти на страницу скачивания">Скачать приложение</a>
+            <ul class="app-download__list">
+              <li class="app-download__item">
+                <a class="TEMP app-download__link apple" href="https://www.apple.com/ru/ios/app-store/" aria-label="Перейти в Эпл Стор"></a>
+              </li>
+              <li class="app-download__item">
+                <a class="TEMP app-download__link android" href="https://play.google.com/store?hl=ru" aria-label="Перейти в Гугл Плей"></a>
+              </li>
+              <li class="app-download__item">
+                <a class="TEMP app-download__link windows" href="https://www.microsoft.com/ru-ru/store/apps/windows-phone" aria-label="Перейти в Виндоус Фон Стор"></a>
+              </li>
+            </ul>
+            <p class="app-download__desc">Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8</p>
+          </article>
+        </div>
+      </div>
     </header>
 
     <main>
-      <h1 class="visually-hidden">Промо-блок</h1>
-
-      <section class="promo">
-        <h2 class="visually-hidden">Описание приложения</h2>
-        <div class="promo-intro">
-          <p class="promo-intro__text">Устали от серости мегаполиса?
-
-            Нам есть, что вам предложить!
-          </p>
+      <h1 class="visually-hidden">О приложении Pink</h1>
+      <section class="features">
+        <h2 class="visually-hidden">Особенности приложения</h2>
+        <div class="features__intro-wrapper">
+          <p class="features__intro">Устали от серости мегаполиса?</p>
+          <p class="features__intro">Нам есть что вам предложить!</p>
         </div>
+        <ul class="features__list">
+          <li class="features__item">
+            <div class="features__img mood"></div>
+            <h3 class="features__ttl">Поднимает настроение</h3>
+            <p class="features__desc">Приложение позволит вам победить осеннюю хандру и депрессию буквально в несколько кликов!</p>
+          </li>
+          <li class="features__item">
+            <div class="features__img world"></div>
+            <h3 class="features__ttl">Меняет мир вокруг</h3>
+            <p class="features__desc">Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект</p>
+          </li>
+          <li class="features__item">
+            <div class="features__img friends"></div>
+            <h3 class="features__ttl">Заводит новых друзей</h3>
+            <p class="features__desc">Ставьте лайки, комментируйте, делитесь фотографиями с друзьями и заводите новых</p>
+          </li>
+        </ul>
+      </section>
 
-        <div class="promo-features">
-          <ul class="promo-features__list">
-            <li class="promo-features__item">
-              <h3 class="promo-features__title">Поднимает настроение</h3>
-              <p class="promo-features__desc">
-                Приложение позволит вам победить
-                осеннюю хандру и депрессию
-                буквально в несколько кликов!
-              </p>
-            </li>
+      <section class="research ff-no-small">
+        <div class="research__alignment">
+          <div class="research__timer-wrapper">
+            <svg class="research__timer-svg" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="238" height="276" viewBox="0 0 298 345.097" enable-background="new 0 0 298 345.097" xml:space="preserve">
+              <path d="M264.568,102.055l5.355-5.355c7.717-7.717,9.124-18.938,3.126-24.935c-5.997-5.997-17.217-4.59-24.934,3.127l-5.386,5.385 C221.768,63.292,196.11,51.875,168,48.297v-9.583h7.658c10.914,0,19.843-8.711,19.843-19.357S186.573,0,175.659,0h-53.317  c-10.913,0-19.842,8.711-19.842,19.357s8.929,19.357,19.842,19.357H130v9.583C56.681,57.629,0,120.244,0,196.097  c0,82.291,66.709,149,149,149c82.29,0,149-66.709,149-149C298,160.434,285.465,127.703,264.568,102.055z M149,306.264 c-60.844,0-110.167-49.323-110.167-110.167S88.156,85.93,149,85.93c60.843,0,110.167,49.323,110.167,110.167  S209.843,306.264,149,306.264z"/>
+            </svg>
+            <div class="research__timer-24">24</div>
+          </div>
+          <div class="research__wrapper">
+            <h2 class="research__ttl">Эффект на&nbsp;24 часа!</h2>
+            <p class="research__desc">Британские ученые провели исследования и доказали, что&nbsp;положительный эффект от&nbsp;использования приложения длится целые сутки!</p>
+            <a class="research__link" href="#" aria-label="Перейти на страницу исследования">Узнать больше об исследовании</a>
+          </div>
+        </div>
+      </section>
 
-            <li class="promo-features__item">
-              <h3 class="promo-features__title">Меняет мир вокруг</h3>
-              <p class="promo-features__desc">
-                Сделайте снимок и украсьте его
-                смайликом или текстовой подписью,
-                чтобы усилить эффект
-              </p>
-            </li>
-
-            <li class="promo-features__item">
-              <h3 class="promo-features__title">Заводит новых друзей</h3>
-              <p class="promo-features__desc">
-                Ставьте лайки, комментируйте,
-                делитесь фотографиями с друзьями и
-                заводите новых
-              </p>
+      <section class="reviews">
+        <h2 class="visually-hidden">Отзывы о приложении</h2>
+        <div class="reviews__alignment">
+          <ul class="reviews__list">
+            <li class="reviews__item">
+              <div class="reviews__user-wrapper">
+                <h3 class="reviews__name">Николай Петров</h3>
+                <p class="reviews__about ff-no-small">25 лет, водитель трамвая</p>
+              </div>
+              <p class="reviews__text">&laquo;Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!&raquo;</p>
             </li>
           </ul>
 
-          <img class="promo-features__phone" src="img/iphone-screen-mobile@1x.png" width="157" height="319" alt="">
+          <button class="TEMP reviews__bw-btn ff-no-small ff-no-medium"></button>
+          <button class="TEMP reviews__fw-btn ff-no-small ff-no-medium"></button>
+
+          <ul class="reviews__slider-bullets custom__slider-bullets ff-no-large">
+            <li class="custom__slider-bullets-item">
+              <label>
+                <input class="visually-hidden custom__slider-bullets-input" type="radio" name="reviews__slider-input" aria-label="Переключить слайдер" checked>
+                <span class="custom__slider-bullet"></span>
+              </label>
+            </li>
+            <li class="custom__slider-bullets-item">
+              <label>
+                <input class="visually-hidden custom__slider-bullets-input" type="radio" name="reviews__slider-input" aria-label="Переключить слайдер">
+                <span class="custom__slider-bullet"></span>
+              </label>
+            </li>
+            <li class="custom__slider-bullets-item">
+              <label>
+                <input class="visually-hidden custom__slider-bullets-input" type="radio" name="reviews__slider-input" aria-label="Переключить слайдер">
+                <span class="custom__slider-bullet"></span>
+              </label>
+            </li>
+          </ul>
         </div>
       </section>
 
-      <section class="feedback">
-        <h2 class="visually-hidden">Отзывы</h2>
-        <ul class="feedback__list">
-          <li class="feedback__item">
-            <h3 class="feedback__name">Николай Петров</h3>
-            <blockquote class="feedback__text">
-              &laquo;Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!&raquo;
-            </blockquote>
-          </li>
-        </ul>
-        <ul class="slider-bullets__list">
-          <li class="slider-bullets__item">
-            <input class="visually-hidden slider-bullets__input" type="radio" name="feedback-slider-bullet" checked disabled>
-            <span class="slider-bullets__bullet"></span>
-          </li>
-          <li class="slider-bullets__item">
-            <input class="visually-hidden slider-bullets__input" type="radio" name="feedback-slider-bullet" disabled>
-            <span class="slider-bullets__bullet"></span>
-          </li>
-          <li class="slider-bullets__item">
-            <input class="visually-hidden slider-bullets__input" type="radio" name="feedback-slider-bullet" disabled>
-            <span class="slider-bullets__bullet"></span>
-          </li>
-        </ul>
-      </section>
-
       <section class="prices">
-        <h2 class="visually-hidden">Цена</h2>
-        <table class="prices-table">
+        <h2 class="visually-hidden">Тарифы</h2>
+        <table class="prices__table">
           <tr>
-            <th class="prices-table__header">
-              <p class="prices-table__title">База</p>
-              <p class="prices-table__price">1,99 USD</p>
+            <th class="prices__heading offset ff-no-small"></th>
+            <th class="prices__heading">
+              <p class="prices__ttl">База</p>
+              <p class="prices__price">1,99 USD</p>
             </th>
-            <th class="prices-table__header">
-              <p class="prices-table__title">Стандарт</p>
-              <p class="prices-table__price">3,99 USD</p>
+            <th class="prices__heading hit">
+              <p class="prices__ttl">Стандарт</p>
+              <p class="prices__price">3,99 USD</p>
             </th>
-            <th class="prices-table__header">
-              <p class="prices-table__title">Анлим</p>
-              <p class="prices-table__price">9,99 USD</p>
+            <th class="prices__heading">
+              <p class="prices__ttl">Анлим</p>
+              <p class="prices__price">9,99 USD</p>
             </th>
           </tr>
-
           <tr>
-            <td class="prices-table__cell yes">Розовый фильтр</td>
-            <td class="prices-table__cell yes">Розовый фильтр</td>
-            <td class="prices-table__cell yes">Розовый фильтр</td>
+            <td class="prices__option ff-no-small">Розовый фильтр</td>
+            <td class="prices__option yes"><p class="prices__option-text ff-no-medium ff-no-large">Розовый фильтр</p></td>
+            <td class="prices__option yes"><p class="prices__option-text ff-no-medium ff-no-large">Розовый фильтр</p></td>
+            <td class="prices__option yes"><p class="prices__option-text ff-no-medium ff-no-large">Розовый фильтр</p></td>
           </tr>
-
           <tr>
-            <td class="prices-table__cell no">Смайлики</td>
-            <td class="prices-table__cell yes">Смайлики</td>
-            <td class="prices-table__cell yes">Смайлики</td>
+            <td class="prices__option ff-no-small">Смайлики</td>
+            <td class="prices__option no"><p class="prices__option-text ff-no-medium ff-no-large">Смайлики</p></td>
+            <td class="prices__option yes"><p class="prices__option-text ff-no-medium ff-no-large">Смайлики</p></td>
+            <td class="prices__option yes"><p class="prices__option-text ff-no-medium ff-no-large">Смайлики</p></td>
           </tr>
-
           <tr>
-            <td class="prices-table__cell no">Комментарии</td>
-            <td class="prices-table__cell no">Комментарии</td>
-            <td class="prices-table__cell yes">Комментарии</td>
+            <td class="prices__option ff-no-small">Комментарии</td>
+            <td class="prices__option no"><p class="prices__option-text ff-no-medium ff-no-large">Комментарии</p></td>
+            <td class="prices__option no"><p class="prices__option-text ff-no-medium ff-no-large">Комментарии</p></td>
+            <td class="prices__option yes"><p class="prices__option-text ff-no-medium ff-no-large">Комментарии</p></td>
           </tr>
         </table>
 
-        <ul class="slider-bullets__list">
-          <li class="slider-bullets__item">
-            <input class="visually-hidden slider-bullets__input" type="radio" name="prices-slider-bullet" disabled>
-            <span class="slider-bullets__bullet"></span>
+        <ul class="prices__slider-bullets custom__slider-bullets ff-no-medium ff-no-large">
+          <li class="custom__slider-bullets-item">
+            <label>
+              <input class="visually-hidden custom__slider-bullets-input" type="radio" name="prices__slider-input">
+              <span class="custom__slider-bullet"></span>
+            </label>
           </li>
-          <li class="slider-bullets__item">
-            <input class="visually-hidden slider-bullets__input" type="radio" name="prices-slider-bullet" checked disabled>
-            <span class="slider-bullets__bullet"></span>
+          <li class="custom__slider-bullets-item">
+            <label>
+              <input class="visually-hidden custom__slider-bullets-input" type="radio" name="prices__slider-input" checked>
+              <span class="custom__slider-bullet"></span>
+            </label>
           </li>
-          <li class="slider-bullets__item">
-            <input class="visually-hidden slider-bullets__input" type="radio" name="prices-slider-bullet" disabled>
-            <span class="slider-bullets__bullet"></span>
+          <li class="custom__slider-bullets-item">
+            <label>
+              <input class="visually-hidden custom__slider-bullets-input" type="radio" name="prices__slider-input">
+              <span class="custom__slider-bullet"></span>
+            </label>
           </li>
         </ul>
       </section>
 
       <section class="contacts">
-        <h2 class="visually-hidden">Обратная связь</h2>
-        <p class="contacts__intro">
-          Остались вопросы?
-          Свяжитесь с нами!
-        </p>
+        <h2 class="contacts__intro">Остались вопросы? Свяжитесь с нами!</h2>
         <ul class="contacts__list">
           <li class="contacts__item">
-            <h3 class="contacts__title">Звоните:</h3>
-            <a class="contacts__desc" href="tel:+78125556666">+7 (812) 555-66-66</a>
+            <h3 class="contacts__ttl">Звоните:</h3>
+            <a class="contacts__desc" href="tel:+78125556666" aria-label="Позвонить по номеру 7, 812, 555, 66, 66">+7 (812) 555-66-66</a>
           </li>
           <li class="contacts__item">
-            <h3 class="contacts__title">Пишите:</h3>
-            <a class="contacts__desc" href="mail@htmlacademy.ru">mail@htmlacademy.ru</a>
+            <h3 class="contacts__ttl">Пишите:</h3>
+            <a class="contacts__desc" href="mailto:mail@htmlacademy.ru" aria-label="Написать нам на почту">mail@htmlacademy.ru</a>
           </li>
           <li class="contacts__item">
-            <h3 class="contacts__title">Приезжайте в гости:</h3>
+            <h3 class="contacts__ttl">Приезжайте в гости:</h3>
             <address class="contacts__desc">ул. Большая Конюшенная, 19/8</address>
           </li>
         </ul>
-
-        <button class="contacts__btn-map" type="button" aria-label="Мы находимся по адресу: улица Большая Конюшенная, 19 дробь 8">
-        </button>
+        <button class="contacts__map-btn" type="button" aria-label="Мы находимся по адресу: улица Большая Конюшенная дом 19 дробь 8. Открыть интерактивную карту"></button>
       </section>
     </main>
 
-    <!-- Не успеваю в сроки, поэтому модальное окно пока не стилизую -->
-    <div class="visually-hidden">
-      <article>
-        <h2>Интерактивная карта в модальном окне</h2>
-        <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A15bb44642f873f0b7a4f3c99b7872dd4f185d22650452c548a204545d78f9e35&amp;source=constructor" height="400"></iframe>
-      </article>
-    </div>
+    <footer class="footer ff-no-small">
+      <div class="footer__alignment">
+        <a class="TEMP footer__logo" aria-label="Перейти на главную страницу"></a>
+
+        <ul class="footer__social-list">
+          <li class="footer__social-item">
+            <a class="footer__social-link twitter" href="#" aria-label="Перейти на нашу страницу в Твиттере"></a>
+          </li>
+          <li class="footer__social-item">
+            <a class="footer__social-link facebook" href="#" aria-label="Перейти на нашу страницу в Фейсбуке"></a>
+          </li>
+          <li class="footer__social-item">
+            <a class="footer__social-link youtube" href="#" aria-label="Перейти на наш канал на Ютюбе"></a>
+          </li>
+        </ul>
+
+        <a class="footer__dev-link" href="https://htmlacademy.ru/intensive/adaptive">
+          <p class="footer__dev">Разработано</p>
+          <svg class="TEMP" width="27" height="34"></svg>
+        </a>
+      </div>
+    </footer>
   </body>
 </html>

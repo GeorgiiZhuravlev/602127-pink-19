@@ -1,5 +1,5 @@
 .contest {
-  padding: 46px 0 5px;
+  padding: 45px 0 20px;
 }
 
 .contest__intro {
@@ -7,28 +7,24 @@
   margin: 0 auto;
   margin-bottom: 39px;
   font: $f_light14;
-  color: $c_darkBlue;
+  color: $c_darkBlue1;
   text-align: center;
   line-height: 30px;
   letter-spacing: 0.2px;
 }
 
-.contest__btn-submit {
-  display: block;
+.contest__submit-btn {
+  @include btnConfirm($c_green);
   width: calc(100% - 40px);
   margin: 0 auto;
-  margin-bottom: 39px;
-  padding: 20px 0;
-  font: $f_bold18;
-  color: $c_white;
-  text-transform: uppercase;
-  background-color: #2aab6d;
-  border: none;
+  margin-bottom: 40px;
 }
 
 .contest__annotation {
+  margin: 0;
+  padding: 0;
   font: $f_light14;
-  color: $c_darkBlue;
+  color: $c_darkBlue1;
   text-align: center;
   text-transform: uppercase;
   letter-spacing: 0.3px;
@@ -38,4 +34,70 @@
   color: $c_red;
 }
 
+@media (min-width: $ff_medium) {
+  .contest {
+    margin-bottom: 30px;
+  }
 
+  .contest__intro {
+    width: calc(100% - 100px);
+    padding: 48px 0 30px;
+    font: $f_reg18;
+    line-height: 30px;
+    letter-spacing: 0.05px;
+  }
+
+  .contest__form {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .contest__annotation-wrapper {
+    order: 2;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: calc(100% - 40px);
+    margin: 0 auto;
+  }
+
+  .contest__annotation {
+    width: auto;
+    margin: 0;
+    margin-top: 0;
+  }
+
+  .contest__submit-btn {
+    width: 300px;
+    margin: 0;
+  }
+}
+
+@media (min-width: $ff_large) {
+  .contest {
+    width: $ff_large;
+    margin: 0 auto;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 0px;
+  }
+
+  .contest__form {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+    flex-wrap: wrap;
+  }
+
+  .contest__intro {
+    width: calc(100% - 180px);
+    margin-bottom: 50px;
+  }
+
+  .contest__annotation-wrapper {
+    width: 940px;
+  }
+}
