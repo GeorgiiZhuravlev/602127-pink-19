@@ -1,0 +1,120 @@
+@media (min-width: $ff_medium) {
+  .research {
+    margin-bottom: 50px;
+    padding: 32px 0 0;
+  }
+
+  .research__alignment {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: $ff_medium;
+    padding: 0 30px 0 20px;
+  }
+
+  .research__timer-wrapper {
+    position: relative;
+  }
+
+  .research__timer-svg {
+    fill: #dedede;
+  }
+
+  .research__timer-24 {
+    position: absolute;
+    z-index: 10;
+    top: 54px;
+    left: 18px;
+    width: 202px;
+    height: 202px;
+    padding: 15px 33px;
+    font: $f_bold96;
+    color: $c_red;
+    border: 14px solid $c_red;
+    border-radius: 50%;
+  }
+
+  .research__wrapper {
+    width: 300px;
+  }
+
+  .research__ttl {
+    width: 60%;
+    margin: 0;
+    margin-bottom: 10px;
+    padding: 0;
+    font: $f_bold30;
+    color: $c_black;
+    line-height: 36px;
+  }
+
+  .research__desc {
+    margin: 0;
+    margin-bottom: 12px;
+    padding: 0;
+    font: $f_reg14;
+    color: $c_darkBlue1;
+    line-height: 24px;
+  }
+
+  .research__link {
+    font: $f_reg14;
+    color: $c_red;
+  }
+}
+
+@media (min-width: $ff_large) {
+  .research {
+    margin: 0 auto;
+    padding: 28px 0 63px;
+    background-color: $c_gray;
+  }
+
+  .research__alignment {
+    align-items: flex-start;
+    width: $ff_large;
+    margin: 0 auto;
+    padding: 0 11px;
+  }
+
+  .research__timer-wrapper {
+    margin-right: 67px;
+  }
+
+  .research__timer-svg {
+    width: 298px;
+    height: 345px;
+  }
+
+  .research__timer-24 {
+    top: 70px;
+    left: 22px;
+    width: 253px;
+    height: 253px;
+    padding: 20px 40px;
+    font: $f_bold120;
+    border: 17px solid $c_red;
+  }
+
+  .research__wrapper {
+    flex-grow: 1;
+    padding-top: 91px;
+  }
+
+  .research__ttl {
+    margin-bottom: 21px;
+  }
+
+  .research__desc {
+    margin-bottom: 34px;
+    padding-right: 20px;
+    font: $f_reg18;
+    line-height: 30px;
+  }
+
+  .research__link {
+    font: $f_reg18;
+  }
+}

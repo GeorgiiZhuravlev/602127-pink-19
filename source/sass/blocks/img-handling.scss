@@ -1,5 +1,5 @@
 .img-handling {
-  padding: 20px 0 40px;
+  padding: 20px 0 42px;
   background-color: $c_gray;
 }
 
@@ -10,66 +10,187 @@
   margin-bottom: 42px;
 }
 
-.img-handling__option-list {
+.img-handling__control {
+  position: relative;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
   margin: 0;
-  margin-bottom: 30px;
+  margin-bottom: 40px;
   padding: 0;
+  padding-bottom: 30px;
   list-style: none;
 }
 
-.img-handling__option-item:not(:last-child) {
+.img-handling__control-item:not(:last-child) {
   margin-right: 40px;
 }
 
-.img-handling__option {
-  background-color: transparent;
+.img-handling__switcher ~ .img-handling__btn ~ .img-handling__range {
+  display: none;
 }
 
-.img-handling__option.vignette {
-  width: 44px;
-  height: 44px;
+.img-handling__switcher:checked ~ .img-handling__btn {
+  display: block;
 }
 
-.img-handling__option.fill {
-  width: 48px;
-  height: 43px;
-}
-
-.img-handling__option.contrast {
-  width: 32px;
-  height: 32px;
-}
-
-.img-handling__range-list {
-  margin: 0;
-  margin-bottom: 28px;
-  padding: 0;
-  list-style: none;
-}
-
-.img-handling__range-item {
+.img-handling__switcher:checked ~ .img-handling__btn ~ .img-handling__range {
+  position: absolute;
+  left: 38px;
+  bottom: -19px;
+  display: block;
   width: calc(100% - 80px);
-  height: 15px;
   margin: 0 auto;
 }
 
-.img-handling__hr {
-  margin-bottom: 37px;
-}
-
-.img-handling__btn-submit {
+.img-handling__submit-btn {
   @include btnGrand($c_red);
   width: calc(100% - 40px);
   margin: 0 auto;
+  margin-top: 38px;
   margin-bottom: 13px;
 }
 
-.img-handling__btn-reset {
-  @include btnGrand(#dee0e1);
+.img-handling__reset-btn {
+  @include btnGrand($c_darkGray1);
   width: calc(100% - 40px);
   margin: 0 auto;
+}
+
+@media (min-width: $ff_medium) {
+  .img-handling {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 57px 20px 11px;
+  }
+
+  .img-handling__user-img {
+    width: 300px;
+  }
+
+  .img-handling__control {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 300px;
+    margin-bottom: 66px;
+    padding: 0;
+    padding-left: 27px;
+  }
+
+  .img-handling__control-item {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    width: 275px;
+    margin: 0;
+    padding: 9px 20px 22px 0;
+    border-bottom: 1px solid $c_darkGray1;
+  }
+
+  .img-handling__control-item:not(:first-child) {
+    padding: 25px 20px 22px 0;
+  }
+
+  .img-handling__control-item:not(:last-child) {
+    margin-right: 0;
+  }
+
+  .img-handling__switcher ~ .img-handling__btn ~ .img-handling__range,
+  .img-handling__switcher:checked ~ .img-handling__btn ~ .img-handling__range {
+    position: static;
+    display: block;
+    width: 202px;
+    margin-left: 27px;
+  }
+
+  .img-handling__submit-btn,
+  .img-handling__reset-btn {
+    width: calc(100% - 40px);
+    margin-left: 26px;
+  }
+
+  .img-handling__submit-btn {
+    margin-bottom: 24px;
+  }
+}
+
+@media (min-width: $ff_large) {
+  .img-handling {
+    width: 940px;
+    padding: 57px 60px 15px 80px;
+    margin: 0 auto;
+    margin-bottom: 28px;
+  }
+
+  .img-handling__form {
+    width: 410px;
+  }
+
+  .img-handling__control {
+    width: 100%;
+    padding: 0;
+    margin-bottom: 147px;
+  }
+
+  .img-handling__control-item,
+  .img-handling__control-item:not(:first-child),
+  .img-handling__control-item:not(:last-child) {
+    width: 100%;
+    padding: 0;
+    padding-right: 30px;
+    padding-bottom: 10px;
+  }
+
+  .img-handling__control-item {
+    justify-content: space-between;
+  }
+
+  .img-handling__control-item:not(:first-child) {
+    padding-top: 19px;
+  }
+
+  .img-handling__control-item:last-child {
+    padding-bottom: 18px;
+  }
+
+  .img-handling__icon-vignette {
+    width: 44px;
+    height: 44px;
+  }
+
+  .img-handling__icon-fill {
+    width: 48px;
+    height: 43px;
+  }
+
+  .img-handling__icon-contrast {
+    width: 32px;
+    height: 32px;
+  }
+
+  .img-handling__switcher ~ .img-handling__btn ~ .img-handling__range,
+  .img-handling__switcher:checked ~ .img-handling__btn ~ .img-handling__range {
+    width: 288px;
+    margin: 0;
+    margin-left: 0;
+    padding: 0;
+  }
+
+  .img-handling__btns-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .img-handling__submit-btn,
+  .img-handling__reset-btn {
+    width: 182px;
+    margin: 0;
+  }
 }

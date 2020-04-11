@@ -1,10 +1,40 @@
-$c_white: #ffffff;
-$c_gray: #f2f2f2;
-$c_darkBlue: #233343;
-$c_red: #d22856;
+// Form factor
+$ff_small: 320px;
+$ff_until-medium: 659px;
+$ff_medium: 660px;
+$ff_until-large: 959px;
+$ff_large: 960px;
 
-$f_bold18: 700 18px "Open Sans", sans-serif;
-$f_regular18: 400 18px "Open Sans", sans-serif;
-$f_light24: 300 24px "Open Sans", sans-serif;
-$f_light14: 300 14px "Open Sans", sans-serif;
-$f_light12: 100 12px "Open Sans", sans-serif;
+// Colors
+$c_white: #ffffff;
+$c_black: #000000;
+$c_darkBlue1: #283645;
+$c_darkBlue2: #17212d;
+$c_gray: #f2f2f2;
+$c_darkGray1: #e5e5e5;
+$c_darkGray2: #b6babf;
+$c_red: #d22856;
+$c_green: #2aab6d;
+
+// Fonts
+$f_bold120: 600 120px "Open Sans", "Arial", sans-serif;
+$f_bold96: 600 96px "Open Sans", "Arial", sans-serif;
+$f_bold30: 600 30px "Open Sans", "Arial", sans-serif;
+$f_bold24: 600 24px "Open Sans", "Arial", sans-serif;
+$f_bold21: 600 21px "Open Sans", "Arial", sans-serif;
+$f_bold20: 600 20px "Open Sans", "Arial", sans-serif;
+$f_bold18: 600 18px "Open Sans", "Arial", sans-serif;
+$f_bold16: 600 16px "Open Sans", "Arial", sans-serif;
+$f_bold14: 600 14px "Open Sans", "Arial", sans-serif;
+$f_bold12: 600 12px "Open Sans", "Arial", sans-serif;
+
+$f_reg18: 400 18px "Open Sans", "Arial", sans-serif;
+$f_reg14: 400 14px "Open Sans", "Arial", sans-serif;
+
+$f_light50: 100 50px "Open Sans", "Arial", sans-serif;
+$f_light40: 100 40px "Open Sans", "Arial", sans-serif;
+$f_light24: 100 24px "Open Sans", "Arial", sans-serif;
+$f_light18: 100 18px "Open Sans", "Arial", sans-serif;
+$f_light14: 100 14px "Open Sans", "Arial", sans-serif;
+$f_light12: 100 12px "Open Sans", "Arial", sans-serif;
+

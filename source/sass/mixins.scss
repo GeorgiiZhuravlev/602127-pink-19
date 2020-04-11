@@ -8,7 +8,18 @@
   line-height: 18px;
   background-color: transparent;
   border: 3px solid $color;
-  border-radius: 25px;
+  border-radius: 30px;
+}
+
+@mixin btnConfirm($background) {
+  display: block;
+  padding: 20px 0;
+  font: $f_bold18;
+  color: $c_white;
+  text-align: center;
+  text-transform: uppercase;
+  background-color: $background;
+  border: none;
 }
 
 @mixin slider-bullet($background) {
@@ -25,6 +36,6 @@
   width: 12px;
   height: 12px;
   background-color: $background;
-  border: 3px solid $c_darkBlue;
+  border: 3px solid $c_darkBlue1;
   border-radius: 50%;
 }

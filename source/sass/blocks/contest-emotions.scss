@@ -1,12 +1,12 @@
 .contest-emotions {
-  padding: 37px 0 49px;
+  padding: 39px 0 49px;
   border: none;
 }
 
 .contest-emotions__intro {
   width: calc(100% - 40px);
   margin: 0 auto;
-  margin-bottom: 16px;
+  margin-bottom: 15px;
   font: $f_light14;
   color: $c_red;
   text-align: center;
@@ -14,11 +14,53 @@
   letter-spacing: 0.3px;
 }
 
-.contest-emotions__user-msg {
+.contest-emotions__user-text {
   display: block;
   width: calc(100% - 40px);
   min-height: 200px;
   margin: 0 auto;
   padding: 16px;
   line-height: 29px;
+}
+
+@media (min-width: $ff_medium) {
+  .contest-emotions {
+    order: 2;
+    width: calc(100% - 40px);
+    margin: 0 auto;
+    margin-bottom: 67px;
+    padding: 0 0 50px;
+    border: 2px solid $c_darkGray1;
+  }
+
+  .contest-emotions__intro {
+    width: fit-content;
+    margin: 0 auto;
+    margin-top: -10px;
+    margin-bottom: 35px;
+    padding: 0 25px;
+    font: $f_light14;
+    color: $c_red;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+    background-color: #ffffff;
+  }
+
+  .contest-emotions__user-text {
+    width: calc(100% - 117px);
+    min-height: 195px;
+  }
+}
+
+@media (min-width: $ff_large) {
+  .contest-emotions {
+    width: 100%;
+    margin-bottom: 65px;
+    padding-bottom: 42px;
+  }
+
+  .contest-emotions__user-text {
+    min-height: 128px;
+  }
 }

@@ -1,0 +1,138 @@
+.reviews {
+  position: relative;
+  z-index: 10;
+  margin-top: -28px;
+  padding: 45px 0 42px;
+  background-color: #ffffff;
+}
+
+
+.reviews__list {
+  width: calc(100% - 40px);
+  margin: 0 auto;
+  padding: 0;
+  list-style: none;
+  text-align: center;
+}
+
+.reviews__name {
+  margin: 0;
+  margin-bottom: 17px;
+  padding: 0;
+  font: $f_bold18;
+}
+
+.reviews__text {
+  margin: 0;
+  margin-bottom: 32px;
+  padding: 0;
+  font: $f_light14;
+  color: $c_darkBlue1;
+  line-height: 30px;
+  letter-spacing: 0.3px;
+}
+
+.reviews__slider-bullets .custom__slider-bullets-input ~ .custom__slider-bullet {
+  @include slider-bullet($c_white);
+}
+
+.reviews__slider-bullets .custom__slider-bullets-input:checked ~ .custom__slider-bullet {
+  @include slider-bullet-active($c_white);
+}
+
+@media (min-width: $ff_medium) {
+  .reviews {
+    position: static;
+    margin-top: 0;
+    padding-bottom: 20px;
+  }
+
+  .reviews__list {
+    width: calc(100% - 5px);
+  }
+
+  .reviews__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .reviews__user-wrapper {
+    order: 1;
+  }
+
+  .reviews__name {
+    margin-bottom: 9px;
+    font: $f_bold20;
+  }
+
+  .reviews__about {
+    margin: 0;
+    margin-bottom: 40px;
+    font: $f_reg14;
+    color: $c_darkBlue1;
+  }
+
+  .reviews__text {
+    margin-bottom: 37px;
+    font: $f_reg18;
+    line-height: 29px;
+    letter-spacing: 0.1px;
+  }
+
+  .reviews__slider-bullets {
+    margin-bottom: 0px;
+  }
+}
+
+@media (min-width: $ff_large) {
+  .reviews {
+    padding: 0;
+    padding-top: 185px;
+    padding-bottom: 2px;
+  }
+
+  .reviews__alignment {
+    position: relative;
+    width: $ff_large;
+    margin: 0 auto;
+  }
+
+  .reviews__list {
+    margin: 0 auto;
+    padding: 0 100px;
+  }
+
+  .reviews__bw-btn,
+  .reviews__fw-btn {
+    position: absolute;
+    width: 22px;
+    height: 41px;
+    background-color: transparent;
+  }
+
+  .reviews__bw-btn {
+    top: 28px;
+    left: 10px;
+  }
+
+  .reviews__fw-btn {
+    top: 28px;
+    right: 10px;
+  }
+
+  .reviews__text {
+    margin-bottom: 34px;
+    line-height: 30px;
+    letter-spacing: 0.01px;
+  }
+
+  .reviews__name {
+    font: $f_bold24;
+    margin-bottom: 5px;
+  }
+
+  .reviews__about {
+    font: $f_reg18;
+  }
+}

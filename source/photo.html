@@ -1,80 +1,85 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang=ru>
   <head>
+    <title>Pink: Фотографии</title>
     <meta charset="utf-8">
-    <title>Фото галерея</title>
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&display=swap&subset=cyrillic,cyrillic-ext,greek,greek-ext,latin-ext,vietnamese" rel="stylesheet">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
     <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
     <header class="header">
-      <nav class="header-menu">
-        <ul class="header-menu__list">
-          <li class="header-menu__item panel">
-            <img class="header-menu__logo" src="img/logo-pink-white-mobile.svg" width="74" height="23" alt="Логотип Pink">
-            <input class="visually-hidden" id="header-menu__input" type="checkbox" aria-label="Открыть выпадающее меню">
-            <label for="header-menu__input">
-              <svg class="TEMP" width="50" height="23"></svg>
-              <svg class="visually-hidden" width="24" height="23"></svg>
-            </label>
-          </li>
-          <li class="header-menu__item">
-            <a class="header-menu__link" href="index.html" aria-label="Перейти на главную страницу">Главная</a>
-          </li>
-          <li class="header-menu__item">
-            <a class="header-menu__link" aria-hidden="true">Фотографии</a>
-          </li>
-          <li class="header-menu__item">
-            <a class="header-menu__link" href="form.html" aria-label="Перейти к конкурсу">Конкурс</a>
-          </li>
-          <li class="header-menu__item">
-            <a class="header-menu__link" href="https://htmlacademy.ru/intensive/adaptive" aria-label="Перейти на страницу Эйч-Ти-Эм-Эл Академи">HTML Academy</a>
-          </li>
-        </ul>
-      </nav>
+      <div class="header-upside">
+        <div class="header-upside__wrapper">
+          <div class="header-upside__menu opened">
+            <a class="TEMP header-upside__logo"></a>
+            <button class="TEMP header-upside__nav-btn ff-no-large" type="button" aria-label="Открыть выпадающее меню"></button>
+          </div>
+          <nav class="header-upside__nav">
+            <ul class="header-upside__nav-list">
+              <li class="header-upside__nav-item">
+                <a class="header-upside__nav-link" href="index.html" aria-label="Перейти на главную страницу">Главная</a>
+              </li>
+              <li class="header-upside__nav-item">
+                <a class="header-upside__nav-link" aria-hidden="true">Фотографии</a>
+              </li>
+              <li class="header-upside__nav-item">
+                <a class="header-upside__nav-link" href="form.html" aria-label="Перейти на страницу конкурса">Конкурс</a>
+              </li>
+              <li class="header-upside__nav-item">
+                <a class="header-upside__nav-link" href="https://htmlacademy.ru/intensive/adaptive" aria-label="Перейти на страницу Эйч-Ти-Эм-Эл Академи">HTML Academy</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
 
-      <div class="header__title-bg">
-        <h2 class="header__title">Фотографии пользователей</h2>
+      <div class="header-downside">
+        <div class="header-downside__alignment">
+          <h3 class="header-downside__intro">Фотографии пользователей</h3>
+        </div>
       </div>
     </header>
 
     <main>
-      <section class="user-posts">
-        <h1 class="visually-hidden">Фотографии пользователей</h1>
-        <p class="user-posts__intro">
-          Взгляните на фотографии, которые
-          выкладывают пользователи!
-          Видите, как не хватает ваших?
-        </p>
-        <ul class="user-posts__list">
-          <li class="user-posts__item">
-            <article class="post">
-              <h2 class="visually-hidden">Пост пользователя</h2>
-              <a class="post__link-img" href="#" aria-label="Перейти на полноразмерную версию">
-                <p class="post__mark">Панорама дня</p>
-                <img class="post__user-img panorama" src="img/panorama-mobile@1x.jpg" alt="">
-              </a>
-              <div class="post__msg-wrapper">
-                <p class="post__username">Анна <span class="post__time">(5 минут назад)</span></p>
-                <p class="post__msg">
-                  Прыгать или нет? Напишите в комментарии свой совет и смотрите прямую трансляцию в перископе, задавайте свои
-                </p>
-                <form method="get" action="https://echo.htmlacademy.ru" name="reaction">
-                  <label class="post__btn-like">
-                    <input class="visually-hidden post__input-like" type="checkbox" name="like" value="liked" aria-label="Поставить лайк">
-                    <span class="TEMP post__decor-like"></span>
-                    Нравится: 215
-                  </label>
-                </form>
-              </div>
-            </article>
-          </li>
+      <h1 class="visually-hidden">Фотографии пользователей</h1>
+      <section class="posts">
+        <h2 class="posts__intro">Взгляните на фотографии, которые выкладывают пользователи! Видите, как не хватает ваших?</h2>
 
-          <li class="user-posts__item">
+        <article class="post full-width">
+          <h2 class="visually-hidden">Пост пользователя</h2>
+          <a class="post__link-img" href="#" aria-label="Перейти на полноразмерную версию">
+            <p class="post__mark">Панорама дня</p>
+            <picture>
+              <source srcset="img/panorama-desktop@1x.jpg" media="(min-width: 960px)">
+              <source srcset="img/panorama-tablet@1x.jpg" media="(min-width: 660px)">
+              <img class="post__user-img panorama" src="img/panorama-mobile@1x.jpg" alt="">
+            </picture>
+          </a>
+          <div class="post__msg-wrapper">
+            <p class="post__username">Анна <span class="post__time">(5 минут назад)</span></p>
+            <p class="post__msg">
+              Прыгать или нет? Напишите в комментарии свой совет и смотрите прямую трансляцию в перископе, задавайте свои вопросы!
+            </p>
+            <form method="get" action="https://echo.htmlacademy.ru" name="reaction">
+              <label class="post__btn-like">
+                <input class="visually-hidden post__input-like" type="checkbox" name="like" value="liked" aria-label="Поставить лайк">
+                <span class="TEMP post__decor-like"></span>
+                <span class="post__count">Нравится: 215</span>
+              </label>
+            </form>
+          </div>
+        </article>
+
+        <ul class="posts__list">
+          <li class="posts__item">
             <article class="post">
               <h2 class="visually-hidden">Пост пользователя</h2>
               <a class="post__link-img" href="#" aria-label="Перейти на полноразмерную версию">
-                <img class="post__user-img" src="img/photo-car-mobile@1x.jpg" alt="">
+                <picture>
+                  <source srcset="img/photo-car-desktop@1x.jpg" media="(min-width: 960px)">
+                  <source srcset="img/photo-car-tablet@1x.jpg" media="(min-width: 660px)">
+                  <img class="post__user-img" src="img/photo-car-mobile@1x.jpg" alt="">
+                </picture>
               </a>
               <div class="post__msg-wrapper">
                 <p class="post__username">Левон <span class="post__time">(5 часов назад)</span></p>
@@ -85,21 +90,25 @@
                   <label class="post__btn-like">
                     <input class="visually-hidden post__input-like" type="checkbox" name="like" value="liked" aria-label="Поставить лайк">
                     <span class="TEMP post__decor-like"></span>
-                    Нравится: 356
+                    <span class="post__count">Нравится: 356</span>
                   </label>
                 </form>
               </div>
             </article>
           </li>
 
-          <li class="user-posts__item">
+          <li class="posts__item">
             <article class="post">
               <h2 class="visually-hidden">Пост пользователя</h2>
               <a class="post__link-img" href="#" aria-label="Перейти на полноразмерную версию">
-                <img class="post__user-img" src="img/photo-drumset-mobile@1x.jpg" alt="">
+                <picture>
+                  <source srcset="img/photo-drumset-desktop@1x.jpg" media="(min-width: 960px)">
+                  <source srcset="img/photo-drumset-tablet@1x.jpg" media="(min-width: 660px)">
+                  <img class="post__user-img" src="img/photo-drumset-mobile@1x.jpg" alt="">
+                </picture>
               </a>
               <div class="post__msg-wrapper">
-                <p class="post__username">Антон <span>(12 часов назад)</span></p>
+                <p class="post__username">Антон <span class="post__time">(12 часов назад)</span></p>
                 <p class="post__msg">
                   Соседи будут рады!
                 </p>
@@ -107,18 +116,22 @@
                   <label class="post__btn-like">
                     <input class="visually-hidden post__input-like" type="checkbox" name="like" value="liked" aria-label="Поставить лайк">
                     <span class="TEMP post__decor-like"></span>
-                    Нравится: 666
+                    <span class="post__count">Нравится: 666</span>
                   </label>
                 </form>
               </div>
             </article>
           </li>
 
-          <li class="user-posts__item">
+          <li class="posts__item">
             <article class="post">
               <h2 class="visually-hidden">Пост пользователя</h2>
               <a class="post__link-img" href="#" aria-label="Перейти на полноразмерную версию">
-                <img class="post__user-img" src="img/photo-window-mobile@1x.jpg" alt="">
+                <picture>
+                  <source srcset="img/photo-window-desktop@1x.jpg" media="(min-width: 960px)">
+                  <source srcset="img/photo-window-tablet@1x.jpg" media="(min-width: 660px)">
+                  <img class="post__user-img" src="img/photo-window-mobile@1x.jpg" alt="">
+                </picture>
               </a>
               <div class="post__msg-wrapper">
                 <p class="post__username">Борис <span class="post__time">(20 часов назад)</span></p>
@@ -129,18 +142,22 @@
                   <label class="post__btn-like">
                     <input class="visually-hidden post__input-like" type="checkbox" name="like" value="liked" aria-label="Поставить лайк">
                     <span class="TEMP post__decor-like"></span>
-                    Нравится: 215
+                    <span class="post__count">Нравится: 215</span>
                   </label>
                 </form>
               </div>
             </article>
           </li>
 
-          <li class="user-posts__item">
+          <li class="posts__item">
             <article class="post">
               <h2 class="visually-hidden">Пост пользователя</h2>
               <a class="post__link-img" href="#" aria-label="Перейти на полноразмерную версию">
-                <img class="post__user-img" src="img/photo-fair-mobile@1x.jpg" alt="">
+                <picture>
+                  <source srcset="img/photo-fair-desktop@1x.jpg" media="(min-width: 960px)">
+                  <source srcset="img/photo-fair-tablet@1x.jpg" media="(min-width: 660px)">
+                  <img class="post__user-img" src="img/photo-fair-mobile@1x.jpg" alt="">
+                </picture>
               </a>
               <div class="post__msg-wrapper">
                 <p class="post__username">Сергей <span class="post__time">(25 часов назад)</span></p>
@@ -151,18 +168,22 @@
                   <label class="post__btn-like">
                     <input class="visually-hidden post__input-like" type="checkbox" name="like" value="liked" aria-label="Поставить лайк">
                     <span class="TEMP post__decor-like"></span>
-                    Нравится: 4
+                    <span class="post__count">Нравится: 4</span>
                   </label>
                 </form>
               </div>
             </article>
           </li>
 
-          <li class="user-posts__item">
+          <li class="posts__item">
             <article class="post">
               <h2 class="visually-hidden">Пост пользователя</h2>
               <a class="post__link-img" href="#" aria-label="Перейти на полноразмерную версию">
-                <img class="post__user-img" src="img/photo-pov-mobile@1x.jpg" alt="">
+                <picture>
+                  <source srcset="img/photo-pov-desktop@1x.jpg" media="(min-width: 960px)">
+                  <source srcset="img/photo-pov-tablet@1x.jpg" media="(min-width: 660px)">
+                  <img class="post__user-img" src="img/photo-pov-mobile@1x.jpg" alt="">
+                </picture>
               </a>
               <div class="post__msg-wrapper">
                 <p class="post__username">Максим <span class="post__time">(40 часов назад)</span></p>
@@ -173,18 +194,22 @@
                   <label class="post__btn-like">
                     <input class="visually-hidden post__input-like" type="checkbox" name="like" value="liked" aria-label="Поставить лайк">
                     <span class="TEMP post__decor-like"></span>
-                    Нравится: 150
+                    <span class="post__count">Нравится: 150</span>
                   </label>
                 </form>
               </div>
             </article>
           </li>
 
-          <li class="user-posts__item">
+          <li class="posts__item">
             <article class="post">
               <h2 class="visually-hidden">Пост пользователя</h2>
               <a class="post__link-img" href="#" aria-label="Перейти на полноразмерную версию">
-                <img class="post__user-img" src="img/photo-wing-mobile@1x.jpg" alt="">
+                <picture>
+                  <source srcset="img/photo-wing-desktop@1x.jpg" media="(min-width: 960px)">
+                  <source srcset="img/photo-wing-tablet@1x.jpg" media="(min-width: 660px)">
+                  <img class="post__user-img" src="img/photo-wing-mobile@1x.jpg" alt="">
+                </picture>
               </a>
               <div class="post__msg-wrapper">
                 <p class="post__username">Надежда <span class="post__time">(45 часов назад)</span></p>
@@ -195,88 +220,83 @@
                   <label class="post__btn-like">
                     <input class="visually-hidden post__input-like" type="checkbox" name="like" value="liked" aria-label="Поставить лайк">
                     <span class="TEMP post__decor-like"></span>
-                    Нравится: 2560
+                    <span class="post__count">Нравится: 2560</span>
                   </label>
                 </form>
               </div>
             </article>
           </li>
         </ul>
-        <p class="user-posts__outro">
+        <p class="posts__outro">
           Затмите их всех!<br>
-          Выкладывайте все, что накопилось в<br>
+          Выкладывайте все, что накопилось в
           телефоне!
         </p>
       </section>
 
       <section class="img-handling">
-        <h2 class="visually-hidden">Отправить обработанную фотографию</h2>
-        <form method="get" action="https://echo.htmlacademy.ru" name="user-img-handling" autocomplete="off">
-          <img class="img-handling__user-img" src="img/photo-road-mobile@1x.jpg" alt="Ваша фотография">
-          <ul class="img-handling__option-list">
-            <li class="img-handling__option-item">
-              <button class="TEMP img-handling__option vignette" type="button" aria-label="Выбрать виньетирование"></button>
+        <h2 class="visually-hidden">Обработать изображение</h2>
+        <picture>
+          <source srcset="img/photo-road-tablet@1x.jpg" media="(min-width: 660px)">
+          <img class="img-handling__user-img" src="img/photo-road-mobile@1x.jpg" width="280" height="374" alt="Изображение пользователя">
+        </picture>
+        <form class="img-handling__form" method="get" action="https://echo.htmlacademy.ru" name="img-handling" autocomplete="off">
+          <ul class="img-handling__control">
+            <li class="img-handling__control-item">
+              <svg class="TEMP img-handling__icon-vignette ff-no-small" width="22" height="22"></svg>
+              <input class="visually-hidden img-handling__switcher vignette ff-no-medium ff-no-large" id="img-handling__switcher-vignette" type="radio" name="img-handling__switcher" aria-label="Выбрать виньетирование" checked>
+              <label class="img-handling__btn" for="img-handling__switcher-vignette">
+                <svg class="TEMP ff-no-medium ff-no-large" width="44" height="44"></svg>
+              </label>
+              <input class="img-handling__range vignette" type="range" name="img-handling__range-vignette" min="0" max="100" step="1" value="0" aria-label="Ползунок виньетирования">
             </li>
-            <li class="img-handling__option-item">
-              <button class="TEMP img-handling__option fill" type="button" aria-label="Выбрать цветофильтр"></button>
+            <li class="img-handling__control-item">
+              <svg class="TEMP img-handling__icon-fill ff-no-small" width="24" height="22"></svg>
+              <input class="visually-hidden img-handling__switcher fill ff-no-medium ff-no-large" id="img-handling__switcher-fill" type="radio" name="img-handling__switcher" aria-label="Выбрать заливку">
+              <label class="img-handling__btn" for="img-handling__switcher-fill">
+                <svg class="TEMP ff-no-medium ff-no-large" width="48" height="43"></svg>
+              </label>
+              <input class="img-handling__range fill" type="range" name="img-handling__range-fill" min="0" max="100" step="1" value="0" aria-label="Ползунок заливки">
             </li>
-            <li class="img-handling__option-item">
-              <button class="TEMP img-handling__option contrast" type="button" aria-label="Выбрать контрастность"></button>
-            </li>
-          </ul>
-
-          <ul class="img-handling__range-list">
-            <li class="TEMP img-handling__range-item">
-              <input class="visually-hidden" type="range" name="range-vignette" min="0" max="100" step="1" value="0" aria-label="Ползунок виньетки">
-              <div class="custom__range">
-                <div class="custom__range-line">
-                </div>
-                <span class="custom__range-drag"></span>
-              </div>
-            </li>
-            <li class="visually-hidden img-handling__range-item">
-              <input class="visually-hidden" type="range" name="range-fill" min="0" max="100" step="1" value="0" aria-label="Ползунок цветофильтра">
-              <div class="custom__range">
-                <div class="custom__range-line">
-                </div>
-                <span class="custom__range-drag"></span>
-              </div>
-            </li>
-            <li class="visually-hidden img-handling__range-item">
-              <input class="visually-hidden" type="range" name="range-contrast" min="0" max="100" step="1" value="0" aria-label="Ползунок контраста">
-              <div class="custom__range">
-                <div class="custom__range-line">
-                </div>
-                <span class="custom__range-drag"></span>
-              </div>
+            <li class="img-handling__control-item">
+              <svg class="TEMP img-handling__icon-contrast ff-no-small" width="16" height="16"></svg>
+              <input class="visually-hidden img-handling__switcher contrast ff-no-medium ff-no-large" id="img-handling__switcher-contrast" type="radio" name="img-handling__switcher" aria-label="Выбрать контраст">
+              <label class="img-handling__btn" for="img-handling__switcher-contrast">
+                <svg class="TEMP ff-no-medium ff-no-large" width="32" height="32"></svg>
+              </label>
+              <input class="img-handling__range contrast" type="range" name="img-handling__range-contrast" min="0" max="100" step="1" value="0" aria-label="Ползунок контраста">
             </li>
           </ul>
-          <hr class="custom__hr img-handling__hr">
-          <div>
-            <button class="img-handling__btn-submit" type="submit">Запостить</button>
-            <button class="img-handling__btn-reset" type="reset">Отмена</button>
+          <hr class="custom__hr ff-no-medium ff-no-large">
+          <div class="img-handling__btns-wrapper">
+            <button class="img-handling__submit-btn" type="submit" aria-label="Запостить фотографию">Запостить</button>
+            <button class="img-handling__reset-btn" type="reset" aria-label="Отменить изменения">Отмена</button>
           </div>
         </form>
       </section>
     </main>
 
     <footer class="footer">
-      <a class="footer__logo" href="index.html" aria-label="Перейти на главную страницу"></a>
-      <ul class="footer__social-list">
-        <li class="footer__social-item">
-          <a class="footer__social" href="#" aria-label="Перейти на нашу страницу в Твиттере"></a>
-        </li>
-        <li class="footer__social-item">
-          <a class="footer__social" href="#" aria-label="Перейти на нашу страницу в ФейсБуке"></a>
-        </li>
-        <li class="footer__social-item">
-          <a class="footer__social" href="#" aria-label="Перейти на нашу страницу в Ютюбе"></a>
-        </li>
-      </ul>
-      <a class="footer__dev" href="https://htmlacademy.ru/intensive/adaptive" aria-label="Перейти на лендинг сайта Эйч-Ти-Эм-Эл Академи">
-        <p class="footer__dev-by">Разработано</p>
-        <svg class="TEMP footer__dev-logo" width="27" height="34"></svg>
-      </a>
+      <div class="footer__alignment">
+        <a class="TEMP footer__logo" href="index.html" aria-label="Перейти на главную страницу"></a>
+
+        <ul class="footer__social-list">
+          <li class="footer__social-item">
+            <a class="TEMP footer__social-link twitter" href="#" aria-label="Перейти на нашу страницу в Твиттере"></a>
+          </li>
+          <li class="footer__social-item">
+            <a class="TEMP footer__social-link facebook" href="#" aria-label="Перейти на нашу страницу в Фейсбуке"></a>
+          </li>
+          <li class="footer__social-item">
+            <a class="TEMP footer__social-link youtube" href="#" aria-label="Перейти на наш канал на Ютюбе"></a>
+          </li>
+        </ul>
+
+        <a class="footer__dev-link" href="https://htmlacademy.ru/intensive/adaptive">
+          <p class="footer__dev">Разработано</p>
+          <svg class="TEMP" width="27" height="34"></svg>
+        </a>
+      </div>
     </footer>
   </body>
 </html>

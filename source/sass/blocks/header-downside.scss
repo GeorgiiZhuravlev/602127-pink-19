@@ -1,0 +1,106 @@
+.header-downside {
+  width: 100%;
+  min-height: 236px;
+  margin-top: -67px;
+  padding: 95px 0 30px;
+  text-align: center;
+  background: url('../../img/bg-back-mobile@1x.jpg') no-repeat $c_darkBlue1;
+}
+
+.header-downside.index {
+  width: 100%;
+  height: 462px;
+  margin-top: -67px;
+  //padding: 89px 0;
+  padding: 89px 0 214px;
+  text-align: center;
+  background:
+    url('../../img/iphone-hand-mobile@1x.png') bottom left no-repeat,
+    url('../../img/bg-back-mobile@1x.jpg') no-repeat $c_darkBlue1;
+  background-size: auto, cover;
+}
+
+.header-downside__alignment {
+  width: $ff_small;
+  margin: 0 auto;
+}
+
+.header-downside__intro {
+  width: calc(100% - 90px);
+  margin: 0 auto;
+  padding: 0;
+  font: $f_light24;
+  line-height: 30px;
+  color: $c_white;
+}
+
+@media (min-width: $ff_medium) {
+  .header-downside {
+    margin-top: -111px;
+    padding: 180px 0 0;
+    min-height: 440px;
+    background: url('../../img/bg-back-tablet@1x.jpg') 50% 0% no-repeat $c_darkBlue1;
+  }
+
+  .header-downside.index {
+    min-height: 729px;
+    margin-top: -110px;
+    padding: 201px 0 30px;
+    background:
+      url('../../img/iphone-hand-tablet@1x.png') 50% 100% no-repeat,
+      url('../../img/bg-back-tablet@1x.jpg') 50% 0% no-repeat $c_darkBlue1;
+  }
+
+  .header-downside__alignment {
+    width: $ff_medium;
+  }
+
+  .header-downside .header-downside__intro {
+    width: 80%;
+    margin: 0 auto;
+    font: $f_light50;
+    line-height: 60px;
+  }
+
+  .header-downside.index .header-downside__intro {
+    width: 186px;
+    margin-left: 73px;
+    margin-bottom: 5px;
+    font: $f_light40;
+    line-height: 48px;
+  }
+}
+
+@media (min-width: $ff_large) {
+  .header-downside {
+    min-height: 395px;
+    padding-top: 175px;
+    padding-bottom: 20px;
+    background: url('../../img/bg-back-desktop@1x.jpg') 50% 0% no-repeat;
+  }
+
+  .header-downside .header-downside__intro {
+    width: 750px;
+  }
+
+  .header-downside.index {
+    height: 854px;
+    margin-top: -110px;
+    padding-top: 220px;
+    background:
+      url('../../img/iphone-hand-desktop@1x.png') 97% 100% no-repeat,
+      url('../../img/bg-back-desktop@1x.jpg') 50% 0% no-repeat;
+  }
+
+  .header-downside__alignment {
+    width: $ff_large;
+  }
+
+  .header-downside.index .header-downside__intro {
+    width: 231px;
+    margin-left: 40px;
+    margin-bottom: 22px;
+    font: $f_light50;
+    line-height: 60px;
+  }
+}

@@ -1,5 +1,137 @@
 .prices {
+  margin-bottom: 41px;
   padding: 88px 0 47px;
   background-color: $c_gray;
   overflow: hidden;
+}
+
+.prices__table {
+  position: relative;
+  margin-left: -257px;
+  margin-bottom: 41px;
+  width: 833px;
+  border-collapse: collapse;
+}
+
+.prices__heading {
+  width: 275px;
+  padding: 19px 0 17px;
+  background-color: $c_darkBlue1;
+  border: 2px solid $c_darkGray1;
+}
+
+.prices__ttl {
+  margin: 0;
+  margin-bottom: 2px;
+  padding: 0;
+  font: $f_bold18;
+  color: $c_white;
+  text-transform: uppercase;
+}
+
+.prices__price {
+  margin: 0;
+  padding: 0;
+  font: $f_light24;
+  color: $c_white;
+  line-height: 37px;
+}
+
+.prices__option {
+  padding: 14px 22px;
+  font: $f_light14;
+  color: $c_darkBlue1;
+  vertical-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+  line-height: 30px;
+  background-color: $c_white;
+  border: 2px solid $c_darkGray1;
+}
+
+.prices__option-text {
+  margin: 0;
+  padding: 0;
+}
+
+.prices__slider-bullets .custom__slider-bullets-input ~ .custom__slider-bullet {
+  @include slider-bullet($c_gray);
+}
+
+.prices__slider-bullets .custom__slider-bullets-input:checked ~ .custom__slider-bullet {
+  @include slider-bullet-active($c_gray);
+}
+
+@media (min-width: $ff_medium) {
+  .prices {
+    margin-bottom: 0;
+    padding: 90px 20px 50px;
+  }
+
+  .prices__table {
+    width: 100%;
+    margin: 0 auto;
+    margin-bottom: 20px;
+  }
+
+  .prices__heading,
+  .prices__option {
+    width: 153px;
+  }
+
+  .prices__heading {
+    padding: 15px 0 12px;
+    border-top: none;
+  }
+
+  .prices__heading.offset {
+    background-color: transparent;
+    border-left: none;
+  }
+
+  .prices__ttl {
+    margin-bottom: 4px;
+    font: $f_bold16;
+  }
+
+  .prices__price {
+    font: $f_light18;
+  }
+
+  .prices__option {
+    padding: 15px 14px;
+    font: $f_reg14;
+    text-transform: none;
+    line-height: 14px;
+    letter-spacing: 0.1px;
+  }
+}
+
+@media (min-width: $ff_large) {
+  .prices {
+    padding: 149px 0 74px;
+  }
+
+  .prices__table {
+    width: 940px;
+  }
+
+  .prices__heading {
+    width: 233px;
+    padding: 20px 0 18px;
+  }
+
+  .prices__ttl {
+    margin-bottom: 2px;
+    font: $f_bold18;
+  }
+
+  .prices__price {
+    font: $f_light24;
+  }
+
+  .prices__option {
+    padding: 16px 21px 19px;
+    font: $f_reg18;
+  }
 }

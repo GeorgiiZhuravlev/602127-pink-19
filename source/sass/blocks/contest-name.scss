@@ -1,0 +1,87 @@
+.contest-name {
+  margin: 0;
+  margin-bottom: 22px;
+  padding: 1px 0;
+  border: none;
+}
+
+.contest-name__list {
+  margin: 0;
+  margin-bottom: 20px;
+  padding: 0;
+  list-style: none;
+}
+
+.contest-name__item {
+  width: calc(100% - 40px);
+  margin: 0 auto;
+  margin-bottom: 22px;
+}
+
+.contest-name__item:last-child {
+  margin-bottom: 0;
+}
+
+.contest-name__label {
+  display: block;
+  width: calc(100% - 44px);
+  margin: 0 auto;
+  margin-bottom: 10px;
+  font: $f_light14;
+  color: $c_red;
+  text-transform: uppercase;
+  letter-spacing: 0.7px;
+}
+
+.contest-name__input {
+  display: block;
+  width: 100%;
+}
+
+@media (min-width: $ff_medium) {
+  .contest-name {
+    margin-bottom: 46px;
+  }
+
+  .contest-name__item {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 50px;
+  }
+
+  .contest-name__label {
+    width: auto;
+    margin: 0;
+    margin-right: 18px;
+  }
+
+  .contest-name__input {
+    margin: 0;
+  }
+}
+
+@media (min-width: $ff_large) {
+  .contest-name {
+    width: 475px;
+    margin: 0;
+  }
+
+  .contest-name__list {
+    margin: 0;
+  }
+
+  .contest-name__item {
+    margin: 0;
+    margin-bottom: 50px;
+  }
+
+  .contest-name__label {
+    margin-left: 0;
+  }
+
+  .contest-name__input {
+    width: 100%;
+  }
+}
