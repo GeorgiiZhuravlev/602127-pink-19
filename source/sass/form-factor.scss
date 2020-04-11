@@ -1,3 +1,5 @@
+// Form factor
+
 @media (max-width: $ff_until-medium) {
   .ff-no-small {
     display: none;
@@ -26,7 +28,6 @@
   }
 
   body {
-    //Cheking now;
     //width: $ff_large;
     width: 1200px;
     margin: 0 auto;
