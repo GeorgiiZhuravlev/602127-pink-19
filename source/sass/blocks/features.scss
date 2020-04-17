@@ -1,104 +1,130 @@
-.features {
-  background-color: $c_gray;
-}
+@media (max-width: $ff_until-medium) {
+  .features {
+    background-color: $c_gray;
+  }
 
-.features__intro-wrapper {
-  padding: 40px 0 32px;
-  background-color: #ffffff;
-}
-
-.features__intro {
-  width: calc(100% - 100px);
-  margin: 0 auto;
-  padding: 0;
-  font: $f_light24;
-  color: $c_darkBlue1;
-  text-align: center;
-  line-height: 29px;
-}
-
-.features__intro:not(:last-child) {
-  margin-bottom: 30px;
-}
-
-.features__list {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
-  margin: 0 auto;
-  margin-bottom: 28px;
-  padding: 82px 0 283px;
-  list-style: none;
-  text-align: center;
-}
-
-.features__item {
-  width: calc(100% - 60px);
-  margin: 0 auto;
-  margin-bottom: 35px;
-}
-
-.features__img.friends {
-  position: absolute;
-  left: 83px;
-  bottom: -42px;
-  width: 157px;
-  height: 320px;
-  background: url('../../img/iphone-screen-mobile@1x.png') no-repeat;
-}
-
-.features__ttl {
-  margin: 0;
-  margin-bottom: 12px;
-  font: $f_bold18;
-}
-
-.features__desc {
-  margin: 0;
-  padding: 0;
-  font: $f_light14;
-  line-height: 23px;
-  letter-spacing: 0.3px;
-}
-
-@media (min-width: $ff_medium) {
   .features__intro-wrapper {
-    padding: 48px 0 32px;
+    padding: 40px 0 32px;
+    background-color: #ffffff;
   }
 
   .features__intro {
-    width: 50%;
-    margin-bottom: 15px;
+    @include resetSize();
+    @include h-spacing();
+    width: $align_small-fields;
+    font: $f_light24;
+    color: $c_darkBlue1;
+    text-align: center;
+    line-height: 29px;
+  }
+
+  .features__intro:not(:last-child) {
+    @include v-spacing(30px);
+  }
+
+  .features__list {
+    @include flex(column, flex-start);
+    @include resetSize();
+    @include v-spacing(28px);
+    @include h-spacing();
+    position: relative;
+    padding: 82px 0 283px;
+    list-style: none;
+    text-align: center;
+    overflow: hidden;
+  }
+
+  .features__item {
+    @include v-spacing(35px);
+    @include h-spacing();
+    width: $align_small-fields;
+  }
+
+  .features__img.friends {
+    position: absolute;
+    left: 83px;
+    bottom: -42px;
+    width: 157px;
+    height: 320px;
+    background: url('../../img/iphone-screen-mobile@1x.png') no-repeat;
+  }
+
+  .features__ttl {
+    @include resetSize();
+    @include v-spacing(12px);
+    font: $f_bold18;
+  }
+
+  .features__desc {
+    @include resetSize();
+    font: $f_light14;
+    color: $c_darkBlue1;
+    line-height: 23px;
+    letter-spacing: 0.3px;
+  }
+}
+
+@media (min-width: $ff_medium) and (max-width: $ff_until-large) {
+  .features__intro-wrapper {
+    padding: 49px 0 46px;
+    background-color: #ffffff;
+  }
+
+  .features__intro {
+    @include resetSize();
+    @include h-spacing();
+    width: $align_medium-fields;
     font: $f_light40;
+    color: $c_darkBlue1;
+    text-align: center;
     line-height: 48px;
   }
 
   .features__intro:not(:last-child) {
-    width: 100%;
-    margin: 0;
+    @include v-spacing(0px);
+  }
+
+  .features__wrapper {
+    background-color: $c_gray;
   }
 
   .features__list {
-    width: 306px;
-    margin-left: 330px;
+    @include resetSize();
+    position: relative;
+    width: 100%;
     padding-top: 74px;
-    padding-bottom: 10px;
-    text-align: left;
+    padding-bottom: 42px;
+    list-style: none;
   }
 
   .features__item {
-    width: 100%;
+    @include h-spacing(330px);
+    width: 310px;
   }
 
   .features__item:not(:last-child) {
-    margin-bottom: 37px;
+    @include v-spacing(33px);
+  }
+
+  .features__ttl {
+    @include resetSize;
+    @include v-spacing(13px);
+    font: $f_bold18;
+    text-align: left;
+  }
+
+  .features__desc {
+    @include resetSize;
+    font: $f_reg14;
+    color: $c_darkBlue1;
+    line-height: 24px;
   }
 
   .features__img.friends {
+    position: absolute;
+    z-index: 100;
     top: 4px;
-    left: -310px;
+    left: 20px;
     width: 268px;
     height: 547px;
     background: url('../../img/iphone-screen-3-tablet@1x.png') no-repeat;
@@ -107,24 +133,34 @@
 
 @media (min-width: $ff_large) {
   .features {
-    padding-top: 20px;
+    @include resetSize();
+  }
+
+  .features__intro-wrapper {
+    padding: 67px 0 76px;
   }
 
   .features__intro {
-    margin-bottom: 45px;
+    @include resetSize();
     font: $f_light50;
+    text-align: center;
     line-height: 60px;
   }
 
+  .features__wrapper {
+    background-color: $c_gray;
+  }
+
   .features__list {
+    @include resetSize();
+    @include h-spacing();
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: flex-start;
-    width: $ff_large;
-    margin: 0 auto;
+    width: $align_large-fields;
     margin-top: -2px;
-    padding: 0;
+    list-style: none;
   }
 
   .features__item {
@@ -150,6 +186,7 @@
   .features__desc {
     padding: 0 25px;
     font: $f_reg18;
+    color: $c_darkBlue1;
     text-align: center;
     line-height: 30px;
     letter-spacing: 0.05px;

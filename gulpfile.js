@@ -23,7 +23,7 @@ gulp.task("css", function () {
 
 gulp.task("server", function () {
   server.init({
-    server: { baseDir: "source/", index: "form.html" },
+    server: { baseDir: "source/", index: "index.html" },
     notify: false,
     open: true,
     cors: true,

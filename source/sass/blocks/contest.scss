@@ -1,103 +1,160 @@
-.contest {
-  padding: 45px 0 20px;
-}
-
-.contest__intro {
-  width: calc(100% - 40px);
-  margin: 0 auto;
-  margin-bottom: 39px;
-  font: $f_light14;
-  color: $c_darkBlue1;
-  text-align: center;
-  line-height: 30px;
-  letter-spacing: 0.2px;
-}
-
-.contest__submit-btn {
-  @include btnConfirm($c_green);
-  width: calc(100% - 40px);
-  margin: 0 auto;
-  margin-bottom: 40px;
-}
-
-.contest__annotation {
-  margin: 0;
-  padding: 0;
-  font: $f_light14;
-  color: $c_darkBlue1;
-  text-align: center;
-  text-transform: uppercase;
-  letter-spacing: 0.3px;
-}
-
-.contest__annotation-red {
-  color: $c_red;
-}
-
-@media (min-width: $ff_medium) {
+@media (max-width: $ff_until-medium) {
   .contest {
-    margin-bottom: 30px;
+    padding: 46px 0 20px;
   }
 
   .contest__intro {
+    @include resetSize();
+    @include v-spacing(39px);
+    @include h-spacing();
+    width: $align_small-fields;
+    font: $f_light14;
+    color: $c_darkBlue1;
+    text-align: center;
+    line-height: 30px;
+    letter-spacing: 0.2px;
+  }
+
+  .contest__intro-detail {
+    display: none;
+  }
+
+  .contest__submit-btn {
+    @include v-spacing(40px);
+    @include h-spacing();
+    @include btnConfirm($c_green);
+    width: $align_small-fields;
+  }
+
+  .contest__annotation {
+    @include resetSize();
+    font: $f_light14;
+    color: $c_darkBlue1;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+  }
+
+  .contest__annotation.large {
+    display: none;
+  }
+
+  .contest__annotation-red {
+    color: $c_red;
+  }
+}
+
+@media (min-width: $ff_medium) and (max-width: $ff_until-large) {
+  .contest {
+    @include v-spacing(30px);
+    padding: 46px 0 20px;
+  }
+
+  .contest__intro {
+    @include resetSize();
+    @include v-spacing(39px);
+    @include h-spacing();
     width: calc(100% - 100px);
     padding: 48px 0 30px;
     font: $f_reg18;
+    color: $c_darkBlue1;
+    text-align: center;
     line-height: 30px;
     letter-spacing: 0.05px;
   }
 
+  .contest__intro-detail {
+    display: inline;
+  }
+
   .contest__form {
-    display: flex;
-    flex-direction: column;
-    align-items: stretch;
-  }
-
-  .contest__annotation-wrapper {
-    order: 2;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    width: calc(100% - 40px);
-    margin: 0 auto;
-  }
-
-  .contest__annotation {
-    width: auto;
-    margin: 0;
-    margin-top: 0;
+    @include flex(column, flex-start, stretch);
   }
 
   .contest__submit-btn {
+    @include btnConfirm($c_green);
     width: 300px;
-    margin: 0;
+  }
+
+  .contest__annotation-wrapper {
+    @include flex();
+    @include h-spacing();
+    order: 2;
+    width: calc(100% - 40px);
+  }
+
+  .contest__annotation {
+    @include resetSize();
+    font: $f_light14;
+    color: $c_darkBlue1;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+  }
+
+  .contest__annotation.large {
+    display: none;
+  }
+
+  .contest__annotation-red {
+    color: $c_red;
   }
 }
 
 @media (min-width: $ff_large) {
   .contest {
-    width: $ff_large;
-    margin: 0 auto;
-    padding-left: 10px;
-    padding-right: 10px;
-    padding-bottom: 0px;
-  }
-
-  .contest__form {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: flex-end;
-    flex-wrap: wrap;
+    @include h-spacing();
+    width: $align_large;
+    padding: 0 10px;
   }
 
   .contest__intro {
+    @include resetSize();
+    @include v-spacing(50px);
+    @include h-spacing();
     width: calc(100% - 180px);
-    margin-bottom: 50px;
+    padding: 92px 0 30px;
+    font: $f_reg18;
+    color: $c_darkBlue1;
+    text-align: center;
+    line-height: 30px;
+    letter-spacing: 0.05px;
+  }
+
+  .contest__intro-detail {
+    display: inline;
+  }
+
+  .contest__form {
+    @include flex(row, space-between, flex-start);
+  }
+
+  .contest__submit-btn {
+    @include btnConfirm($c_green);
+    width: 300px;
   }
 
   .contest__annotation-wrapper {
-    width: 940px;
+    @include flex();
+    @include h-spacing();
+    order: 2;
+    width: $align_large-fields;
+  }
+
+  .contest__annotation {
+    @include resetSize();
+    font: $f_light14;
+    color: $c_darkBlue1;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+  }
+
+  .contest__annotation.short {
+    display: none;
+  }
+
+  .contest__annotation-red {
+    color: $c_red;
   }
 }

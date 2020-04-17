@@ -9,10 +9,10 @@
   <body>
     <header class="header index">
       <div class="header-upside">
-        <div class="header-upside__wrapper">
+        <div class="header-upside__alignment">
           <div class="header-upside__menu opened">
             <a class="TEMP header-upside__logo"></a>
-            <button class="TEMP header-upside__nav-btn ff-no-large" type="button" aria-label="Открыть выпадающее меню"></button>
+            <button class="TEMP header-upside__nav-btn for-closed-menu" type="button" aria-label="Открыть выпадающее меню"></button>
           </div>
           <nav class="header-upside__nav">
             <ul class="header-upside__nav-list">
@@ -63,28 +63,30 @@
         <h2 class="visually-hidden">Особенности приложения</h2>
         <div class="features__intro-wrapper">
           <p class="features__intro">Устали от серости мегаполиса?</p>
-          <p class="features__intro">Нам есть что вам предложить!</p>
+          <p class="features__intro">Нам есть, что вам<br>предложить!</p>
         </div>
-        <ul class="features__list">
-          <li class="features__item">
-            <div class="features__img mood"></div>
-            <h3 class="features__ttl">Поднимает настроение</h3>
-            <p class="features__desc">Приложение позволит вам победить осеннюю хандру и депрессию буквально в несколько кликов!</p>
-          </li>
-          <li class="features__item">
-            <div class="features__img world"></div>
-            <h3 class="features__ttl">Меняет мир вокруг</h3>
-            <p class="features__desc">Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект</p>
-          </li>
-          <li class="features__item">
-            <div class="features__img friends"></div>
-            <h3 class="features__ttl">Заводит новых друзей</h3>
-            <p class="features__desc">Ставьте лайки, комментируйте, делитесь фотографиями с друзьями и заводите новых</p>
-          </li>
-        </ul>
+        <div class="features__wrapper">
+          <ul class="features__list">
+            <li class="features__item">
+              <div class="features__img mood"></div>
+              <h3 class="features__ttl">Поднимает настроение</h3>
+              <p class="features__desc">Приложение позволит вам победить осеннюю хандру и депрессию буквально в несколько кликов!</p>
+            </li>
+            <li class="features__item">
+              <div class="features__img world"></div>
+              <h3 class="features__ttl">Меняет мир вокруг</h3>
+              <p class="features__desc">Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить&nbsp;эффект</p>
+            </li>
+            <li class="features__item">
+              <div class="features__img friends"></div>
+              <h3 class="features__ttl">Заводит новых друзей</h3>
+              <p class="features__desc">Ставьте лайки, комментируйте, делитесь фотографиями с друзьями и заводите новых</p>
+            </li>
+          </ul>
+        </div>
       </section>
 
-      <section class="research ff-no-small">
+      <section class="research">
         <div class="research__alignment">
           <div class="research__timer-wrapper">
             <svg class="research__timer-svg" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="238" height="276" viewBox="0 0 298 345.097" enable-background="new 0 0 298 345.097" xml:space="preserve">
@@ -107,7 +109,7 @@
             <li class="reviews__item">
               <div class="reviews__user-wrapper">
                 <h3 class="reviews__name">Николай Петров</h3>
-                <p class="reviews__about ff-no-small">25 лет, водитель трамвая</p>
+                <p class="reviews__about">25 лет, водитель трамвая</p>
               </div>
               <p class="reviews__text">&laquo;Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!&raquo;</p>
             </li>
@@ -143,7 +145,7 @@
         <h2 class="visually-hidden">Тарифы</h2>
         <table class="prices__table">
           <tr>
-            <th class="prices__heading offset ff-no-small"></th>
+            <th class="prices__heading offset"></th>
             <th class="prices__heading">
               <p class="prices__ttl">База</p>
               <p class="prices__price">1,99 USD</p>
@@ -158,26 +160,26 @@
             </th>
           </tr>
           <tr>
-            <td class="prices__option ff-no-small">Розовый фильтр</td>
-            <td class="prices__option yes"><p class="prices__option-text ff-no-medium ff-no-large">Розовый фильтр</p></td>
-            <td class="prices__option yes"><p class="prices__option-text ff-no-medium ff-no-large">Розовый фильтр</p></td>
-            <td class="prices__option yes"><p class="prices__option-text ff-no-medium ff-no-large">Розовый фильтр</p></td>
+            <td class="prices__option">Розовый фильтр</td>
+            <td class="prices__option yes"><p class="prices__option-text">Розовый фильтр</p></td>
+            <td class="prices__option yes"><p class="prices__option-text">Розовый фильтр</p></td>
+            <td class="prices__option yes"><p class="prices__option-text">Розовый фильтр</p></td>
           </tr>
           <tr>
-            <td class="prices__option ff-no-small">Смайлики</td>
-            <td class="prices__option no"><p class="prices__option-text ff-no-medium ff-no-large">Смайлики</p></td>
-            <td class="prices__option yes"><p class="prices__option-text ff-no-medium ff-no-large">Смайлики</p></td>
-            <td class="prices__option yes"><p class="prices__option-text ff-no-medium ff-no-large">Смайлики</p></td>
+            <td class="prices__option">Смайлики</td>
+            <td class="prices__option no"><p class="prices__option-text">Смайлики</p></td>
+            <td class="prices__option yes"><p class="prices__option-text">Смайлики</p></td>
+            <td class="prices__option yes"><p class="prices__option-text">Смайлики</p></td>
           </tr>
           <tr>
-            <td class="prices__option ff-no-small">Комментарии</td>
-            <td class="prices__option no"><p class="prices__option-text ff-no-medium ff-no-large">Комментарии</p></td>
-            <td class="prices__option no"><p class="prices__option-text ff-no-medium ff-no-large">Комментарии</p></td>
-            <td class="prices__option yes"><p class="prices__option-text ff-no-medium ff-no-large">Комментарии</p></td>
+            <td class="prices__option">Комментарии</td>
+            <td class="prices__option no"><p class="prices__option-text">Комментарии</p></td>
+            <td class="prices__option no"><p class="prices__option-text">Комментарии</p></td>
+            <td class="prices__option yes"><p class="prices__option-text">Комментарии</p></td>
           </tr>
         </table>
 
-        <ul class="prices__slider-bullets custom__slider-bullets ff-no-medium ff-no-large">
+        <ul class="prices__slider-bullets custom__slider-bullets">
           <li class="custom__slider-bullets-item">
             <label>
               <input class="visually-hidden custom__slider-bullets-input" type="radio" name="prices__slider-input">

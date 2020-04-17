@@ -1,43 +1,47 @@
-.contest-emotions {
-  padding: 39px 0 49px;
-  border: none;
-}
-
-.contest-emotions__intro {
-  width: calc(100% - 40px);
-  margin: 0 auto;
-  margin-bottom: 15px;
-  font: $f_light14;
-  color: $c_red;
-  text-align: center;
-  text-transform: uppercase;
-  letter-spacing: 0.3px;
-}
-
-.contest-emotions__user-text {
-  display: block;
-  width: calc(100% - 40px);
-  min-height: 200px;
-  margin: 0 auto;
-  padding: 16px;
-  line-height: 29px;
-}
-
-@media (min-width: $ff_medium) {
+@media (max-width: $ff_until-medium) {
   .contest-emotions {
+    padding: 39px 0 49px;
+    border: none;
+  }
+
+  .contest-emotions__intro {
+    @include resetSize();
+    @include v-spacing(15px);
+    @include h-spacing();
+    width: $align_small-fields;
+    font: $f_light14;
+    color: $c_red;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+  }
+
+  .contest-emotions__user-text {
+    @include h-spacing();
+    display: block;
+    width: $align_small-fields;
+    min-height: 200px;
+    padding: 16px;
+    line-height: 29px;
+  }
+}
+
+@media (min-width: $ff_medium) and (max-width: $ff_until-large) {
+  .contest-emotions {
+    @include v-spacing(67px);
+    @include h-spacing();
     order: 2;
     width: calc(100% - 40px);
-    margin: 0 auto;
-    margin-bottom: 67px;
-    padding: 0 0 50px;
+    padding-bottom: 50px;
     border: 2px solid $c_darkGray1;
   }
 
   .contest-emotions__intro {
+    @include resetSize();
+    @include v-spacing(35px);
+    @include h-spacing();
     width: fit-content;
-    margin: 0 auto;
-    margin-top: -10px;
-    margin-bottom: 35px;
+    margin-top: -15px;
     padding: 0 25px;
     font: $f_light14;
     color: $c_red;
@@ -48,19 +52,46 @@
   }
 
   .contest-emotions__user-text {
-    width: calc(100% - 117px);
+    @include h-spacing();
+    display: block;
+    width: calc(100% - 95px);
     min-height: 195px;
+    padding: 16px;
+    line-height: 29px;
   }
 }
 
 @media (min-width: $ff_large) {
   .contest-emotions {
+    @include v-spacing(65px);
+    @include h-spacing();
+    order: 2;
     width: 100%;
-    margin-bottom: 65px;
     padding-bottom: 42px;
+    border: 2px solid $c_darkGray1;
+  }
+
+  .contest-emotions__intro {
+    @include resetSize();
+    @include v-spacing(32px);
+    @include h-spacing();
+    width: fit-content;
+    margin-top: -15px;
+    padding: 0 25px;
+    font: $f_light14;
+    color: $c_red;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+    background-color: #ffffff;
   }
 
   .contest-emotions__user-text {
+    @include h-spacing();
+    display: block;
+    width: calc(100% - 95px);
     min-height: 128px;
+    padding: 16px;
+    line-height: 29px;
   }
 }

@@ -1,87 +1,126 @@
-.contest-name {
-  margin: 0;
-  margin-bottom: 22px;
-  padding: 1px 0;
-  border: none;
-}
-
-.contest-name__list {
-  margin: 0;
-  margin-bottom: 20px;
-  padding: 0;
-  list-style: none;
-}
-
-.contest-name__item {
-  width: calc(100% - 40px);
-  margin: 0 auto;
-  margin-bottom: 22px;
-}
-
-.contest-name__item:last-child {
-  margin-bottom: 0;
-}
-
-.contest-name__label {
-  display: block;
-  width: calc(100% - 44px);
-  margin: 0 auto;
-  margin-bottom: 10px;
-  font: $f_light14;
-  color: $c_red;
-  text-transform: uppercase;
-  letter-spacing: 0.7px;
-}
-
-.contest-name__input {
-  display: block;
-  width: 100%;
-}
-
-@media (min-width: $ff_medium) {
+@media (max-width: $ff_until-medium) {
   .contest-name {
-    margin-bottom: 46px;
+    @include resetSize();
+    @include v-spacing(22px);
+    padding: 1px 0;
+    border: none;
+  }
+
+  .contest-name__list {
+    @include resetSize();
+    @include v-spacing(20px);
+    list-style: none;
   }
 
   .contest-name__item {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: center;
-    margin-bottom: 50px;
+    @include flex(row, flex-start);
+    @include v-spacing(22px);
+    @include h-spacing();
+    width: $align_small-fields;
+  }
+
+  .contest-name__item:last-child {
+    @include v-spacing();
   }
 
   .contest-name__label {
-    width: auto;
-    margin: 0;
-    margin-right: 18px;
+    @include v-spacing(10px);
+    @include h-spacing();
+    display: block;
+    width: calc(100% - 44px);
+    font: $f_light14;
+    color: $c_red;
+    text-transform: uppercase;
+    letter-spacing: 0.7px;
   }
 
   .contest-name__input {
+    display: block;
+    width: 100%;
+  }
+}
+
+@media (min-width: $ff_medium) and (max-width: $ff_until-large) {
+  .contest-name {
+    @include resetSize();
+    @include v-spacing(46px);
+    padding: 1px 0;
+    border: none;
+  }
+
+  .contest-name__list {
+    @include resetSize();
+    @include v-spacing(20px);
+    list-style: none;
+  }
+
+  .contest-name__item {
+    @include flex();
+    @include v-spacing(50px);
+    @include h-spacing();
+    flex-wrap: nowrap;
+    width: calc(100% - 40px);
+  }
+
+  .contest-name__item:last-child {
+    @include v-spacing();
+  }
+
+  .contest-name__label {
+    @include h-spacing(0, 18px);
+    display: block;
+    width: auto;
+    font: $f_reg14;
+    color: $c_red;
+    text-transform: uppercase;
+    letter-spacing: 0.1px;
+  }
+
+  .contest-name__input {
+    display: block;
+    width: 100%;
     margin: 0;
   }
 }
 
 @media (min-width: $ff_large) {
   .contest-name {
+    @include resetSize();
+    @include v-spacing(46px);
     width: 475px;
-    margin: 0;
+    padding: 1px 0;
+    border: none;
   }
 
   .contest-name__list {
-    margin: 0;
+    @include resetSize();
+    list-style: none;
   }
 
   .contest-name__item {
-    margin: 0;
-    margin-bottom: 50px;
+    @include flex();
+    @include v-spacing(50px);
+    flex-wrap: nowrap;
+    width: calc(100% - 40px);
+  }
+
+  .contest-name__item:last-child {
+    @include v-spacing();
   }
 
   .contest-name__label {
-    margin-left: 0;
+    @include h-spacing(0, 18px);
+    display: block;
+    width: auto;
+    font: $f_reg14;
+    color: $c_red;
+    text-transform: uppercase;
+    letter-spacing: 0.1px;
   }
 
   .contest-name__input {
+    display: block;
     width: 100%;
+    margin: 0;
   }
 }

@@ -1,17 +1,22 @@
-@media (min-width: $ff_medium) {
+@media (max-width: $ff_until-medium) {
   .research {
-    margin-bottom: 50px;
-    padding: 32px 0 0;
+    display: none;
+  }
+}
+
+@media (min-width: $ff_medium) and (max-width: $ff_until-large) {
+  .research {
+    @include v-spacing(50px);
+    padding: 60px 0 0;
   }
 
   .research__alignment {
+    @include flex();
+    @include h-spacing();
     position: relative;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    width: $ff_medium;
-    padding: 0 30px 0 20px;
+    width: $align_medium-fields;
+    padding-left: 10px;
+    padding-right: 20px;
   }
 
   .research__timer-wrapper {
@@ -41,19 +46,16 @@
   }
 
   .research__ttl {
-    width: 60%;
-    margin: 0;
-    margin-bottom: 10px;
-    padding: 0;
+    @include resetSize();
+    @include v-spacing(10px);
+    width: 170px;
     font: $f_bold30;
-    color: $c_black;
     line-height: 36px;
   }
 
   .research__desc {
-    margin: 0;
-    margin-bottom: 12px;
-    padding: 0;
+    @include resetSize();
+    @include v-spacing(12px);
     font: $f_reg14;
     color: $c_darkBlue1;
     line-height: 24px;
@@ -67,54 +69,64 @@
 
 @media (min-width: $ff_large) {
   .research {
-    margin: 0 auto;
-    padding: 28px 0 63px;
+    padding: 48px 0 63px;
     background-color: $c_gray;
   }
 
   .research__alignment {
-    align-items: flex-start;
+    @include flex();
+    @include h-spacing();
+    flex-wrap: nowrap;
     width: $ff_large;
-    margin: 0 auto;
     padding: 0 11px;
   }
 
   .research__timer-wrapper {
+    position: relative;
     margin-right: 67px;
   }
 
   .research__timer-svg {
     width: 298px;
     height: 345px;
+    fill: #dedede;
   }
 
   .research__timer-24 {
+    position: absolute;
     top: 70px;
     left: 22px;
     width: 253px;
     height: 253px;
     padding: 20px 40px;
     font: $f_bold120;
+    color: $c_red;
     border: 17px solid $c_red;
+    border-radius: 50%;
   }
 
   .research__wrapper {
     flex-grow: 1;
-    padding-top: 91px;
+    padding-top: 34px;
   }
 
   .research__ttl {
-    margin-bottom: 21px;
+    @include resetSize();
+    @include v-spacing(19px);
+    font: $f_bold30;
   }
 
   .research__desc {
-    margin-bottom: 34px;
+    @include resetSize();
+    @include v-spacing(36px);
     padding-right: 20px;
     font: $f_reg18;
+    color: $c_darkBlue1;
     line-height: 30px;
   }
 
   .research__link {
     font: $f_reg18;
+    color: $c_red;
   }
 }

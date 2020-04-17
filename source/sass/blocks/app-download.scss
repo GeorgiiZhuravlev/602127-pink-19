@@ -1,79 +1,105 @@
-.app-download {
-  position: absolute;
-  top: 721px;
-  width: 320px;
-  padding: 28px 0 28px;
-  background-color: #17212D;
-}
-
-.app-download__btn-download {
-  @include btnGrand($c_white);
-  width: calc(100% - 40px);
-  margin: 0 auto;
-  margin-bottom: 34px;
-}
-
-.app-download__list {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  width: 209px;
-  margin: 0 auto;
-  margin-bottom: 20px;
-  padding: 0;
-  list-style: none;
-}
-
-.app-download__link {
-  display: block;
-}
-
-.app-download__link.apple {
-  width: 47px;
-  height: 56px;
-  background-size: contain;
-}
-
-.app-download__link.android {
-  width: 43px;
-  height: 47px;
-  background-size: contain;
-}
-
-.app-download__link.windows {
-  width: 44px;
-  height: 41px;
-  background-size: contain;
-}
-
-.app-download__desc {
-  width: 250px;
-  margin: 0 auto;
-  font: $f_light14;
-  color: $c_white;
-  text-align: center;
-  line-height: 25px;
-}
-
-@media (min-width: $ff_medium) {
+@media (max-width: $ff_until-medium) {
   .app-download {
+    position: absolute;
+    top: 721px;
+    width: 320px;
+    padding: 28px 0 15px;
+    background-color: #17212D;
+  }
+
+  .app-download__btn-download {
+    @include btnGrand($c_white);
+    @include v-spacing(34px);
+    @include h-spacing();
+    width: $align_small-fields;
+  }
+
+  .app-download__list {
+    @include flex();
+    @include resetSize();
+    @include v-spacing(21px);
+    @include h-spacing();
+    width: 209px;
+    list-style: none;
+  }
+
+  .app-download__link {
+    display: block;
+  }
+
+  .app-download__link.apple {
+    width: 47px;
+    height: 56px;
+  }
+
+  .app-download__link.android {
+    width: 43px;
+    height: 47px;
+  }
+
+  .app-download__link.windows {
+    width: 44px;
+    height: 41px;
+  }
+
+  .app-download__desc {
+    @include h-spacing();
+    width: 250px;
+    font: $f_light14;
+    color: $c_white;
+    text-align: center;
+    line-height: 25px;
+  }
+}
+
+@media (min-width: $ff_medium) and (max-width: $ff_until-large) {
+  .app-download {
+    @include h-spacing(20px);
     position: static;
-    width: 340px;
+    width: 300px;
     background-color: transparent;
   }
 
   .app-download__btn-download {
-    margin-bottom: 47px;
+    @include btnGrand($c_white);
+    @include v-spacing(47px);
+    @include h-spacing();
+    width: 300px;
   }
 
   .app-download__list {
-    margin-bottom: 35px;
+    @include flex();
+    @include resetSize();
+    @include v-spacing(36px);
+    padding: 0 46px;
+    list-style: none;
+  }
+
+    .app-download__link {
+    display: block;
+  }
+
+  .app-download__link.apple {
+    width: 47px;
+    height: 56px;
+  }
+
+  .app-download__link.android {
+    width: 43px;
+    height: 47px;
+  }
+
+  .app-download__link.windows {
+    width: 44px;
+    height: 41px;
   }
 
   .app-download__desc {
+    @include resetSize();
     width: 100%;
     font: $f_light18;
+    color: $c_white;
+    text-align: center;
   }
 }
 
@@ -83,20 +109,43 @@
   }
 
   .app-download__btn-download {
+    @include btnGrand($c_white);
     width: 100%;
     padding: 11px 13px;
     margin-bottom: 67px;
-    margin-left: 10px;
     font: $f_bold21;
     border-radius: 30px;
   }
 
   .app-download__list {
-    margin-bottom: 55px;
-    margin-left: 55px;
+    @include flex();
+    @include resetSize();
+    @include v-spacing(55px);
+    padding: 0 48px;
+  }
+
+  .app-download__link {
+    display: block;
+  }
+
+  .app-download__link.apple {
+    width: 47px;
+    height: 56px;
+  }
+
+  .app-download__link.android {
+    width: 43px;
+    height: 47px;
+  }
+
+  .app-download__link.windows {
+    width: 44px;
+    height: 41px;
   }
 
   .app-download__desc {
-    margin-left: 10px;
+    font: $f_light18;
+    color: $c_white;
+    text-align: center;
   }
 }

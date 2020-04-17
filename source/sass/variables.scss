@@ -5,6 +5,18 @@ $ff_medium: 660px;
 $ff_until-large: 959px;
 $ff_large: 960px;
 
+// Alignment
+$align_small: 320px;
+$align_small-fields: calc(#{$align_small} - 40px);
+$align_medium: 660px;
+$align_medium-fields: calc(#{$align_medium} - 20px);
+$align_large: 960px;
+$align_large-fields: calc(#{$align_large} - 20px);
+// В будущем будет заменено на
+// $align_borders: 100%;
+// $align_borders-fields: calc(100% - 20px);
+// Для резиновой верстки.
+
 // Colors
 $c_white: #ffffff;
 $c_black: #000000;

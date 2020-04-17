@@ -2,9 +2,9 @@
 @import "variables.scss";
 @import "mixins.scss";
 @import "fonts.scss";
-@import "custom.scss";
 @import "visually-hidden.scss";
 @import "form-factor.scss";
+@import "custom.scss";
 @import "blocks/header.scss";
 @import "blocks/header-upside.scss";
 @import "blocks/header-downside.scss";
@@ -14,9 +14,9 @@
 @import "blocks/reviews.scss";
 @import "blocks/prices.scss";
 @import "blocks/contacts.scss";
-@import "blocks/posts.scss";
+@import "blocks/user-posts.scss";
 @import "blocks/post.scss";
-@import "blocks/img-handling.scss";
+@import "blocks/editor.scss";
 @import "blocks/contest.scss";
 @import "blocks/contest-name.scss";
 @import "blocks/contest-achievements.scss";

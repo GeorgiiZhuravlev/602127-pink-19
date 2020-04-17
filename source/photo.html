@@ -9,10 +9,10 @@
   <body>
     <header class="header">
       <div class="header-upside">
-        <div class="header-upside__wrapper">
+        <div class="header-upside__alignment">
           <div class="header-upside__menu opened">
             <a class="TEMP header-upside__logo"></a>
-            <button class="TEMP header-upside__nav-btn ff-no-large" type="button" aria-label="Открыть выпадающее меню"></button>
+            <button class="TEMP header-upside__nav-btn for-closed-menu" type="button" aria-label="Открыть выпадающее меню"></button>
           </div>
           <nav class="header-upside__nav">
             <ul class="header-upside__nav-list">
@@ -42,8 +42,8 @@
 
     <main>
       <h1 class="visually-hidden">Фотографии пользователей</h1>
-      <section class="posts">
-        <h2 class="posts__intro">Взгляните на фотографии, которые выкладывают пользователи! Видите, как не хватает ваших?</h2>
+      <section class="user-posts">
+        <h2 class="user-posts__intro">Взгляните на фотографии, которые выкладывают пользователи! Видите, как не хватает ваших?</h2>
 
         <article class="post full-width">
           <h2 class="visually-hidden">Пост пользователя</h2>
@@ -70,8 +70,8 @@
           </div>
         </article>
 
-        <ul class="posts__list">
-          <li class="posts__item">
+        <ul class="user-posts__list">
+          <li class="user-posts__item">
             <article class="post">
               <h2 class="visually-hidden">Пост пользователя</h2>
               <a class="post__link-img" href="#" aria-label="Перейти на полноразмерную версию">
@@ -97,7 +97,7 @@
             </article>
           </li>
 
-          <li class="posts__item">
+          <li class="user-posts__item">
             <article class="post">
               <h2 class="visually-hidden">Пост пользователя</h2>
               <a class="post__link-img" href="#" aria-label="Перейти на полноразмерную версию">
@@ -123,7 +123,7 @@
             </article>
           </li>
 
-          <li class="posts__item">
+          <li class="user-posts__item">
             <article class="post">
               <h2 class="visually-hidden">Пост пользователя</h2>
               <a class="post__link-img" href="#" aria-label="Перейти на полноразмерную версию">
@@ -149,7 +149,7 @@
             </article>
           </li>
 
-          <li class="posts__item">
+          <li class="user-posts__item">
             <article class="post">
               <h2 class="visually-hidden">Пост пользователя</h2>
               <a class="post__link-img" href="#" aria-label="Перейти на полноразмерную версию">
@@ -175,7 +175,7 @@
             </article>
           </li>
 
-          <li class="posts__item">
+          <li class="user-posts__item">
             <article class="post">
               <h2 class="visually-hidden">Пост пользователя</h2>
               <a class="post__link-img" href="#" aria-label="Перейти на полноразмерную версию">
@@ -201,7 +201,7 @@
             </article>
           </li>
 
-          <li class="posts__item">
+          <li class="user-posts__item">
             <article class="post">
               <h2 class="visually-hidden">Пост пользователя</h2>
               <a class="post__link-img" href="#" aria-label="Перейти на полноразмерную версию">
@@ -227,50 +227,50 @@
             </article>
           </li>
         </ul>
-        <p class="posts__outro">
+        <p class="user-posts__outro">
           Затмите их всех!<br>
           Выкладывайте все, что накопилось в
           телефоне!
         </p>
       </section>
 
-      <section class="img-handling">
+      <section class="editor">
         <h2 class="visually-hidden">Обработать изображение</h2>
         <picture>
           <source srcset="img/photo-road-tablet@1x.jpg" media="(min-width: 660px)">
-          <img class="img-handling__user-img" src="img/photo-road-mobile@1x.jpg" width="280" height="374" alt="Изображение пользователя">
+          <img class="editor__user-img" src="img/photo-road-mobile@1x.jpg" width="280" height="374" alt="Изображение пользователя">
         </picture>
-        <form class="img-handling__form" method="get" action="https://echo.htmlacademy.ru" name="img-handling" autocomplete="off">
-          <ul class="img-handling__control">
-            <li class="img-handling__control-item">
-              <svg class="TEMP img-handling__icon-vignette ff-no-small" width="22" height="22"></svg>
-              <input class="visually-hidden img-handling__switcher vignette ff-no-medium ff-no-large" id="img-handling__switcher-vignette" type="radio" name="img-handling__switcher" aria-label="Выбрать виньетирование" checked>
-              <label class="img-handling__btn" for="img-handling__switcher-vignette">
-                <svg class="TEMP ff-no-medium ff-no-large" width="44" height="44"></svg>
+        <form class="editor__form" method="get" action="https://echo.htmlacademy.ru" name="editor" autocomplete="off">
+          <ul class="editor__control">
+            <li class="editor__control-item">
+              <svg class="TEMP editor__icon-vignette" width="22" height="22"></svg>
+              <input class="visually-hidden editor__switcher vignette" id="editor__switcher-vignette" type="radio" name="editor__switcher" aria-label="Выбрать виньетирование" checked>
+              <label class="editor__btn" for="editor__switcher-vignette">
+                <svg class="TEMP" width="44" height="44"></svg>
               </label>
-              <input class="img-handling__range vignette" type="range" name="img-handling__range-vignette" min="0" max="100" step="1" value="0" aria-label="Ползунок виньетирования">
+              <input class="editor__range vignette" type="range" name="editor__range-vignette" min="0" max="100" step="1" value="0" aria-label="Ползунок виньетирования">
             </li>
-            <li class="img-handling__control-item">
-              <svg class="TEMP img-handling__icon-fill ff-no-small" width="24" height="22"></svg>
-              <input class="visually-hidden img-handling__switcher fill ff-no-medium ff-no-large" id="img-handling__switcher-fill" type="radio" name="img-handling__switcher" aria-label="Выбрать заливку">
-              <label class="img-handling__btn" for="img-handling__switcher-fill">
-                <svg class="TEMP ff-no-medium ff-no-large" width="48" height="43"></svg>
+            <li class="editor__control-item">
+              <svg class="TEMP editor__icon-fill" width="24" height="22"></svg>
+              <input class="visually-hidden editor__switcher fill" id="editor__switcher-fill" type="radio" name="editor__switcher" aria-label="Выбрать заливку">
+              <label class="editor__btn" for="editor__switcher-fill">
+                <svg class="TEMP" width="48" height="43"></svg>
               </label>
-              <input class="img-handling__range fill" type="range" name="img-handling__range-fill" min="0" max="100" step="1" value="0" aria-label="Ползунок заливки">
+              <input class="editor__range fill" type="range" name="editor__range-fill" min="0" max="100" step="1" value="0" aria-label="Ползунок заливки">
             </li>
-            <li class="img-handling__control-item">
-              <svg class="TEMP img-handling__icon-contrast ff-no-small" width="16" height="16"></svg>
-              <input class="visually-hidden img-handling__switcher contrast ff-no-medium ff-no-large" id="img-handling__switcher-contrast" type="radio" name="img-handling__switcher" aria-label="Выбрать контраст">
-              <label class="img-handling__btn" for="img-handling__switcher-contrast">
-                <svg class="TEMP ff-no-medium ff-no-large" width="32" height="32"></svg>
+            <li class="editor__control-item">
+              <svg class="TEMP editor__icon-contrast" width="16" height="16"></svg>
+              <input class="visually-hidden editor__switcher contrast" id="editor__switcher-contrast" type="radio" name="editor__switcher" aria-label="Выбрать контраст">
+              <label class="editor__btn" for="editor__switcher-contrast">
+                <svg class="TEMP" width="32" height="32"></svg>
               </label>
-              <input class="img-handling__range contrast" type="range" name="img-handling__range-contrast" min="0" max="100" step="1" value="0" aria-label="Ползунок контраста">
+              <input class="editor__range contrast" type="range" name="editor__range-contrast" min="0" max="100" step="1" value="0" aria-label="Ползунок контраста">
             </li>
           </ul>
-          <hr class="custom__hr ff-no-medium ff-no-large">
-          <div class="img-handling__btns-wrapper">
-            <button class="img-handling__submit-btn" type="submit" aria-label="Запостить фотографию">Запостить</button>
-            <button class="img-handling__reset-btn" type="reset" aria-label="Отменить изменения">Отмена</button>
+          <hr class="custom__hr">
+          <div class="editor__btns-wrapper">
+            <button class="editor__submit-btn" type="submit" aria-label="Запостить фотографию">Запостить</button>
+            <button class="editor__reset-btn" type="reset" aria-label="Отменить изменения">Отмена</button>
           </div>
         </form>
       </section>
@@ -282,13 +282,13 @@
 
         <ul class="footer__social-list">
           <li class="footer__social-item">
-            <a class="TEMP footer__social-link twitter" href="#" aria-label="Перейти на нашу страницу в Твиттере"></a>
+            <a class="footer__social-link twitter" href="#" aria-label="Перейти на нашу страницу в Твиттере"></a>
           </li>
           <li class="footer__social-item">
-            <a class="TEMP footer__social-link facebook" href="#" aria-label="Перейти на нашу страницу в Фейсбуке"></a>
+            <a class="footer__social-link facebook" href="#" aria-label="Перейти на нашу страницу в Фейсбуке"></a>
           </li>
           <li class="footer__social-item">
-            <a class="TEMP footer__social-link youtube" href="#" aria-label="Перейти на наш канал на Ютюбе"></a>
+            <a class="footer__social-link youtube" href="#" aria-label="Перейти на наш канал на Ютюбе"></a>
           </li>
         </ul>
 

@@ -1,3 +1,27 @@
+// Technical
+@mixin v-spacing($space: 0) {
+  margin-bottom: $space;
+}
+
+@mixin h-spacing($space-left: auto, $space-right: auto) {
+  margin-left: $space-left;
+  margin-right: $space-right;
+}
+
+@mixin resetSize() {
+  margin: 0;
+  padding: 0;
+}
+
+@mixin flex($dir: row, $jc: space-between, $ai: center, $fw: wrap) {
+  display: flex;
+  flex-direction: $dir;
+  justify-content: $jc;
+  align-items: $ai;
+  flex-wrap: $fw;
+}
+
+// Styling
 @mixin btnGrand($color) {
   display: block;
   padding: 15px;

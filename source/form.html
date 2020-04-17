@@ -9,10 +9,10 @@
   <body>
     <header class="header">
       <div class="header-upside">
-        <div class="header-upside__wrapper">
+        <div class="header-upside__alignment">
           <div class="header-upside__menu opened">
             <a class="TEMP header-upside__logo"></a>
-            <button class="TEMP header-upside__nav-btn ff-no-large" type="button" aria-label="Открыть выпадающее меню"></button>
+            <button class="TEMP header-upside__nav-btn for-closed-menu" type="button" aria-label="Открыть выпадающее меню"></button>
           </div>
           <nav class="header-upside__nav">
             <ul class="header-upside__nav-list">
@@ -41,7 +41,7 @@
     <main>
       <h1 class="visually-hidden">Конкурс от Pink</h1>
       <section class="contest">
-        <h2 class="contest__intro">Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту! <span class="ff-no-small">Пожалуйста, заполните форму ниже:</span></h2>
+        <h2 class="contest__intro">Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту! <span class="contest__intro-detail">Пожалуйста, заполните форму ниже:</span></h2>
         <form class="contest__form" method="post" action="https://echo.htmlacademy.ru" name="contest" autocomplete="on">
           <fieldset class="contest-name">
             <ul class="contest-name__list">
@@ -109,7 +109,7 @@
           </fieldset>
 
           <fieldset class="contest-contacts">
-            <h3 class="contest-contacts__intro ff-no-small">Контактная информация</h3>
+            <h3 class="contest-contacts__intro">Контактная информация</h3>
             <ul class="contest-contacts__list">
               <li class="contest-contacts__item">
                 <label class="contest-contacts__label">Номер телефона</label>
@@ -156,8 +156,7 @@
 
           <div class="contest__annotation-wrapper">
             <button class="contest__submit-btn" type="submit">Отправить форму</button>
-            <p class="contest__annotation ff-no-large"><span class="contest__annotation-red">*</span> — обязательные поля</p>
-            <p class="contest__annotation ff-no-small ff-no-medium"><span class="contest__annotation-red">*</span> — обязательные для заполнения поля</p>
+            <p class="contest__annotation"><span class="contest__annotation-red">*</span><span class="contest__annotation short"> — обязательные поля</span><span class="contest__annotation large"> — обязательные для заполнения поля</span></p>
           </div>
         </form>
       </section>
