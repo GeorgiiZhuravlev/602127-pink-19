@@ -1,53 +1,58 @@
-.contest-contacts {
-  margin: 0;
-  padding: 38px 0 20px;
-  border: none;
-}
-
-.contest-contacts__list {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-
-.contest-contacts__item {
-  width: calc(100% - 40px);
-  margin: 0 auto;
-}
-
-.contest-contacts__label {
-  display: block;
-  width: calc(100% - 45px);
-  margin: 0 auto;
-  margin-bottom: 10px;
-  font: $f_light14;
-  color: $c_red;
-  text-transform: uppercase;
-  letter-spacing: 0.3px;
-}
-
-.contest-contacts__input {
-  display: block;
-  width: 100%;
-  margin: 0 auto;
-  margin-bottom: 21px;
-}
-
-@media (min-width: $ff_medium) {
+@media (max-width: $ff_until-medium) {
   .contest-contacts {
+    padding: 38px 0 20px;
+    border: none;
+  }
+
+  .contest-contacts__intro {
+    display: none;
+  }
+
+  .contest-contacts__list {
+    @include resetSize();
+    list-style: none;
+  }
+
+  .contest-contacts__item {
+    @include h-spacing();
+    width: $align_small-fields;
+  }
+
+  .contest-contacts__label {
+    @include v-spacing(10px);
+    @include h-spacing();
+    display: block;
+    width: calc(100% - 45px);
+    font: $f_light14;
+    color: $c_red;
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+  }
+
+  .contest-contacts__input {
+    @include v-spacing(21px);
+    @include h-spacing();
+    display: block;
+    width: 100%;
+  }
+}
+
+@media (min-width: $ff_medium) and (max-width: $ff_until-large) {
+  .contest-contacts {
+    @include v-spacing(66px);
+    @include h-spacing();
     order: 1;
     width: calc(100% - 40px);
-    margin: 0 auto;
-    margin-bottom: 66px;
-    padding-top: 0;
+    padding-bottom: 20px;
     border: 2px solid $c_darkGray1;
   }
 
   .contest-contacts__intro {
+    @include resetSize();
+    @include v-spacing(36px);
+    @include h-spacing();
     width: fit-content;
-    margin: 0 auto;
-    margin-top: -10px;
-    margin-bottom: 36px;
+    margin-top: -17px;
     padding: 0 25px 0;
     font: $f_reg14;
     color: $c_red;
@@ -55,15 +60,22 @@
     background-color: #ffffff;
   }
 
+  .contest-contacts__list {
+    @include resetSize();
+    list-style: none;
+  }
+
   .contest-contacts__item {
+    @include flex(column, flex-start, center, stretch);
+    @include h-spacing();
     position: relative;
-    display: flex;
-    flex-direction: column;
+    width: calc(100% - 20px);
+
     &::after {
       content: "";
       position: absolute;
-      top: 18px;
-      right: 58px;
+      top: 19px;
+      right: 55px;
       display: block;
       width: 25px;
       height: 25px;
@@ -72,60 +84,94 @@
   }
 
   .contest-contacts__item:not(:last-child) {
-    margin-bottom: 24px;
+    @include v-spacing(24px);
   }
 
   .contest-contacts__label {
+    @include v-spacing(10px);
+    @include h-spacing();
+    display: block;
     width: calc(100% - 115px);
+    font: $f_light14;
+    color: $c_red;
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
   }
 
   .contest-contacts__input {
     order: -1;
+    @include v-spacing(15px);
+    @include h-spacing();
+    display: block;
     width: calc(100% - 75px);
-    margin-bottom: 15px;
     border-right: 63px solid $c_darkGray1;
   }
 }
 
 @media (min-width: $ff_large) {
   .contest-contacts {
+    @include v-spacing(63px);
+    @include h-spacing();
+    order: 1;
     width: 100%;
-    margin-top: 65px;
-    margin-bottom: 63px;
+    margin-top: 25px;
     padding: 0 53px 0 57px;
+    border: 2px solid $c_darkGray1;
   }
 
   .contest-contacts__intro {
-    margin-bottom: 32px;
+    @include resetSize();
+    @include v-spacing(32px);
+    @include h-spacing();
+    width: fit-content;
+    margin-top: -12px;
+    padding: 0 25px 0;
+    font: $f_reg14;
+    color: $c_red;
+    text-transform: uppercase;
+    background-color: #ffffff;
   }
 
   .contest-contacts__list {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
+    @include flex();
+    @include resetSize();
+    list-style: none;
   }
 
-  .contest-contacts__item,
-  .contest-contacts__item:not(:last-child) {
-    width: 380px;
-    margin: 0;
-    margin-bottom: 0;
-  }
-
-  .contest-contacts__item::after {
-    right: 24px;
-  }
-
-  .contest-contacts__input {
+  .contest-contacts__item {
+    @include flex(column, flex-start, center, stretch);
+    position: relative;
     width: 375px;
-    margin: 0;
-    margin-bottom: 15px;
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: 380px;
+      top: 20px;
+      right: 19px;
+      display: block;
+      width: 25px;
+      height: 25px;
+      border: 1px dashed red;
+    }
   }
 
   .contest-contacts__label {
-    margin: 0;
-    margin-left: 20px;
-    margin-bottom: 20px;
+    @include v-spacing(20px);
+    display: block;
+    width: 100%;
+    padding-left: 20px;
+    font: $f_light14;
+    color: $c_red;
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+  }
+
+  .contest-contacts__input {
+    @include v-spacing(17px);
+    order: -1;
+    display: block;
+    width: 100%;
+    border-right: 63px solid $c_darkGray1;
   }
 }

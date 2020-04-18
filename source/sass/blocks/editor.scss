@@ -1,0 +1,246 @@
+@media (max-width: $ff_until-medium) {
+  .editor {
+    padding: 20px 0 42px;
+    background-color: $c_gray;
+  }
+
+  .editor__user-img {
+    @include v-spacing(42px);
+    @include h-spacing();
+    display: block;
+    width: $align_small-fields;
+  }
+
+  .editor__control {
+    @include flex(row, center);
+    @include resetSize();
+    @include v-spacing(40px);
+    position: relative;
+    padding-bottom: 30px;
+    list-style: none;
+  }
+
+  .editor__control-item:not(:last-child) {
+    @include h-spacing(0, 40px);
+  }
+
+  .editor__icon-vignette,
+  .editor__icon-fill,
+  .editor__icon-contrast {
+    display: none;
+  }
+
+  .editor__switcher ~ .editor__btn ~ .editor__range {
+    display: none;
+  }
+
+  .editor__switcher:checked ~ .editor__btn {
+    display: block;
+  }
+
+  .editor__switcher:checked ~ .editor__btn ~ .editor__range {
+    @include h-spacing();
+    position: absolute;
+    left: 38px;
+    bottom: -19px;
+    display: block;
+    width: calc(100% - 80px);
+  }
+
+  .editor__submit-btn {
+    @include h-spacing();
+    @include btnGrand($c_red);
+    width: $align_small-fields;
+    margin-top: 38px;
+    margin-bottom: 13px;
+  }
+
+  .editor__reset-btn {
+    @include h-spacing();
+    @include btnGrand($c_darkGray1);
+    width: $align_small-fields;
+  }
+}
+
+@media (min-width: $ff_medium) and (max-width: $ff_until-large) {
+  .editor {
+    @include flex(row, space-between, flex-start);
+    padding: 57px 20px 12px;
+    background-color: $c_gray;
+  }
+
+  .editor__user-img {
+    @include v-spacing(42px);
+    @include h-spacing();
+    display: block;
+    width: 300px;
+  }
+
+  .editor__control {
+    @include flex(column, flex-start, flex-end);
+    @include resetSize();
+    @include v-spacing(66px);
+    position: relative;
+    width: 300px;
+    padding-left: 27px;
+    list-style: none;
+  }
+
+  .editor__control-item {
+    @include flex(row, flex-end);
+    @include resetSize();
+    padding: 7px 20px 22px 0;
+    border-bottom: 1px solid $c_darkGray1;
+  }
+
+  .editor__control-item:not(:first-child) {
+    padding: 24px 20px 22px 0;
+  }
+
+  .editor__icon-vignette,
+  .editor__icon-fill,
+  .editor__icon-contrast {
+    display: block;
+  }
+
+  .editor__switcher.vignette,
+  .editor__switcher.fill,
+  .editor__switcher.contrast {
+    display: none;
+  }
+
+
+  .editor__switcher ~ .editor__btn,
+  .editor__switcher:checked ~ .editor__btn {
+    display: none;
+  }
+
+  .editor__switcher ~ .editor__btn ~ .editor__range,
+  .editor__switcher:checked ~ .editor__btn ~ .editor__range {
+    @include h-spacing();
+    position: static;
+    display: block;
+    width: 202px;
+    margin-left: 25px;
+  }
+
+  .editor .custom__hr {
+    display: none;
+  }
+
+  .editor__submit-btn {
+    @include v-spacing(24px);
+    @include h-spacing();
+    @include btnGrand($c_red);
+    width: calc(100% - 40px);
+    margin-top: 38px;
+    margin-left: 26px;
+  }
+
+  .editor__reset-btn {
+    @include h-spacing();
+    @include btnGrand($c_darkGray1);
+    width: calc(100% - 40px);
+    margin-left: 26px;
+  }
+}
+
+@media (min-width: $ff_large) {
+  .editor {
+    @include flex(row, space-between, flex-start);
+    @include v-spacing(28px);
+    @include h-spacing();
+    width: 940px;
+    padding: 57px 60px 15px 80px;
+    background-color: $c_gray;
+  }
+
+  .editor__form {
+    width: 410px;
+  }
+
+  .editor__user-img {
+    @include v-spacing(42px);
+    @include h-spacing();
+    display: block;
+    width: 300px;
+  }
+
+  .editor__control {
+    @include flex(column, flex-start, flex-end);
+    @include resetSize();
+    @include v-spacing(147px);
+    position: relative;
+    width: 100%;
+    list-style: none;
+  }
+
+  .editor__control-item {
+    @include flex(row, space-between);
+    @include resetSize();
+    width: 100%;
+    padding-top: 15px;
+    padding-bottom: 18px;
+    padding-right: 30px;
+    border-bottom: 1px solid $c_darkGray1;
+  }
+
+  .editor__control-item:first-child {
+    padding-top: 0;
+    padding-bottom: 11px;
+  }
+
+  .editor__icon-vignette {
+    width: 44px;
+    height: 44px;
+  }
+
+  .editor__icon-fill {
+    width: 48px;
+    height: 43px;
+  }
+
+  .editor__icon-contrast {
+    width: 32px;
+    height: 32px;
+  }
+
+  .editor__switcher.vignette,
+  .editor__switcher.fill,
+  .editor__switcher.contrast {
+    display: none;
+  }
+
+  .editor__switcher ~ .editor__btn,
+  .editor__switcher:checked ~ .editor__btn {
+    display: none;
+  }
+
+  .editor__switcher ~ .editor__btn ~ .editor__range,
+  .editor__switcher:checked ~ .editor__btn ~ .editor__range {
+    @include resetSize();
+    position: static;
+    display: block;
+    width: 288px;
+  }
+
+  .editor .custom__hr {
+    display: none;
+  }
+
+  .editor__btns-wrapper {
+    @include flex();
+  }
+
+  .editor__submit-btn {
+    @include resetSize();
+    @include btnGrand($c_red);
+    width: 182px;
+  }
+
+  .editor__reset-btn {
+    @include resetSize();
+    @include btnGrand($c_darkGray1);
+    width: 182px;
+  }
+}

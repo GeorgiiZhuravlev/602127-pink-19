@@ -1,0 +1,114 @@
+@media (max-width: $ff_until-medium) {
+  .user-posts {
+    padding: 46px 0 0;
+  }
+
+  .user-posts__intro {
+    @include resetSize();
+    @include v-spacing(49px);
+    @include h-spacing();
+    width: calc(100% - 70px);
+    font: $f_light14;
+    color: $c_darkBlue1;
+    text-align: center;
+    line-height: 30px;
+    letter-spacing: 0.3px;
+  }
+
+  .user-posts__list {
+    @include resetSize();
+    list-style: none;
+  }
+
+  .user-posts__outro {
+    @include resetSize();
+    @include h-spacing();
+    width: $align_small-fields;
+    padding: 21px 0 42px;
+    font: $f_light14;
+    color: $c_darkBlue1;
+    text-align: center;
+    line-height: 30px;
+    letter-spacing: 0.3px;
+  }
+}
+
+@media (min-width: $ff_medium) and (max-width: $ff_until-large) {
+  .user-posts {
+    padding: 46px 0 0;
+  }
+
+  .user-posts__intro {
+    @include resetSize();
+    @include v-spacing(49px);
+    @include h-spacing();
+    width: calc(100% - 100px);
+    padding: 47px 0 27px;
+    font: $f_reg18;
+    color: $c_darkBlue1;
+    text-align: center;
+    line-height: 30px;
+    letter-spacing: 0.05px;
+  }
+
+  .user-posts__list {
+    @include flex(row, space-between, stretch);
+    @include resetSize();
+    @include h-spacing();
+    width: calc(100% - 40px);
+    list-style: none;
+    overflow-x: hidden;
+  }
+
+  .user-posts__outro {
+    @include resetSize();
+    @include h-spacing();
+    width: calc(100% - 40px);
+    padding: 48px 0 71px;
+    font: $f_reg18;
+    color: $c_darkBlue1;
+    text-align: center;
+    line-height: 28px;
+    letter-spacing: 0.01px;
+  }
+}
+
+@media (min-width: $ff_large) {
+  .user-posts {
+    padding: 46px 0 0;
+  }
+
+  .user-posts__intro {
+    @include resetSize();
+    @include v-spacing(62px);
+    @include h-spacing();
+    width: 600px;
+    padding: 47px 0 27px;
+    font: $f_reg18;
+    color: $c_darkBlue1;
+    text-align: center;
+    line-height: 30px;
+    letter-spacing: 0.05px;
+  }
+
+  .user-posts__list {
+    @include flex(row, space-between, stretch);
+    @include resetSize();
+    @include h-spacing();
+    width: $align_large-fields;
+    list-style: none;
+    overflow-x: hidden;
+  }
+
+  .user-posts__outro {
+    @include resetSize();
+    @include h-spacing();
+    width: calc(100% - 40px);
+    padding: 6px 0 66px;
+    font: $f_reg18;
+    color: $c_darkBlue1;
+    text-align: center;
+    line-height: 30px;
+    letter-spacing: 0.05px;
+  }
+}

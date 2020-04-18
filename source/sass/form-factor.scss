@@ -1,36 +1,55 @@
 // Form factor
 
 @media (max-width: $ff_until-medium) {
-  .ff-no-small {
-    display: none;
-  }
-
   body {
     width: 320px;
-    margin: 0 auto;
   }
 }
 
 @media (min-width: $ff_medium) and (max-width: $ff_until-large) {
-  .ff-no-medium {
-    display: none;
-  }
-
   body {
-    width: $ff_medium;
-    margin: 0 auto;
+    width: 660px;
   }
 }
 
 @media (min-width: $ff_large) {
-  .ff-no-large {
-    display: none;
-  }
-
   body {
-    //Check
-    //width: $ff_large;
-    width: 1200px;
-    margin: 0 auto;
+    width: 1200px; //960px;
   }
 }
+
+//===========================
+// @media (max-width: $ff_until-medium) {
+//   .ff-no-small {
+//     display: none;
+//   }
+
+//   body {
+//     width: 320px;
+//     margin: 0 auto;
+//   }
+// }
+
+// @media (min-width: $ff_medium) and (max-width: $ff_until-large) {
+//   .ff-no-medium {
+//     display: none;
+//   }
+
+//   body {
+//     width: $ff_medium;
+//     margin: 0 auto;
+//   }
+// }
+
+// @media (min-width: $ff_large) {
+//   .ff-no-large {
+//     display: none;
+//   }
+
+//   body {
+//     //Check
+//     //width: $ff_large;
+//     width: 1200px;
+//     margin: 0 auto;
+//   }
+// }

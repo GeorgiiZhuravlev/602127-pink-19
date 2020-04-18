@@ -1,95 +1,139 @@
-.contest-achievements {
-  margin: 0;
-  padding: 36px 0 45px;
-  background-color: $c_gray;
-  border: none;
-}
-
-.contest-achievements__intro {
-  width: calc(100% - 80px);
-  margin: 0 auto;
-  margin-bottom: 39px;
-  padding: 0;
-  font: $f_light14;
-  color: $c_red;
-  text-align: center;
-  text-transform: uppercase;
-  letter-spacing: 0.3px;
-}
-
-.contest-achievements__list {
-  width: calc(100% - 43px);
-  margin: 0 auto;
-  padding: 0;
-  list-style: none;
-}
-
-.contest-achievements__item:not(:last-child) {
-  margin-bottom: 47px;
-}
-
-.contest-achievements__label {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  font: $f_reg18;
-  color: $c_darkBlue1;
-}
-
-.contest-achievements__checkbox {
-  margin-right: 32px;
-}
-
-@media (min-width: $ff_medium) {
+@media (max-width: $ff_until-medium) {
   .contest-achievements {
+    padding: 36px 0 45px;
+    background-color: $c_gray;
+    border: none;
+  }
+
+  .contest-achievements__intro {
+    @include resetSize();
+    @include v-spacing(39px);
+    @include h-spacing();
+    width: calc(100% - 80px);
+    font: $f_light14;
+    color: $c_red;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+  }
+
+  .contest-achievements__list {
+    @include resetSize();
+    @include h-spacing();
+    width: calc(100% - 43px);
+    list-style: none;
+  }
+
+  .contest-achievements__item:not(:last-child) {
+    @include v-spacing(47px);
+  }
+
+  .contest-achievements__label {
+    @include flex(row, flex-start);
+    font: $f_reg18;
+    color: $c_darkBlue1;
+  }
+
+  .contest-achievements__checkbox {
+    @include h-spacing(0, 32px);
+  }
+}
+
+@media (min-width: $ff_medium) and (max-width: $ff_until-large) {
+  .contest-achievements {
+    @include v-spacing(65px);
+    @include h-spacing();
     order: 2;
     width: calc(100% - 40px);
-    margin: 0 auto;
-    margin-bottom: 65px;
-    padding: 0 0 50px;
+    padding-bottom: 50px;
     background-color: transparent;
     border: 2px solid $c_darkGray1;
   }
 
   .contest-achievements__intro {
+    @include resetSize();
+    @include v-spacing(45px);
+    @include h-spacing();
     width: fit-content;
-    margin: 0 auto;
-    margin-top: -10px;
-    margin-bottom: 45px;
+    margin-top: -15px;
     padding: 0 25px 0;
     font: $f_reg14;
     color: $c_red;
+    text-align: center;
     text-transform: uppercase;
-    background-color: #ffffff;
     letter-spacing: 0.05px;
+    background-color: #ffffff;
   }
 
   .contest-achievements__list {
-    width: calc(100% - 120px);
+    @include resetSize();
+    @include h-spacing();
+    width: calc(100% - 95px);
+    list-style: none;
+  }
+
+  .contest-achievements__item:not(:last-child) {
+    @include v-spacing(47px);
+  }
+
+  .contest-achievements__label {
+    @include flex(row, flex-start);
+    font: $f_reg18;
+    color: $c_darkBlue1;
   }
 
   .contest-achievements__checkbox {
-    margin-right: 22px;
+    @include h-spacing(0, 22px);
   }
 }
 
 @media (min-width: $ff_large) {
   .contest-achievements {
+    @include v-spacing(65px);
+    @include h-spacing();
+    order: 2;
     width: 100%;
-    padding: 0;
     padding-bottom: 4px;
+    background-color: transparent;
+    border: 2px solid $c_darkGray1;
+  }
+
+  .contest-achievements__intro {
+    @include resetSize();
+    @include v-spacing(45px);
+    @include h-spacing();
+    width: fit-content;
+    margin-top: -15px;
+    padding: 0 25px 0;
+    font: $f_reg14;
+    color: $c_red;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 0.05px;
+    background-color: #ffffff;
   }
 
   .contest-achievements__list {
-    display: flex;
-    flex-direction: column;
-    align-items: space-between;
-    flex-wrap: wrap;
+    @include flex(column, flex-start, stretch);
+    @include resetSize();
+    @include h-spacing();
+    width: calc(100% - 95px);
     height: 170px;
+    list-style: none;
   }
 
   .contest-achievements__item {
-    margin-bottom: 0;
-    margin-right: 58px;
+    @include v-spacing(45px);
+    @include h-spacing(0, 58px);
+  }
+
+  .contest-achievements__label {
+    @include flex(row, flex-start);
+    font: $f_reg18;
+    color: $c_darkBlue1;
+  }
+
+  .contest-achievements__checkbox {
+    @include h-spacing(0, 22px);
   }
 }
