@@ -30,16 +30,19 @@
   .app-download__link.apple {
     width: 47px;
     height: 56px;
+    background: url('../../img/logo-apple.svg') no-repeat;
   }
 
   .app-download__link.android {
     width: 43px;
     height: 47px;
+    background: url('../../img/logo-android.svg') no-repeat;
   }
 
   .app-download__link.windows {
     width: 44px;
     height: 41px;
+    background: url('../../img/logo-microsoft.svg') no-repeat;
   }
 
   .app-download__desc {
@@ -122,6 +125,7 @@
     @include resetSize();
     @include v-spacing(55px);
     padding: 0 48px;
+    list-style: none;
   }
 
   .app-download__link {

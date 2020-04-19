@@ -19,16 +19,22 @@
     height: 22px;
   }
 
-  .header-upside__nav-btn.for-closed-menu {
-    width: 50px;
-    height: 24px;
-    background-color: transparent;
+  .header-upside__logo-tablet,
+  .header-upside__logo-desktop {
+    display: none;
   }
 
-  .header-upside__nav-btn.for-opened-menu {
-    width: 24px;
-    height: 23px;
+  .header-upside__nav-btn {
     background-color: transparent;
+    border: none;
+  }
+
+  .header-upside__nav-btn-closed {
+    display: none;
+  }
+
+  .header-upside__nav-btn-opened {
+    display: block;
   }
 
   .header-upside__nav {
@@ -78,16 +84,22 @@
     height: 40px;
   }
 
-  .header-upside__nav-btn.for-closed-menu {
-    width: 50px;
-    height: 24px;
-    background-color: transparent;
+  .header-upside__logo-mobile,
+  .header-upside__logo-desktop {
+    display: none;
   }
 
-  .header-upside__nav-btn.for-opened-menu {
-    width: 24px;
-    height: 23px;
+  .header-upside__nav-btn {
     background-color: transparent;
+    border: none;
+  }
+
+  .header-upside__nav-btn-closed {
+    display: none;
+  }
+
+  .header-upside__nav-btn-opened {
+    display: block;
   }
 
   .header-upside__nav {
@@ -141,8 +153,12 @@
     height: 40px;
   }
 
-  .header-upside__nav-btn.for-closed-menu,
-  .header-upside__nav-btn.for-opened-menu {
+  .header-upside__logo-mobile,
+  .header-upside__logo-tablet {
+    display: none;
+  }
+
+  .header-upside__nav-btn {
     display: none;
   }
 

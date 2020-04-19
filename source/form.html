@@ -11,8 +11,15 @@
       <div class="header-upside">
         <div class="header-upside__alignment">
           <div class="header-upside__menu opened">
-            <a class="TEMP header-upside__logo"></a>
-            <button class="TEMP header-upside__nav-btn for-closed-menu" type="button" aria-label="Открыть выпадающее меню"></button>
+            <a class="header-upside__logo" href="index.html">
+              <object class="header-upside__logo-mobile" data="img/logo-pink-white-mobile.svg" type="image/svg+xml"></object>
+              <object class="header-upside__logo-tablet" data="img/logo-pink-white-tablet.svg" type="image/svg+xml"></object>
+              <object class="header-upside__logo-desktop" data="img/logo-pink-white-desktop.svg" type="image/svg+xml"></object>
+            </a>
+            <button class="TEMP header-upside__nav-btn" type="button" aria-label="Открыть выпадающее меню">
+              <object class="header-upside__nav-btn-closed" data="img/icon-menu-burger.svg" type="image/svg+xml"></object>
+              <object class="header-upside__nav-btn-opened" data="img/icon-menu-cross.svg" type="image/svg+xml"></object>
+            </button>
           </div>
           <nav class="header-upside__nav">
             <ul class="header-upside__nav-list">
@@ -164,7 +171,10 @@
 
     <footer class="footer">
       <div class="footer__alignment">
-        <a class="TEMP footer__logo" href="index.html" aria-label="Перейти на главную страницу"></a>
+        <a class="footer__logo" href="index.html" aria-label="Перейти на главную страницу">
+          <object class="footer__logo-blended" data="img/logo-pink-blue-mobile.svg" type="image/svg+xml"></object>
+          <object class="footer__logo-desktop" data="img/logo-pink-blue-desktop.svg" type="image/svg+xml"></object>
+        </a>
 
         <ul class="footer__social-list">
           <li class="footer__social-item">
@@ -180,7 +190,7 @@
 
         <a class="footer__dev-link" href="https://htmlacademy.ru/intensive/adaptive">
           <p class="footer__dev">Разработано</p>
-          <svg class="TEMP" width="27" height="34"></svg>
+          <object class="footer__dev-logo" data="img/htmlacademy.svg" type="image/svg+xml" width="27" height="34"></object>
         </a>
       </div>
     </footer>

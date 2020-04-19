@@ -11,8 +11,15 @@
       <div class="header-upside">
         <div class="header-upside__alignment">
           <div class="header-upside__menu opened">
-            <a class="TEMP header-upside__logo"></a>
-            <button class="TEMP header-upside__nav-btn for-closed-menu" type="button" aria-label="Открыть выпадающее меню"></button>
+            <a class="header-upside__logo">
+              <object class="header-upside__logo-mobile" data="img/logo-pink-white-mobile.svg" type="image/svg+xml"></object>
+              <object class="header-upside__logo-tablet" data="img/logo-pink-white-tablet.svg" type="image/svg+xml"></object>
+              <object class="header-upside__logo-desktop" data="img/logo-pink-white-desktop.svg" type="image/svg+xml"></object>
+            </a>
+            <button class="header-upside__nav-btn" type="button" aria-label="Открыть выпадающее меню">
+              <object class="header-upside__nav-btn-closed" data="img/icon-menu-burger.svg" type="image/svg+xml"></object>
+              <object class="header-upside__nav-btn-opened" data="img/icon-menu-cross.svg" type="image/svg+xml"></object>
+            </button>
           </div>
           <nav class="header-upside__nav">
             <ul class="header-upside__nav-list">
@@ -42,13 +49,13 @@
             <a class="app-download__btn-download" href="https://www.apple.com/ru/ios/app-store/" aria-label="Перейти на страницу скачивания">Скачать приложение</a>
             <ul class="app-download__list">
               <li class="app-download__item">
-                <a class="TEMP app-download__link apple" href="https://www.apple.com/ru/ios/app-store/" aria-label="Перейти в Эпл Стор"></a>
+                <a class="app-download__link apple" href="https://www.apple.com/ru/ios/app-store/" aria-label="Перейти в Эпл Стор"></a>
               </li>
               <li class="app-download__item">
-                <a class="TEMP app-download__link android" href="https://play.google.com/store?hl=ru" aria-label="Перейти в Гугл Плей"></a>
+                <a class="app-download__link android" href="https://play.google.com/store?hl=ru" aria-label="Перейти в Гугл Плей"></a>
               </li>
               <li class="app-download__item">
-                <a class="TEMP app-download__link windows" href="https://www.microsoft.com/ru-ru/store/apps/windows-phone" aria-label="Перейти в Виндоус Фон Стор"></a>
+                <a class="app-download__link windows" href="https://www.microsoft.com/ru-ru/store/apps/windows-phone" aria-label="Перейти в Виндоус Фон Стор"></a>
               </li>
             </ul>
             <p class="app-download__desc">Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8</p>
@@ -68,17 +75,21 @@
         <div class="features__wrapper">
           <ul class="features__list">
             <li class="features__item">
-              <div class="features__img mood"></div>
+              <img class="features__img" src="img/iphone-screen-1-desktop@1x.png" srcset="img/iphone-screen-1-desktop@2x.png 2x" alt="IPhone image">
               <h3 class="features__ttl">Поднимает настроение</h3>
               <p class="features__desc">Приложение позволит вам победить осеннюю хандру и депрессию буквально в несколько кликов!</p>
             </li>
             <li class="features__item">
-              <div class="features__img world"></div>
+              <img class="features__img" src="img/iphone-screen-2-desktop@1x.png" srcset="img/iphone-screen-2-desktop@2x.png 2x" alt="IPhone image">
               <h3 class="features__ttl">Меняет мир вокруг</h3>
               <p class="features__desc">Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить&nbsp;эффект</p>
             </li>
             <li class="features__item">
-              <div class="features__img friends"></div>
+              <picture>
+                <source srcset="img/iphone-screen-3-desktop@1x.png 1x, img/iphone-screen-3-desktop@2x.png 2x" media="(min-width: 960px)">
+                <source srcset="img/iphone-screen-3-tablet@1x.png 1x, img/iphone-screen-3-tablet@2x.png 2x" media="(min-width: 660px) and (max-width: 959px)">
+                <img class="features__img single" src="img/iphone-screen-mobile@1x.png" srcset="img/iphone-screen-mobile@2x.png 2x" width="157" height="320" alt="IPhone image">
+              </picture>
               <h3 class="features__ttl">Заводит новых друзей</h3>
               <p class="features__desc">Ставьте лайки, комментируйте, делитесь фотографиями с друзьями и заводите новых</p>
             </li>
@@ -115,8 +126,8 @@
             </li>
           </ul>
 
-          <button class="TEMP reviews__bw-btn ff-no-small ff-no-medium"></button>
-          <button class="TEMP reviews__fw-btn ff-no-small ff-no-medium"></button>
+          <button class="TEMP reviews__bw-btn"></button>
+          <button class="TEMP reviews__fw-btn"></button>
 
           <ul class="reviews__slider-bullets custom__slider-bullets ff-no-large">
             <li class="custom__slider-bullets-item">
@@ -221,9 +232,12 @@
       </section>
     </main>
 
-    <footer class="footer ff-no-small">
+    <footer class="footer index">
       <div class="footer__alignment">
-        <a class="TEMP footer__logo" aria-label="Перейти на главную страницу"></a>
+        <a class="footer__logo" aria-label="Перейти на главную страницу">
+          <object class="footer__logo-blended" data="img/logo-pink-blue-mobile.svg" type="image/svg+xml"></object>
+          <object class="footer__logo-desktop" data="img/logo-pink-blue-desktop.svg" type="image/svg+xml"></object>
+        </a>
 
         <ul class="footer__social-list">
           <li class="footer__social-item">
@@ -239,7 +253,7 @@
 
         <a class="footer__dev-link" href="https://htmlacademy.ru/intensive/adaptive">
           <p class="footer__dev">Разработано</p>
-          <svg class="TEMP" width="27" height="34"></svg>
+          <object class="footer__dev-logo" data="img/htmlacademy.svg" type="image/svg+xml" width="27" height="34"></object>
         </a>
       </div>
     </footer>

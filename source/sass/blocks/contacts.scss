@@ -45,6 +45,11 @@
     background-size: cover;
     border: none;
     overflow: hidden;
+
+    @media (min-resolution: 2dppx), (min-resolution: $ratio2_dpi) {
+      background: url('../../img/bg-map-mobile@2x.jpg') 0 100% no-repeat;
+      background-size: cover;
+    }
   }
 }
 
@@ -115,6 +120,11 @@
     background-size: cover;
     border: none;
     overflow: hidden;
+
+    @media (min-resolution: 2dppx), (min-resolution: $ratio2_dpi) {
+      background: url('../../img/bg-map-tablet@2x.jpg') 0% 72% no-repeat;
+      background-size: cover;
+    }
   }
 }
 
@@ -181,5 +191,10 @@
     background-size: cover;
     border: none;
     overflow: hidden;
+
+    @media (min-resolution: 2dppx), (min-resolution: $ratio2_dpi) {
+      background: url('../../img/bg-map-desktop@2x.jpg') 0% 59% no-repeat;
+      background-size: cover;
+    }
   }
 }

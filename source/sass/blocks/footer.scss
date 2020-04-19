@@ -3,13 +3,20 @@
     padding: 41px 0;
   }
 
+  .footer.index {
+    display: none;
+  }
+
   .footer__logo {
     @include v-spacing(40px);
     @include h-spacing();
     display: block;
     width: 147px;
     height: 40px;
-    border: 1px dashed red;
+  }
+
+  .footer__logo-desktop {
+    display: none;
   }
 
   .footer__social-list {
@@ -62,7 +69,10 @@
     width: 147px;
     height: 40px;
     margin-top: -15px;
-    border: 1px dashed red;
+  }
+
+  .footer__logo-desktop {
+    display: none;
   }
 
   .footer__social-list {
@@ -115,7 +125,10 @@
     width: 147px;
     height: 40px;
     margin-top: -15px;
-    border: 1px dashed red;
+  }
+
+  .footer__logo-blended {
+    display: none;
   }
 
   .footer__social-list {

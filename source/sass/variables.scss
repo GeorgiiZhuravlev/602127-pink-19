@@ -5,6 +5,11 @@ $ff_medium: 660px;
 $ff_until-large: 959px;
 $ff_large: 960px;
 
+// Device pixel ratios
+// 1dppx = 96dpi
+$ratio1_dpi: 96dpi;
+$ratio2_dpi: 192dpi;
+
 // Alignment
 $align_small: 320px;
 $align_small-fields: calc(#{$align_small} - 40px);
