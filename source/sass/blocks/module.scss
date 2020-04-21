@@ -1,0 +1,177 @@
+@media (max-width: $ff_until-medium) {
+  .module__bg-off {
+    @include flex(row, center);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+  }
+
+  .module__bg-off.vis-off {
+    display: none;
+  }
+
+  .module__window {
+    width: 320px;
+    padding-top: 45px;
+    box-shadow: 0px 7px 15px 0 rgba(0, 1, 1, 0.15);
+    background-color: $c_white;
+  }
+
+  .module__ttl {
+    @include resetSize();
+    @include v-spacing(20px);
+    @include h-spacing();
+    width: 280px;
+    font: $f_bold18;
+    text-align: center;
+    line-height: 24px;
+  }
+
+  .module__desc {
+    @include resetSize();
+    @include v-spacing(40px);
+    @include h-spacing();
+    width: $align_small-fields;
+    font: $f_reg14;
+    color: $c_darkBlue1;
+    text-align: center;
+    line-height: 24px;
+  }
+
+  .module__control {
+    padding-bottom: 54px;
+  }
+
+  .module__control.zone {
+    padding: 50px 0 54px;
+    background-color: $c_gray;
+  }
+
+  .module__btn {
+    @include h-spacing();
+    @include btnConfirm($c_green);
+    width: calc(100% - 40px);
+  }
+}
+
+@media (min-width: $ff_medium) and (max-width: $ff_until-large) {
+  .module__bg-off {
+    @include flex(row, center);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+  }
+
+  .module__bg-off.vis-off {
+    display: none;
+  }
+
+  .module__window {
+    width: 460px;
+    padding-top: 45px;
+    box-shadow: 0px 7px 15px 0 rgba(0, 1, 1, 0.15);
+    background-color: $c_white;
+  }
+
+  .module__ttl {
+    @include resetSize();
+    @include v-spacing(20px);
+    @include h-spacing();
+    width: 260px;
+    font: $f_bold30;
+    text-align: center;
+    line-height: 40px;
+  }
+
+  .module__desc {
+    @include resetSize();
+    @include v-spacing(40px);
+    @include h-spacing();
+    width: 310px;
+    font: $f_reg18;
+    color: $c_darkBlue1;
+    text-align: center;
+    line-height: 24px;
+  }
+
+  .module__control {
+    padding-bottom: 54px;
+  }
+
+  .module__control.zone {
+    padding: 50px 0 54px;
+    background-color: $c_gray;
+  }
+
+  .module__btn {
+    @include h-spacing();
+    @include btnConfirm($c_green);
+    width: calc(100% - 80px);
+  }
+}
+
+@media (min-width: $ff_large) {
+  .module__bg-off {
+    @include flex(row, center);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+  }
+
+  .module__bg-off.vis-off {
+    display: none;
+  }
+
+  .module__window {
+    width: 780px;
+    padding-top: 45px;
+    box-shadow: 0px 7px 15px 0 rgba(0, 1, 1, 0.15);
+    background-color: $c_white;
+  }
+
+  .module__ttl {
+    @include resetSize();
+    @include v-spacing(20px);
+    @include h-spacing();
+    width: calc(100% - 370px);
+    font: $f_bold30;
+    text-align: center;
+    line-height: 40px;
+  }
+
+  .module__desc {
+    @include resetSize();
+    @include v-spacing(60px);
+    @include h-spacing();
+    width: calc(100% - 385px);
+    font: $f_reg18;
+    color: $c_darkBlue1;
+    text-align: center;
+    line-height: 24px;
+  }
+
+  .module__control,
+  .module__control.zone {
+    padding: 50px 0 54px;
+    background-color: $c_gray;
+  }
+
+  .module__btn {
+    @include h-spacing();
+    @include btnConfirm($c_green);
+  }
+
+  .module__control .module__btn {
+    width: calc(100% - 480px);
+  }
+
+  .module__control.zone .module__btn {
+    width: calc(100% - 360px);
+  }
+}
