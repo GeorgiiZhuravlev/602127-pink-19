@@ -12,13 +12,8 @@
         <div class="header-upside__alignment">
           <div class="header-upside__menu opened">
             <a class="header-upside__logo" href="index.html">
-              <object class="header-upside__logo-mobile" data="img/logo-pink-white-mobile.svg" type="image/svg+xml"></object>
-              <object class="header-upside__logo-tablet" data="img/logo-pink-white-tablet.svg" type="image/svg+xml"></object>
-              <object class="header-upside__logo-desktop" data="img/logo-pink-white-desktop.svg" type="image/svg+xml"></object>
             </a>
             <button class="header-upside__nav-btn" type="button" aria-label="Открыть выпадающее меню">
-              <object class="header-upside__nav-btn-closed" data="img/icon-menu-burger.svg" type="image/svg+xml"></object>
-              <object class="header-upside__nav-btn-opened" data="img/icon-menu-cross.svg" type="image/svg+xml"></object>
             </button>
           </div>
           <nav class="header-upside__nav">
@@ -27,7 +22,7 @@
                 <a class="header-upside__nav-link" href="index.html" aria-label="Перейти на главную страницу">Главная</a>
               </li>
               <li class="header-upside__nav-item">
-                <a class="header-upside__nav-link" aria-hidden="true">Фотографии</a>
+                <a class="header-upside__nav-link" tabindex="-1" aria-hidden="true">Фотографии</a>
               </li>
               <li class="header-upside__nav-item">
                 <a class="header-upside__nav-link" href="form.html" aria-label="Перейти на страницу конкурса">Конкурс</a>
@@ -42,7 +37,7 @@
 
       <div class="header-downside">
         <div class="header-downside__alignment">
-          <h3 class="header-downside__intro">Фотографии пользователей</h3>
+          <h3 class="header-downside__intro">Фотографии<br>пользователей</h3>
         </div>
       </div>
     </header>
@@ -57,8 +52,11 @@
           <a class="post__link-img" href="#" aria-label="Перейти на полноразмерную версию">
             <p class="post__mark">Панорама дня</p>
             <picture>
+              <source srcset="img/panorama-desktop@1x.webp 1x, img/panorama-desktop@2x.webp 2x" media="(min-width: 960px)">
               <source srcset="img/panorama-desktop@1x.jpg 1x, img/panorama-desktop@2x.jpg 2x" media="(min-width: 960px)">
+              <source srcset="img/panorama-tablet@1x.webp 1x, img/panorama-tablet@2x.webp 2x" media="(min-width: 660px) and (max-width: 959px)">
               <source srcset="img/panorama-tablet@1x.jpg 1x, img/panorama-tablet@2x.jpg 2x" media="(min-width: 660px) and (max-width: 959px)">
+              <source srcset="img/panorama-mobile@1x.webp 1x, img/panorama-mobile@2x.webp 2x">
               <img class="post__user-img panorama" src="img/panorama-mobile@1x.jpg" srcset="img/panorama-mobile@2x.jpg 2x" alt="">
             </picture>
           </a>
@@ -83,8 +81,11 @@
               <h2 class="visually-hidden">Пост пользователя</h2>
               <a class="post__link-img" href="#" aria-label="Перейти на полноразмерную версию">
                 <picture>
+                  <source srcset="img/photo-car-desktop@1x.webp 1x, img/photo-car-desktop@2x.webp 2x" media="(min-width: 960px)">
                   <source srcset="img/photo-car-desktop@1x.jpg 1x, img/photo-car-desktop@2x.jpg 2x" media="(min-width: 960px)">
+                  <source srcset="img/photo-car-tablet@1x.webp 1x, img/photo-car-tablet@2x.webp 2x" media="(min-width: 660px) and (max-width: 959px)">
                   <source srcset="img/photo-car-tablet@1x.jpg 1x, img/photo-car-tablet@2x.jpg 2x" media="(min-width: 660px) and (max-width: 959px)">
+                  <source srcset="img/photo-car-mobile@1x.webp 1x, img/photo-car-mobile@2x.webp 2x">
                   <img class="post__user-img" src="img/photo-car-mobile@1x.jpg" srcset="img/photo-car-mobile@2x.jpg 2x" alt="">
                 </picture>
               </a>
@@ -109,8 +110,11 @@
               <h2 class="visually-hidden">Пост пользователя</h2>
               <a class="post__link-img" href="#" aria-label="Перейти на полноразмерную версию">
                 <picture>
+                  <source srcset="img/photo-drumset-desktop@1x.webp 1x, img/photo-drumset-desktop@2x.webp 2x" media="(min-width: 960px)">
                   <source srcset="img/photo-drumset-desktop@1x.jpg 1x, img/photo-drumset-desktop@2x.jpg 2x" media="(min-width: 960px)">
+                  <source srcset="img/photo-drumset-tablet@1x.webp 1x, img/photo-drumset-tablet@2x.webp 2x" media="(min-width: 660px) and (max-width: 959px)">
                   <source srcset="img/photo-drumset-tablet@1x.jpg 1x, img/photo-drumset-tablet@2x.jpg 2x" media="(min-width: 660px) and (max-width: 959px)">
+                  <source srcset="img/photo-drumset-mobile@1x.webp 1x, img/photo-drumset-mobile@2x.webp 2x">
                   <img class="post__user-img" src="img/photo-drumset-mobile@1x.jpg" srcset="img/photo-drumset-mobile@2x.jpg 2x" alt="">
                 </picture>
               </a>
@@ -135,8 +139,11 @@
               <h2 class="visually-hidden">Пост пользователя</h2>
               <a class="post__link-img" href="#" aria-label="Перейти на полноразмерную версию">
                 <picture>
+                  <source srcset="img/photo-window-desktop@1x.webp 1x, img/photo-window-desktop@2x.webp 2x" media="(min-width: 960px)">
                   <source srcset="img/photo-window-desktop@1x.jpg 1x, img/photo-window-desktop@2x.jpg 2x" media="(min-width: 960px)">
-                  <source srcset="img/photo-window-tablet@1x.jpg 1x, img/photo-window-tablet@2x.jpg 2x" media="(min-width: 660px) and (max-width: 959px">
+                  <source srcset="img/photo-window-tablet@1x.webp 1x, img/photo-window-tablet@2x.webp 2x" media="(min-width: 660px) and (max-width: 959px)">
+                  <source srcset="img/photo-window-tablet@1x.jpg 1x, img/photo-window-tablet@2x.jpg 2x" media="(min-width: 660px) and (max-width: 959px)">
+                  <source srcset="img/photo-window-mobile@1x.webp 1x, img/photo-window-mobile@2x.webp 2x">
                   <img class="post__user-img" src="img/photo-window-mobile@1x.jpg" srcset="img/photo-window-mobile@2x.jpg 2x" alt="">
                 </picture>
               </a>
@@ -161,8 +168,11 @@
               <h2 class="visually-hidden">Пост пользователя</h2>
               <a class="post__link-img" href="#" aria-label="Перейти на полноразмерную версию">
                 <picture>
+                  <source srcset="img/photo-fair-desktop@1x.webp 1x, img/photo-fair-desktop@2x.webp 2x" media="(min-width: 960px)">
                   <source srcset="img/photo-fair-desktop@1x.jpg 1x, img/photo-fair-desktop@2x.jpg 2x" media="(min-width: 960px)">
+                  <source srcset="img/photo-fair-tablet@1x.webp 1x, img/photo-fair-tablet@2x.webp 2x" media="(min-width: 660px) and (max-width: 959px)">
                   <source srcset="img/photo-fair-tablet@1x.jpg 1x, img/photo-fair-tablet@2x.jpg 2x" media="(min-width: 660px) and (max-width: 959px)">
+                  <source srcset="img/photo-fair-mobile@1x.webp 1x, img/photo-fair-mobile@2x.webp 2x">
                   <img class="post__user-img" src="img/photo-fair-mobile@1x.jpg" srcset="img/photo-fair-mobile@2x.jpg 2x" alt="">
                 </picture>
               </a>
@@ -187,8 +197,11 @@
               <h2 class="visually-hidden">Пост пользователя</h2>
               <a class="post__link-img" href="#" aria-label="Перейти на полноразмерную версию">
                 <picture>
+                  <source srcset="img/photo-pov-desktop@1x.webp 1x, img/photo-pov-desktop@2x.webp 2x" media="(min-width: 960px)">
                   <source srcset="img/photo-pov-desktop@1x.jpg 1x, img/photo-pov-desktop@2x.jpg 2x" media="(min-width: 960px)">
+                  <source srcset="img/photo-pov-tablet@1x.webp 1x, img/photo-pov-tablet@2x.webp 2x" media="(min-width: 660px) and (max-width: 959px)">
                   <source srcset="img/photo-pov-tablet@1x.jpg 1x, img/photo-pov-tablet@2x.jpg 2x" media="(min-width: 660px) and (max-width: 959px)">
+                  <source srcset="img/photo-pov-mobile@1x.webp 1x, img/photo-pov-mobile@2x.webp 2x">
                   <img class="post__user-img" src="img/photo-pov-mobile@1x.jpg" srcset="img/photo-pov-mobile@2x.jpg 2x" alt="">
                 </picture>
               </a>
@@ -213,8 +226,11 @@
               <h2 class="visually-hidden">Пост пользователя</h2>
               <a class="post__link-img" href="#" aria-label="Перейти на полноразмерную версию">
                 <picture>
+                  <source srcset="img/photo-wing-desktop@1x.webp 1x, img/photo-wing-desktop@2x.webp 2x" media="(min-width: 960px)">
                   <source srcset="img/photo-wing-desktop@1x.jpg 1x, img/photo-wing-desktop@2x.jpg 2x" media="(min-width: 960px)">
+                  <source srcset="img/photo-wing-tablet@1x.webp 1x, img/photo-wing-tablet@2x.webp 2x" media="(min-width: 660px) and (max-width: 959px)">
                   <source srcset="img/photo-wing-tablet@1x.jpg 1x, img/photo-wing-tablet@2x.jpg 2x" media="(min-width: 660px) and (max-width: 959px)">
+                  <source srcset="img/photo-wing-mobile@1x.webp 1x, img/photo-wing-mobile@2x.webp 2x">
                   <img class="post__user-img" src="img/photo-wing-mobile@1x.jpg" srcset="img/photo-wing-mobile@2x.jpg 2x" alt="">
                 </picture>
               </a>
@@ -243,11 +259,16 @@
 
       <section class="editor">
         <h2 class="visually-hidden">Обработать изображение</h2>
-        <picture>
-          <source srcset="img/photo-road-desktop@1x.jpg 1x, img/photo-road-desktop@2x.jpg 2x" media="(min-width: 960px">
-          <source srcset="img/photo-road-tablet@1x.jpg 1x, img/photo-road-tablet@2x.jpg 2x" media="(min-width: 660px) and (max-width: 959px)">
-          <img class="editor__user-img" src="img/photo-road-mobile@1x.jpg" srcset="img/photo-road-mobile@2x.jpg 2x" width="280" height="374" alt="Изображение пользователя">
-        </picture>
+        <a class="editor__link-img" href="#" aria-label="Перейти на полноразмерную версию">
+          <picture>
+            <source srcset="img/photo-road-desktop@1x.webp 1x, img/photo-road-desktop@2x.webp 2x" media="(min-width: 960px)">
+            <source srcset="img/photo-road-desktop@1x.jpg 1x, img/photo-road-desktop@2x.jpg 2x" media="(min-width: 960px)">
+            <source srcset="img/photo-road-tablet@1x.webp 1x, img/photo-road-tablet@2x.webp 2x" media="(min-width: 660px) and (max-width: 959px)">
+            <source srcset="img/photo-road-tablet@1x.jpg 1x, img/photo-road-tablet@2x.jpg 2x" media="(min-width: 660px) and (max-width: 959px)">
+            <source srcset="img/photo-road-mobile@1x.webp 1x, img/photo-road-mobile@2x.webp 2x">
+            <img class="editor__user-img" src="img/photo-road-mobile@1x.jpg" srcset="img/photo-road-mobile@2x.jpg 2x" width="280" height="374" alt="Изображение пользователя">
+          </picture>
+        </a>
         <form class="editor__form" method="get" action="https://echo.htmlacademy.ru" name="editor" autocomplete="off">
           <ul class="editor__control">
             <li class="editor__control-item">
@@ -256,7 +277,7 @@
               <label class="editor__btn" for="editor__switcher-vignette">
                 <svg class="TEMP" width="44" height="44"></svg>
               </label>
-              <input class="editor__range vignette" type="range" name="editor__range-vignette" min="0" max="100" step="1" value="0" aria-label="Ползунок виньетирования">
+              <input class="editor__range custom__input-range vignette" type="range" name="editor__range-vignette" min="0" max="100" step="1" value="0" aria-label="Ползунок виньетирования">
             </li>
             <li class="editor__control-item">
               <svg class="TEMP editor__icon-fill" width="24" height="22"></svg>
@@ -264,7 +285,7 @@
               <label class="editor__btn" for="editor__switcher-fill">
                 <svg class="TEMP" width="48" height="43"></svg>
               </label>
-              <input class="editor__range fill" type="range" name="editor__range-fill" min="0" max="100" step="1" value="0" aria-label="Ползунок заливки">
+              <input class="editor__range custom__input-range fill" type="range" name="editor__range-fill" min="0" max="100" step="1" value="0" aria-label="Ползунок заливки">
             </li>
             <li class="editor__control-item">
               <svg class="TEMP editor__icon-contrast" width="16" height="16"></svg>
@@ -272,7 +293,7 @@
               <label class="editor__btn" for="editor__switcher-contrast">
                 <svg class="TEMP" width="32" height="32"></svg>
               </label>
-              <input class="editor__range contrast" type="range" name="editor__range-contrast" min="0" max="100" step="1" value="0" aria-label="Ползунок контраста">
+              <input class="editor__range custom__input-range contrast" type="range" name="editor__range-contrast" min="0" max="100" step="1" value="0" aria-label="Ползунок контраста">
             </li>
           </ul>
           <hr class="custom__hr">
@@ -309,5 +330,8 @@
         </a>
       </div>
     </footer>
+
+    <script src="js/picturefill-min.js"></script>
+    <script src="js/header-menu.js"></script>
   </body>
 </html>

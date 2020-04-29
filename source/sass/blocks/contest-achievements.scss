@@ -1,13 +1,13 @@
 @media (max-width: $ff_until-medium) {
   .contest-achievements {
-    padding: 36px 0 45px;
+    padding: 36px 0 43px;
     background-color: $c_gray;
     border: none;
   }
 
   .contest-achievements__intro {
     @include resetSize();
-    @include v-spacing(39px);
+    @include v-spacing(37px);
     @include h-spacing();
     width: calc(100% - 80px);
     font: $f_light14;
@@ -20,12 +20,12 @@
   .contest-achievements__list {
     @include resetSize();
     @include h-spacing();
-    width: calc(100% - 43px);
+    width: calc(100% - 38px);
     list-style: none;
   }
 
   .contest-achievements__item:not(:last-child) {
-    @include v-spacing(47px);
+    @include v-spacing(43px);
   }
 
   .contest-achievements__label {
@@ -35,7 +35,7 @@
   }
 
   .contest-achievements__checkbox {
-    @include h-spacing(0, 32px);
+    @include h-spacing(0, 30px);
   }
 }
 
@@ -44,15 +44,16 @@
     @include v-spacing(65px);
     @include h-spacing();
     order: 2;
-    width: calc(100% - 40px);
+    width: calc(100% - 38px);
     padding-bottom: 50px;
     background-color: transparent;
     border: 2px solid $c_darkGray1;
+    border-radius: 3px;
   }
 
   .contest-achievements__intro {
     @include resetSize();
-    @include v-spacing(45px);
+    @include v-spacing(43px);
     @include h-spacing();
     width: fit-content;
     margin-top: -15px;
@@ -73,7 +74,7 @@
   }
 
   .contest-achievements__item:not(:last-child) {
-    @include v-spacing(47px);
+    @include v-spacing(43px);
   }
 
   .contest-achievements__label {
@@ -83,24 +84,25 @@
   }
 
   .contest-achievements__checkbox {
-    @include h-spacing(0, 22px);
+    @include h-spacing(0, 20px);
   }
 }
 
 @media (min-width: $ff_large) {
   .contest-achievements {
-    @include v-spacing(65px);
+    @include v-spacing(67px);
     @include h-spacing();
     order: 2;
     width: 100%;
     padding-bottom: 4px;
     background-color: transparent;
     border: 2px solid $c_darkGray1;
+    border-radius: 3px;
   }
 
   .contest-achievements__intro {
     @include resetSize();
-    @include v-spacing(45px);
+    @include v-spacing(42px);
     @include h-spacing();
     width: fit-content;
     margin-top: -15px;
@@ -124,7 +126,7 @@
 
   .contest-achievements__item {
     @include v-spacing(45px);
-    @include h-spacing(0, 58px);
+    @include h-spacing(0, 53px);
   }
 
   .contest-achievements__label {

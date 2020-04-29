@@ -8,11 +8,11 @@
     @include v-spacing(49px);
     @include h-spacing();
     width: calc(100% - 70px);
-    font: $f_light14;
+    font: $f_reg14;
     color: $c_darkBlue1;
     text-align: center;
     line-height: 30px;
-    letter-spacing: 0.3px;
+    letter-spacing: 0.05px;
   }
 
   .user-posts__list {
@@ -24,12 +24,12 @@
     @include resetSize();
     @include h-spacing();
     width: $align_small-fields;
-    padding: 21px 0 42px;
-    font: $f_light14;
+    padding: 23px 0 42px;
+    font: $f_reg14;
     color: $c_darkBlue1;
     text-align: center;
     line-height: 30px;
-    letter-spacing: 0.3px;
+    letter-spacing: 0.05px;
   }
 }
 

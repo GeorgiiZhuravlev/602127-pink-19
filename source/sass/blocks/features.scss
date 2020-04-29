@@ -28,14 +28,14 @@
     @include v-spacing(28px);
     @include h-spacing();
     position: relative;
-    padding: 82px 0 283px;
+    padding: 82px 0 287px;
     list-style: none;
     text-align: center;
     overflow: hidden;
   }
 
   .features__item {
-    @include v-spacing(35px);
+    @include v-spacing(31px);
     @include h-spacing();
     width: $align_small-fields;
   }
@@ -56,14 +56,15 @@
     @include resetSize();
     @include v-spacing(12px);
     font: $f_bold18;
+    line-height: 24px;
   }
 
   .features__desc {
     @include resetSize();
-    font: $f_light14;
+    font: $f_reg14;
     color: $c_darkBlue1;
-    line-height: 23px;
-    letter-spacing: 0.3px;
+    line-height: 24px;
+    letter-spacing: 0.05px;
   }
 }
 
@@ -114,6 +115,7 @@
     @include v-spacing(13px);
     font: $f_bold18;
     text-align: left;
+    line-height: 24px;
   }
 
   .features__desc {
@@ -143,7 +145,7 @@
   }
 
   .features__intro-wrapper {
-    padding: 67px 0 76px;
+    padding: 67px 0 80px;
   }
 
   .features__intro {
@@ -175,10 +177,10 @@
 
   .features__img,
   .features__img.single {
+    @include v-spacing(21px);
     position: static;
-    width: 300px;
-    height: 310px;
-    margin-bottom: 47px;
+    width: 290px;
+    height: auto;
   }
 
   .features__ttl {

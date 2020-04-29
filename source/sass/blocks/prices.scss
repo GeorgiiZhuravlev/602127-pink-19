@@ -21,7 +21,7 @@
 
   .prices__heading {
     width: 275px;
-    padding: 19px 0 17px;
+    padding: 15px 0 20px;
     background-color: $c_darkBlue1;
     border: 2px solid $c_darkGray1;
   }
@@ -31,6 +31,7 @@
     @include v-spacing(2px);
     font: $f_bold18;
     color: $c_white;
+    line-height: 30px;
     text-transform: uppercase;
   }
 
@@ -38,16 +39,16 @@
     @include resetSize();
     font: $f_light24;
     color: $c_white;
-    line-height: 37px;
+    line-height: 30px;
   }
 
   .prices__option {
     padding: 14px 22px;
-    font: $f_light14;
+    font: $f_reg14;
     color: $c_darkBlue1;
     vertical-align: center;
     text-transform: uppercase;
-    letter-spacing: 0.3px;
+    letter-spacing: 0.05px;
     line-height: 30px;
     background-color: $c_white;
     border: 2px solid $c_darkGray1;
@@ -58,17 +59,25 @@
   }
 
   .prices__slider-bullets .custom__slider-bullets-input ~ .custom__slider-bullet {
-    @include slider-bullet($c_gray);
+    @include slider-bullet($c_darkGray2);
+
+    &:hover {
+      @include slider-bullet($c_darkBlue1);
+    }
+
+    &:active {
+      @include slider-bullet($c_gray);
+    }
   }
 
   .prices__slider-bullets .custom__slider-bullets-input:checked ~ .custom__slider-bullet {
-    @include slider-bullet-active($c_gray);
+    @include slider-bullet-active();
   }
 }
 
 @media (min-width: $ff_medium) and (max-width: $ff_until-large) {
   .prices {
-    padding: 90px 20px 50px;
+    padding: 88px 20px 50px;
     background-color: $c_gray;
   }
 
@@ -81,8 +90,9 @@
   }
 
   .prices__heading {
+    @include v-spacing(8px);
     width: 153px;
-    padding: 15px 0 6px;
+    padding: 12px 0 10px;
     background-color: $c_darkBlue1;
     border: 2px solid $c_darkGray1;
     border-top: none;
@@ -95,25 +105,26 @@
 
   .prices__ttl {
     @include resetSize();
-    @include v-spacing(-2px)
+    @include v-spacing(-3px);
     font: $f_bold16;
     color: $c_white;
     text-transform: uppercase;
+    line-height: 30px;
   }
 
   .prices__price {
     @include resetSize();
     font: $f_light18;
     color: $c_white;
-    line-height: 37px;
+    line-height: 30px;
   }
 
   .prices__option {
-    padding: 15px 14px;
+    padding: 5px 14px 9px;
     font: $f_reg14;
     color: $c_darkBlue1;
     vertical-align: center;
-    line-height: 14px;
+    line-height: 30px;
     letter-spacing: 0.1px;
     background-color: $c_white;
     border: 2px solid $c_darkGray1;
@@ -130,7 +141,7 @@
 
 @media (min-width: $ff_large) {
   .prices {
-    padding: 149px 0 74px;
+    padding: 147px 0 76px;
     background-color: $c_gray;
   }
 
@@ -144,7 +155,7 @@
 
   .prices__heading {
     width: 233px;
-    padding: 20px 0 16px;
+    padding: 16px 0 20px;
     background-color: $c_darkBlue1;
     border: 2px solid $c_darkGray1;
     border-top: none;
@@ -157,24 +168,26 @@
 
   .prices__ttl {
     @include resetSize();
+    @include v-spacing(2px);
     font: $f_bold18;
     color: $c_white;
     text-transform: uppercase;
+    line-height: 30px;
   }
 
   .prices__price {
     @include resetSize();
     font: $f_light24;
     color: $c_white;
-    line-height: 37px;
+    line-height: 30px;
   }
 
   .prices__option {
-    padding: 21px 21px 24px;
+    padding: 12px 21px 16px;
     font: $f_reg18;
     color: $c_darkBlue1;
     vertical-align: center;
-    line-height: 14px;
+    line-height: 30px;
     letter-spacing: 0.1px;
     background-color: $c_white;
     border: 2px solid $c_darkGray1;

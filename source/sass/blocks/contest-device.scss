@@ -49,6 +49,7 @@
     padding: 0 30px 54px;
     background-color: transparent;
     border: 2px solid $c_darkGray1;
+    border-radius: 3px;
   }
 
   .contest-device__intro {
@@ -90,11 +91,13 @@
 
 @media (min-width: $ff_large) {
   .contest-device {
+    @include v-spacing(42px);
     order: 0;
     width: 435px;
     padding: 0 30px 54px;
     background-color: transparent;
     border: 2px solid $c_darkGray1;
+    border-radius: 3px;
   }
 
   .contest-device__intro {

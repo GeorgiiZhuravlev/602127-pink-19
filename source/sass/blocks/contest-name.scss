@@ -86,7 +86,7 @@
 @media (min-width: $ff_large) {
   .contest-name {
     @include resetSize();
-    @include v-spacing(46px);
+    @include v-spacing(42px);
     width: 475px;
     padding: 1px 0;
     border: none;

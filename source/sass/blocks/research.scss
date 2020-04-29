@@ -107,18 +107,19 @@
 
   .research__wrapper {
     flex-grow: 1;
-    padding-top: 34px;
+    padding-top: 43px;
   }
 
   .research__ttl {
     @include resetSize();
-    @include v-spacing(19px);
+    @include v-spacing(23px);
     font: $f_bold30;
+    line-height: 30px;
   }
 
   .research__desc {
     @include resetSize();
-    @include v-spacing(36px);
+    @include v-spacing(33px);
     padding-right: 20px;
     font: $f_reg18;
     color: $c_darkBlue1;
@@ -128,5 +129,6 @@
   .research__link {
     font: $f_reg18;
     color: $c_red;
+    line-height: 30px;
   }
 }

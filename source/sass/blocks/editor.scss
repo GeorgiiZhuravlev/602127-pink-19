@@ -42,23 +42,47 @@
     @include h-spacing();
     position: absolute;
     left: 38px;
-    bottom: -19px;
+    bottom: -9px;
     display: block;
     width: calc(100% - 80px);
   }
 
   .editor__submit-btn {
     @include h-spacing();
-    @include btnGrand($c_red);
+    @include btnGrand($c_red, $c_red);
     width: $align_small-fields;
     margin-top: 38px;
     margin-bottom: 13px;
+
+    &:hover {
+      @include btnGrand($c_white, $c_red, $c_red);
+    }
+
+    &:active {
+      @include btnGrand(rgba(255, 255, 255, 0.3), $c_red, $c_red);
+    }
+
+    &:disabled {
+      @include btnGrand($c_white, $c_darkGray1, $c_darkGray1);
+    }
   }
 
   .editor__reset-btn {
     @include h-spacing();
-    @include btnGrand($c_darkGray1);
+    @include btnGrand($c_darkGray1, $c_darkGray1);
     width: $align_small-fields;
+
+    &:hover {
+      @include btnGrand($c_darkGray2, $c_darkGray2);
+    }
+
+    &:active {
+      @include btnGrand(rgba(255, 255, 255, 0.3), $c_darkGray2, $c_darkGray2);
+    }
+
+    &:disabled {
+      @include btnGrand($c_white, $c_darkGray1, $c_darkGray1);
+    }
   }
 }
 
@@ -79,7 +103,7 @@
   .editor__control {
     @include flex(column, flex-start, flex-end);
     @include resetSize();
-    @include v-spacing(66px);
+    @include v-spacing(72px);
     position: relative;
     width: 300px;
     padding-left: 27px;
@@ -89,12 +113,12 @@
   .editor__control-item {
     @include flex(row, flex-end);
     @include resetSize();
-    padding: 7px 20px 22px 0;
+    padding: 9px 20px 22px 0;
     border-bottom: 1px solid $c_darkGray1;
   }
 
   .editor__control-item:not(:first-child) {
-    padding: 24px 20px 22px 0;
+    padding: 28px 20px 22px 0;
   }
 
   .editor__icon-vignette,
@@ -131,17 +155,41 @@
   .editor__submit-btn {
     @include v-spacing(24px);
     @include h-spacing();
-    @include btnGrand($c_red);
+    @include btnGrand($c_red, $c_red);
     width: calc(100% - 40px);
     margin-top: 38px;
     margin-left: 26px;
+
+    &:hover {
+      @include btnGrand($c_white, $c_red, $c_red);
+    }
+
+    &:active {
+      @include btnGrand(rgba(255, 255, 255, 0.3), $c_red, $c_red);
+    }
+
+    &:disabled {
+      @include btnGrand($c_white, $c_darkGray1, $c_darkGray1);
+    }
   }
 
   .editor__reset-btn {
     @include h-spacing();
-    @include btnGrand($c_darkGray1);
+    @include btnGrand($c_darkGray1, $c_darkGray1);
     width: calc(100% - 40px);
     margin-left: 26px;
+
+    &:hover {
+      @include btnGrand($c_darkGray2, $c_darkGray2);
+    }
+
+    &:active {
+      @include btnGrand(rgba(255, 255, 255, 0.3), $c_darkGray2, $c_darkGray2);
+    }
+
+    &:disabled {
+      @include btnGrand($c_white, $c_darkGray1, $c_darkGray1);
+    }
   }
 }
 
@@ -234,13 +282,37 @@
 
   .editor__submit-btn {
     @include resetSize();
-    @include btnGrand($c_red);
+    @include btnGrand($c_red, $c_red);
     width: 182px;
+
+    &:hover {
+      @include btnGrand($c_white, $c_red, $c_red);
+    }
+
+    &:active {
+      @include btnGrand(rgba(255, 255, 255, 0.3), $c_red, $c_red);
+    }
+
+    &:disabled {
+      @include btnGrand($c_white, $c_darkGray1, $c_darkGray1);
+    }
   }
 
   .editor__reset-btn {
     @include resetSize();
-    @include btnGrand($c_darkGray1);
+    @include btnGrand($c_darkGray1, $c_darkGray1);
     width: 182px;
+
+    &:hover {
+      @include btnGrand($c_darkGray2, $c_darkGray2);
+    }
+
+    &:active {
+      @include btnGrand(rgba(255, 255, 255, 0.3), $c_darkGray2, $c_darkGray2);
+    }
+
+    &:disabled {
+      @include btnGrand($c_white, $c_darkGray1, $c_darkGray1);
+    }
   }
 }

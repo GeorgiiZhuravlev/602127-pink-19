@@ -45,6 +45,7 @@
     width: calc(100% - 40px);
     padding-bottom: 20px;
     border: 2px solid $c_darkGray1;
+    border-radius: 3px;
   }
 
   .contest-contacts__intro {
@@ -72,15 +73,23 @@
     width: calc(100% - 20px);
 
     &::after {
-      content: "";
+      content: '';
       position: absolute;
-      top: 19px;
-      right: 55px;
+      top: 2px;
+      right: 39px;
       display: block;
-      width: 25px;
-      height: 25px;
-      border: 1px dashed red;
+      width: 60px;
+      height: 60px;
+      background-color: $c_darkGray1;
     }
+  }
+
+  .contest-contacts__item.tel::after {
+    background: url('../../img/icon-contacts-phone.svg') 50% no-repeat $c_darkGray1;
+  }
+
+  .contest-contacts__item.email::after {
+    background: url('../../img/icon-contacts-mail.svg') 50% no-repeat $c_darkGray1;
   }
 
   .contest-contacts__item:not(:last-child) {
@@ -104,7 +113,6 @@
     @include h-spacing();
     display: block;
     width: calc(100% - 75px);
-    border-right: 63px solid $c_darkGray1;
   }
 }
 
@@ -117,6 +125,7 @@
     margin-top: 25px;
     padding: 0 53px 0 57px;
     border: 2px solid $c_darkGray1;
+    border-radius: 3px;
   }
 
   .contest-contacts__intro {
@@ -143,17 +152,24 @@
     position: relative;
     width: 375px;
 
-    &::after {
-      content: "";
+    &:after {
+      content: '';
       position: absolute;
-      width: 380px;
-      top: 20px;
-      right: 19px;
+      top: 2px;
+      right: 2px;
       display: block;
-      width: 25px;
-      height: 25px;
-      border: 1px dashed red;
+      width: 60px;
+      height: 60px;
+      background-color: $c_darkGray1;
     }
+  }
+
+  .contest-contacts__item.tel::after {
+    background: url('../../img/icon-contacts-phone.svg') 50% no-repeat $c_darkGray1;
+  }
+
+  .contest-contacts__item.email::after {
+    background: url('../../img/icon-contacts-mail.svg') 50% no-repeat $c_darkGray1;
   }
 
   .contest-contacts__label {
@@ -172,6 +188,5 @@
     order: -1;
     display: block;
     width: 100%;
-    border-right: 63px solid $c_darkGray1;
   }
 }

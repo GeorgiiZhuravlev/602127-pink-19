@@ -53,6 +53,18 @@
     @include h-spacing();
     @include btnConfirm($c_green);
     width: calc(100% - 40px);
+
+    &:hover {
+      @include btnConfirm($c_darkGreen);
+    }
+
+    &:active {
+      @include btnConfirm($c_darkGreen, rgba(255, 255, 255, 0.3));
+    }
+
+    &:disabled {
+      @include btnConfirm($c_darkGray1, $c_white);
+    }
   }
 }
 
@@ -111,6 +123,18 @@
     @include h-spacing();
     @include btnConfirm($c_green);
     width: calc(100% - 80px);
+
+    &:hover {
+      @include btnConfirm($c_darkGreen);
+    }
+
+    &:active {
+      @include btnConfirm($c_darkGreen, rgba(255, 255, 255, 0.3));
+    }
+
+    &:disabled {
+      @include btnConfirm($c_darkGray1, $c_white);
+    }
   }
 }
 
@@ -165,6 +189,18 @@
   .module__btn {
     @include h-spacing();
     @include btnConfirm($c_green);
+
+    &:hover {
+      @include btnConfirm($c_darkGreen);
+    }
+
+    &:active {
+      @include btnConfirm($c_darkGreen, rgba(255, 255, 255, 0.3));
+    }
+
+    &:disabled {
+      @include btnConfirm($c_darkGray1, $c_white);
+    }
   }
 
   .module__control .module__btn {

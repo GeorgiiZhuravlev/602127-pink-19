@@ -3,15 +3,27 @@
     position: absolute;
     top: 721px;
     width: 320px;
-    padding: 28px 0 15px;
+    padding: 28px 0 16px;
     background-color: #17212D;
   }
 
   .app-download__btn-download {
-    @include btnGrand($c_white);
+    @include btnGrand($c_white, $c_white);
     @include v-spacing(34px);
     @include h-spacing();
     width: $align_small-fields;
+
+    &:hover {
+      @include btnGrand($c_red, $c_white, $c_white);
+    }
+
+    &:active {
+      @include btnGrand(rgba(210, 40, 86, 0.3), $c_white, $c_white);
+    }
+
+    &:disabled {
+      @include btnGrand($c_white, $c_darkGray1, $c_darkGray1);
+    }
   }
 
   .app-download__list {
@@ -51,7 +63,7 @@
     font: $f_light14;
     color: $c_white;
     text-align: center;
-    line-height: 25px;
+    line-height: 24px;
   }
 }
 
@@ -64,10 +76,22 @@
   }
 
   .app-download__btn-download {
-    @include btnGrand($c_white);
+    @include btnGrand($c_white, $c_white);
     @include v-spacing(47px);
     @include h-spacing();
     width: 300px;
+
+    &:hover {
+      @include btnGrand($c_red, $c_white, $c_white);
+    }
+
+    &:active {
+      @include btnGrand(rgba(210, 40, 86, 0.3), $c_white, $c_white);
+    }
+
+    &:disabled {
+      @include btnGrand($c_white, $c_darkGray1, $c_darkGray1);
+    }
   }
 
   .app-download__list {
@@ -106,6 +130,7 @@
     font: $f_light18;
     color: $c_white;
     text-align: center;
+    line-height: 24px;
   }
 }
 
@@ -115,12 +140,28 @@
   }
 
   .app-download__btn-download {
-    @include btnGrand($c_white);
+    @include btnGrand($c_white, $c_white);
     width: 100%;
     padding: 11px 13px;
     margin-bottom: 67px;
     font: $f_bold21;
     border-radius: 30px;
+
+    &:hover {
+      @include btnGrand($c_red, $c_white, $c_white);
+      padding: 11px 13px;
+      font: $f_bold21;
+    }
+
+    &:active {
+      @include btnGrand(rgba(210, 40, 86, 0.3), $c_white, $c_white);
+      padding: 11px 13px;
+      font: $f_bold21;
+    }
+
+    &:disabled {
+      @include btnGrand($c_white, $c_darkGray1, $c_darkGray1);
+    }
   }
 
   .app-download__list {
@@ -157,5 +198,6 @@
     font: $f_light18;
     color: $c_white;
     text-align: center;
+    line-height: 24px;
   }
 }

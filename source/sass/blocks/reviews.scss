@@ -2,7 +2,7 @@
   .reviews {
     position: relative;
     z-index: 10;
-    padding: 18px 0 42px;
+    padding: 13px 0 42px;
   }
 
   .reviews__list {
@@ -20,8 +20,9 @@
 
   .reviews__name {
     @include resetSize();
-    @include v-spacing(15px);
+    @include v-spacing(13px);
     font: $f_bold18;
+    line-height: 30px;
   }
 
   .reviews__about {
@@ -30,27 +31,34 @@
 
   .reviews__text {
     @include resetSize();
-    @include v-spacing(32px);
-    font: $f_light14;
+    @include v-spacing(33px);
+    font: $f_reg14;
     color: $c_darkBlue1;
     line-height: 30px;
-    letter-spacing: 0.3px;
+    letter-spacing: 0px;
   }
 
   .reviews__slider-bullets .custom__slider-bullets-input ~ .custom__slider-bullet {
-    @include slider-bullet($c_white);
+    @include slider-bullet($c_darkGray2);
+
+    &:hover {
+      @include slider-bullet($c_darkBlue1);
+    }
+
+    &:active {
+      @include slider-bullet($c_gray);
+    }
   }
 
   .reviews__slider-bullets .custom__slider-bullets-input:checked ~ .custom__slider-bullet {
-    @include slider-bullet-active($c_white);
+    @include slider-bullet-active();
   }
 }
 
 @media (min-width: $ff_medium) and (max-width: $ff_until-large) {
   .reviews {
     position: static;
-    padding-top: 44px;
-    padding-bottom: 20px;
+    padding: 43px 0 20px;
   }
 
   .reviews__fw-btn,
@@ -60,7 +68,7 @@
 
   .reviews__list {
     @include resetSize();
-    @include v-spacing(40px);
+    @include v-spacing(35px);
     @include h-spacing();
     width: $align_medium-fields;
   }
@@ -77,9 +85,10 @@
 
   .reviews__name {
     @include resetSize();
-    @include v-spacing(10px);
+    @include v-spacing(2px);
     font: $f_bold20;
     text-align: center;
+    line-height: 30px;
   }
 
   .reviews__about {
@@ -87,31 +96,39 @@
     font: $f_reg14;
     color: $c_darkBlue1;
     text-align: center;
+    line-height: 30px;
   }
 
   .reviews__text {
     @include resetSize();
-    @include v-spacing(37px);
+    @include v-spacing(35px);
     font: $f_reg18;
     color: $c_darkBlue1;
     text-align: center;
-    line-height: 29px;
+    line-height: 30px;
     letter-spacing: 0.05px;
   }
 
   .reviews__slider-bullets .custom__slider-bullets-input ~ .custom__slider-bullet {
-    @include slider-bullet($c_white);
+    @include slider-bullet($c_darkGray2);
+
+    &:hover {
+      @include slider-bullet($c_darkBlue1);
+    }
+
+    &:active {
+      @include slider-bullet($c_gray);
+    }
   }
 
   .reviews__slider-bullets .custom__slider-bullets-input:checked ~ .custom__slider-bullet {
-    @include slider-bullet-active($c_white);
+    @include slider-bullet-active();
   }
 }
 
 @media (min-width: $ff_large) {
   .reviews {
-    padding-top: 185px;
-    padding-bottom: 2px;
+    padding: 185px 0 2px;
   }
 
   .reviews__alignment {
@@ -166,9 +183,10 @@
 
   .reviews__name {
     @include resetSize();
-    @include v-spacing(5px);
+    @include v-spacing(3px);
     font: $f_bold24;
     text-align: center;
+    line-height: 30px;
   }
 
   .reviews__about {
@@ -176,5 +194,6 @@
     font: $f_reg18;
     color: $c_darkBlue1;
     text-align: center;
+    line-height: 30px;
   }
 }

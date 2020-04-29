@@ -11,20 +11,15 @@
       <div class="header-upside">
         <div class="header-upside__alignment">
           <div class="header-upside__menu opened">
-            <a class="header-upside__logo">
-              <object class="header-upside__logo-mobile" data="img/logo-pink-white-mobile.svg" type="image/svg+xml"></object>
-              <object class="header-upside__logo-tablet" data="img/logo-pink-white-tablet.svg" type="image/svg+xml"></object>
-              <object class="header-upside__logo-desktop" data="img/logo-pink-white-desktop.svg" type="image/svg+xml"></object>
-            </a>
+            <a class="header-upside__logo" tabindex="-1"></a>
             <button class="header-upside__nav-btn" type="button" aria-label="Открыть выпадающее меню">
-              <object class="header-upside__nav-btn-closed" data="img/icon-menu-burger.svg" type="image/svg+xml"></object>
-              <object class="header-upside__nav-btn-opened" data="img/icon-menu-cross.svg" type="image/svg+xml"></object>
+              <!-- SVG -->
             </button>
           </div>
-          <nav class="header-upside__nav">
+          <nav class="header-upside__nav opened">
             <ul class="header-upside__nav-list">
               <li class="header-upside__nav-item">
-                <a class="header-upside__nav-link" aria-hidden="true">Главная</a>
+                <a class="header-upside__nav-link" tabindex="-1" aria-hidden="true">Главная</a>
               </li>
               <li class="header-upside__nav-item">
                 <a class="header-upside__nav-link" href="photo.html" aria-label="Перейти на страницу фотографий">Фотографии</a>
@@ -75,19 +70,28 @@
         <div class="features__wrapper">
           <ul class="features__list">
             <li class="features__item">
-              <img class="features__img" src="img/iphone-screen-1-desktop@1x.png" srcset="img/iphone-screen-1-desktop@2x.png 2x" alt="IPhone image">
+              <picture>
+                <source srcset="img/iphone-screen-1-desktop@1x.webp 1x, img/iphone-screen-1-desktop@2x.webp 2x">
+                <img class="features__img" src="img/iphone-screen-1-desktop@1x.png" srcset="img/iphone-screen-1-desktop@2x.png 2x" alt="IPhone image">
+              </picture>
               <h3 class="features__ttl">Поднимает настроение</h3>
               <p class="features__desc">Приложение позволит вам победить осеннюю хандру и депрессию буквально в несколько кликов!</p>
             </li>
             <li class="features__item">
-              <img class="features__img" src="img/iphone-screen-2-desktop@1x.png" srcset="img/iphone-screen-2-desktop@2x.png 2x" alt="IPhone image">
+              <picture>
+                <source srcset="img/iphone-screen-2-desktop@1x.webp 1x, img/iphone-screen-2-desktop@2x.webp 2x">
+                <img class="features__img" src="img/iphone-screen-2-desktop@1x.png" srcset="img/iphone-screen-2-desktop@2x.png 2x" alt="IPhone image">
+              </picture>
               <h3 class="features__ttl">Меняет мир вокруг</h3>
               <p class="features__desc">Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить&nbsp;эффект</p>
             </li>
             <li class="features__item">
               <picture>
+                <source srcset="img/iphone-screen-3-desktop@1x.webp 1x, img/iphone-screen-3-desktop@2x.webp 2x" media="(min-width: 960px)">
                 <source srcset="img/iphone-screen-3-desktop@1x.png 1x, img/iphone-screen-3-desktop@2x.png 2x" media="(min-width: 960px)">
+                <source srcset="img/iphone-screen-3-tablet@1x.webp 1x, img/iphone-screen-3-tablet@2x.webp 2x" media="(min-width: 660px) and (max-width: 959px)">
                 <source srcset="img/iphone-screen-3-tablet@1x.png 1x, img/iphone-screen-3-tablet@2x.png 2x" media="(min-width: 660px) and (max-width: 959px)">
+                <source srcset="img/iphone-screen-mobile@1x.webp 1x, img/iphone-screen-mobile@2x.webp 2x">
                 <img class="features__img single" src="img/iphone-screen-mobile@1x.png" srcset="img/iphone-screen-mobile@2x.png 2x" width="157" height="320" alt="IPhone image">
               </picture>
               <h3 class="features__ttl">Заводит новых друзей</h3>
@@ -126,10 +130,15 @@
             </li>
           </ul>
 
-          <button class="TEMP reviews__bw-btn"></button>
-          <button class="TEMP reviews__fw-btn"></button>
+          <button class="reviews__bw-btn">
+            <!-- SVG -->
+          </button>
+          <button class="reviews__fw-btn">
+            <!-- SVG -->
+          </button>
 
-          <ul class="reviews__slider-bullets custom__slider-bullets ff-no-large">
+          <ul class="reviews__slider-bullets custom__slider-bullets">
+            <!-- SVG -->
             <li class="custom__slider-bullets-item">
               <label>
                 <input class="visually-hidden custom__slider-bullets-input" type="radio" name="reviews__slider-input" aria-label="Переключить слайдер" checked>
@@ -154,6 +163,7 @@
 
       <section class="prices">
         <h2 class="visually-hidden">Тарифы</h2>
+        <!-- SVG -->
         <table class="prices__table">
           <tr>
             <th class="prices__heading offset"></th>
@@ -253,9 +263,12 @@
 
         <a class="footer__dev-link" href="https://htmlacademy.ru/intensive/adaptive">
           <p class="footer__dev">Разработано</p>
-          <object class="footer__dev-logo" data="img/htmlacademy.svg" type="image/svg+xml" width="27" height="34"></object>
+          <!-- SVG -->
         </a>
       </div>
     </footer>
+
+    <script src="js/picturefill-min.js"></script>
+    <script src="js/header-menu.js"></script>
   </body>
 </html>

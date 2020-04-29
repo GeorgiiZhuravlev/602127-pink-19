@@ -24,6 +24,18 @@
     @include h-spacing();
     @include btnConfirm($c_green);
     width: $align_small-fields;
+
+    &:hover {
+      @include btnConfirm($c_darkGreen);
+    }
+
+    &:active {
+      @include btnConfirm($c_darkGreen, rgba(255, 255, 255, 0.3));
+    }
+
+    &:disabled {
+      @include btnConfirm($c_darkGray1, $c_white);
+    }
   }
 
   .contest__annotation {
@@ -74,6 +86,18 @@
   .contest__submit-btn {
     @include btnConfirm($c_green);
     width: 300px;
+
+    &:hover {
+      @include btnConfirm($c_darkGreen);
+    }
+
+    &:active {
+      @include btnConfirm($c_darkGreen, rgba(255, 255, 255, 0.3));
+    }
+
+    &:disabled {
+      @include btnConfirm($c_darkGray1, $c_white);
+    }
   }
 
   .contest__annotation-wrapper {
@@ -126,12 +150,24 @@
   }
 
   .contest__form {
-    @include flex(row, space-between, flex-start);
+    @include flex(row, space-between, flex-end);
   }
 
   .contest__submit-btn {
     @include btnConfirm($c_green);
     width: 300px;
+
+    &:hover {
+      @include btnConfirm($c_darkGreen);
+    }
+
+    &:active {
+      @include btnConfirm($c_darkGreen, rgba(255, 255, 255, 0.3));
+    }
+
+    &:disabled {
+      @include btnConfirm($c_darkGray1, $c_white);
+    }
   }
 
   .contest__annotation-wrapper {

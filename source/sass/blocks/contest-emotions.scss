@@ -34,6 +34,7 @@
     width: calc(100% - 40px);
     padding-bottom: 50px;
     border: 2px solid $c_darkGray1;
+    border-radius: 3px;
   }
 
   .contest-emotions__intro {
@@ -63,12 +64,13 @@
 
 @media (min-width: $ff_large) {
   .contest-emotions {
-    @include v-spacing(65px);
+    @include v-spacing(67px);
     @include h-spacing();
     order: 2;
     width: 100%;
     padding-bottom: 42px;
     border: 2px solid $c_darkGray1;
+    border-radius: 3px;
   }
 
   .contest-emotions__intro {

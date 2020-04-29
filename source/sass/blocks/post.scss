@@ -41,15 +41,15 @@
   .post__msg-wrapper {
     @include h-spacing();
     width: $align_small-fields;
-    padding: 21px 10px 25px 18px;
+    padding: 18px 10px 25px 18px;
     background-color: $c_gray;
   }
 
   .post__username {
     @include resetSize();
-    @include v-spacing(3px);
     font: $f_bold14;
     color: $c_darkBlue1;
+    line-height: 24px;
   }
 
   .post__time {
@@ -61,7 +61,7 @@
   .post__msg {
     @include resetSize();
     @include v-spacing(12px);
-    font: 100 14px "Open Sans", sans-serif;
+    font: $f_light14;
     color: $c_darkBlue1;
     line-height: 24px;
     letter-spacing: 0.3px;
@@ -89,7 +89,7 @@
 
 @media (min-width: $ff_medium) and (max-width: $ff_until-large) {
   .post {
-    @include v-spacing(20px);
+    @include v-spacing(22px);
     width: 300px;
   }
 
@@ -162,13 +162,12 @@
 
   .post__username {
     @include resetSize();
-    @include v-spacing(3px);
     font: $f_bold14;
     color: $c_darkBlue1;
+    line-height: 24px;
   }
 
   .post.full-width .post__username {
-    @include v-spacing(5px);
   }
 
   .post__time {
@@ -181,13 +180,14 @@
     @include resetSize();
     @include v-spacing(16px);
     min-height: 48px;
-    font: 100 14px "Open Sans", sans-serif;
+    font: $f_reg14;
     color: $c_darkBlue1;
     line-height: 24px;
-    letter-spacing: 0.3px;
+    letter-spacing: 0.05px;
   }
 
   .post.full-width .post__msg {
+    @include resetSize();
     width: 100%;
     min-height: none;
   }
@@ -299,18 +299,18 @@
     position: relative;
     width: $align_large-fields;
     height: auto;
-    padding: 25px 27px 0;
+    padding: 23px 27px 0;
   }
 
   .post__username {
     @include resetSize();
-    @include v-spacing(3px);
     font: $f_bold14;
     color: $c_darkBlue1;
+    line-height: 24px;
   }
 
   .post.full-width .post__username {
-    @include v-spacing(5px);
+    @include v-spacing();
   }
 
   .post__time {
@@ -323,10 +323,10 @@
     @include resetSize();
     @include v-spacing(16px);
     min-height: 48px;
-    font: 100 14px "Open Sans", sans-serif;
+    font: $f_reg14;
     color: $c_darkBlue1;
     line-height: 24px;
-    letter-spacing: 0.3px;
+    letter-spacing: 0.05px;
   }
 
   .post.full-width .post__msg {

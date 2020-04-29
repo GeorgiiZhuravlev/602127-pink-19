@@ -22,7 +22,7 @@
 }
 
 // Styling
-@mixin btnGrand($color) {
+@mixin btnGrand($color, $border-color, $background-color: transparent) {
   display: block;
   padding: 15px;
   font: $f_bold18;
@@ -30,16 +30,16 @@
   text-decoration: none;
   color: $color;
   line-height: 18px;
-  background-color: transparent;
-  border: 3px solid $color;
+  background-color: $background-color;
+  border: 3px solid $border-color;
   border-radius: 30px;
 }
 
-@mixin btnConfirm($background) {
+@mixin btnConfirm($background, $color: $c_white) {
   display: block;
   padding: 20px 0;
   font: $f_bold18;
-  color: $c_white;
+  color: $color;
   text-align: center;
   text-transform: uppercase;
   background-color: $background;
@@ -48,18 +48,17 @@
 
 @mixin slider-bullet($background) {
   display: block;
-  width: 12px;
-  height: 12px;
-  background-color: #bfc3c8;
-  border: 3px solid $background;
+  width: 6px;
+  height: 6px;
+  background-color: $background;
   border-radius: 50%;
 }
 
-@mixin slider-bullet-active($background) {
+@mixin slider-bullet-active() {
   display: block;
   width: 12px;
   height: 12px;
-  background-color: $background;
+  background-color: transparent;
   border: 3px solid $c_darkBlue1;
   border-radius: 50%;
 }
