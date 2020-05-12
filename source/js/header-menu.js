@@ -20,7 +20,7 @@ var body = document.body;
 
 function Resize() {
   if (locCheck) {
-    if (document.body.clientWidth <= 320) {
+    if (document.body.clientWidth <= 659) {
       headerIndex.style.paddingBottom = '272px';
       appDownload.style.top = '459px';
 

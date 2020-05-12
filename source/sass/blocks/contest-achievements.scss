@@ -20,7 +20,8 @@
   .contest-achievements__list {
     @include resetSize();
     @include h-spacing();
-    width: calc(100% - 38px);
+    width: 281px;
+    width: max-content;
     list-style: none;
   }
 
@@ -55,21 +56,26 @@
     @include resetSize();
     @include v-spacing(43px);
     @include h-spacing();
-    width: fit-content;
+    width: 100%;
     margin-top: -15px;
-    padding: 0 25px 0;
     font: $f_reg14;
     color: $c_red;
     text-align: center;
     text-transform: uppercase;
     letter-spacing: 0.05px;
+    background-color: transparent;
+  }
+
+  .contest-achievements__intro.quasi-legend {
+    padding: 0 20px;
     background-color: #ffffff;
   }
 
   .contest-achievements__list {
     @include resetSize();
     @include h-spacing();
-    width: calc(100% - 95px);
+    width: 281px;
+    width: max-content;
     list-style: none;
   }
 
@@ -104,14 +110,18 @@
     @include resetSize();
     @include v-spacing(42px);
     @include h-spacing();
-    width: fit-content;
+    width: 100%;
     margin-top: -15px;
-    padding: 0 25px 0;
     font: $f_reg14;
     color: $c_red;
     text-align: center;
     text-transform: uppercase;
     letter-spacing: 0.05px;
+    background-color: transparent;
+  }
+
+  .contest-achievements__intro.quasi-legend {
+    padding: 0 20px;
     background-color: #ffffff;
   }
 

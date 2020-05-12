@@ -102,6 +102,7 @@
   .reviews__text {
     @include resetSize();
     @include v-spacing(35px);
+    width: 640px;
     font: $f_reg18;
     color: $c_darkBlue1;
     text-align: center;
@@ -129,6 +130,8 @@
 @media (min-width: $ff_large) {
   .reviews {
     padding: 185px 0 2px;
+    background: url('../../img/icon-quotes.svg') no-repeat;
+    background-position: 50% 72px;
   }
 
   .reviews__alignment {
@@ -155,7 +158,9 @@
     top: 28px;
     width: 22px;
     height: 41px;
+    padding: 0;
     background-color: transparent;
+    border: none;
   }
 
   .reviews__bw-btn {
@@ -166,9 +171,28 @@
     right: 10px;
   }
 
+  .reviews__bw-btn-svg,
+  .reviews__fw-btn-svg {
+    width: 22px;
+    height: 41px;
+    fill: $c_darkBlue1;
+    opacity: 30%;
+  }
+
+  .reviews__bw-btn:hover .reviews__bw-btn-svg,
+  .reviews__fw-btn:hover .reviews__fw-btn-svg {
+    opacity: 60%;
+  }
+
+  .reviews__bw-btn:active .reviews__bw-btn-svg,
+  .reviews__fw-btn:active .reviews__fw-btn-svg {
+    opacity: 10%;
+  }
+
   .reviews__text {
     @include resetSize();
     @include v-spacing(34px);
+    width: 760px;
     font: $f_reg18;
     color: $c_darkBlue1;
     text-align: center;
@@ -195,5 +219,9 @@
     color: $c_darkBlue1;
     text-align: center;
     line-height: 30px;
+  }
+
+  .reviews__slider-bullets {
+    display: none;
   }
 }

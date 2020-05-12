@@ -19,7 +19,7 @@
   .contest-emotions__user-text {
     @include h-spacing();
     display: block;
-    width: $align_small-fields;
+    width: calc(100% - 40px);
     min-height: 200px;
     padding: 16px;
     line-height: 29px;
@@ -41,14 +41,18 @@
     @include resetSize();
     @include v-spacing(35px);
     @include h-spacing();
-    width: fit-content;
+    width: 100%;
     margin-top: -15px;
-    padding: 0 25px;
     font: $f_light14;
     color: $c_red;
     text-align: center;
     text-transform: uppercase;
     letter-spacing: 0.3px;
+    background-color: transparent;
+  }
+
+  .contest-emotions__intro.quasi-legend {
+    padding: 0 20px;
     background-color: #ffffff;
   }
 
@@ -77,14 +81,18 @@
     @include resetSize();
     @include v-spacing(32px);
     @include h-spacing();
-    width: fit-content;
+    width: 100%;
     margin-top: -15px;
-    padding: 0 25px;
     font: $f_light14;
     color: $c_red;
     text-align: center;
     text-transform: uppercase;
     letter-spacing: 0.3px;
+    background-color: transparent;
+  }
+
+  .contest-emotions__intro.quasi-legend {
+    padding: 0 20px;
     background-color: #ffffff;
   }
 

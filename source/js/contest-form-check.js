@@ -39,13 +39,15 @@ function LocStorageSet() {
     userContacts[i].value = localStorage.getItem(userContacts[i].name);
   }
 
-  for (let i = 0; i < userDevice.length; i++) {
-    if (localStorage.getItem(userDevice[i].name) === 'true') {
-      userDevice[i].checked = true;
-    }
+  if (localStorage.getItem('userDevice')) {
+    userDevice[localStorage.getItem('userDevice')].checked = 'true';
   }
 
-  userText.value = localStorage.getItem(userText.name);
+  if (localStorage.getItem(userText.name) == null) {
+    userText.value = '';
+  } else {
+    userText.value = localStorage.getItem(userText.name);
+  }
 }
 
 // Save in local storage
@@ -67,7 +69,7 @@ function LocStorageUpdate() {
 
     for (let i = 0; i < userDevice.length; i++) {
       if (userDevice[i].checked) {
-        localStorage.setItem(userDevice[i].name, userDevice[i].checked);
+        localStorage.setItem('userDevice', i);
       }
     }
 
@@ -79,32 +81,6 @@ function LocStorageUpdate() {
 
 // Form check
 var form = document.querySelector('.contest__form');
-
-var moduleControl = {
-  'confirm': {
-    'path': document.querySelector('#confirm-message'),
-    open: function () {
-      moduleControl.confirm.path.classList.remove('vis-off');
-      moduleControl.confirm.path.addEventListener('click', moduleControl.confirm.close);
-      moduleControl.confirm.path.querySelector('.module__btn').addEventListener('click', moduleControl.confirm.close);
-    },
-    close: function () {
-      moduleControl.confirm.path.classList.add('vis-off');
-      form.submit();
-    }
-  },
-  'error': {
-    'path': document.querySelector('#error-message'),
-    open: function () {
-      moduleControl.error.path.classList.remove('vis-off');
-      moduleControl.error.path.addEventListener('click', moduleControl.error.close);
-      moduleControl.error.path.querySelector('.module__btn').addEventListener('click', moduleControl.error.close);
-    },
-    close: function () {
-      moduleControl.error.path.classList.add('vis-off');
-    }
-  }
-}
 
 btn_submit.addEventListener('click', FormCheck);
 

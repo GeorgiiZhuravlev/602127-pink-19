@@ -2,13 +2,16 @@
   .prices {
     @include v-spacing(41px);
     padding: 90px 0 47px;
+    background: url('../../img/bg-triangle-white.svg') no-repeat;
+    background-position: 0% 0%;
+    background-size: contain;
     background-color: $c_gray;
     overflow: hidden;
   }
 
   .prices__table {
     @include v-spacing(41px);
-    @include h-spacing(-257px);
+    @include h-spacing(calc(100% / 2 - 833px / 2));
     position: relative;
     width: 833px;
     border-collapse: collapse;
@@ -20,10 +23,33 @@
   }
 
   .prices__heading {
+    position: relative;
     width: 275px;
     padding: 15px 0 20px;
     background-color: $c_darkBlue1;
     border: 2px solid $c_darkGray1;
+  }
+
+  .prices__hit-mark-small-large {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+  }
+
+  .prices__hit-mark-medium {
+    display: none;
+  }
+
+  .prices__hit-text {
+    position: absolute;
+    top: 2px;
+    left: 11px;
+    z-index: 10;
+    font: $f_reg14;
+    color: $c_white;
+    text-transform: uppercase;
+    transform: rotate(-45deg);
   }
 
   .prices__ttl {
@@ -54,6 +80,18 @@
     border: 2px solid $c_darkGray1;
   }
 
+  .prices__option.yes {
+    background: url('../../img/icon-yes.svg') no-repeat $c_white;
+    background-size: 31px 21px;
+    background-position: 94% 50%;
+  }
+
+  .prices__option.no {
+    background: url('../../img/icon-no.svg') no-repeat $c_white;
+    background-size: 27px 27px;
+    background-position: 93% 50%;
+  }
+
   .prices__option-text {
     @include resetSize();
   }
@@ -78,24 +116,49 @@
 @media (min-width: $ff_medium) and (max-width: $ff_until-large) {
   .prices {
     padding: 88px 20px 50px;
-    background-color: $c_gray;
+    background: url('../../img/bg-triangle-white.svg') no-repeat $c_gray;
+    background-position: 0% 0%;
+    background-size: contain;
   }
 
   .prices__table {
     @include v-spacing(20px);
     @include h-spacing();
     position: relative;
-    width: 100%;
+    width: 620px;
     border-collapse: collapse;
   }
 
   .prices__heading {
     @include v-spacing(8px);
+    position: relative;
     width: 153px;
     padding: 12px 0 10px;
     background-color: $c_darkBlue1;
     border: 2px solid $c_darkGray1;
     border-top: none;
+  }
+
+  .prices__hit-mark-small-large {
+    display: none;
+  }
+
+  .prices__hit-mark-medium {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+  }
+
+  .prices__hit-text {
+    position: absolute;
+    top: -1px;
+    left: 5px;
+    z-index: 10;
+    font: $f_reg14;
+    color: $c_white;
+    text-transform: uppercase;
+    transform: rotate(-45deg);
   }
 
   .prices__heading.offset {
@@ -130,6 +193,18 @@
     border: 2px solid $c_darkGray1;
   }
 
+  .prices__option.yes {
+    background: url('../../img/icon-yes.svg') no-repeat $c_white;
+    background-size: 31px 21px;
+    background-position: 50%;
+  }
+
+  .prices__option.no {
+    background: url('../../img/icon-no.svg') no-repeat $c_white;
+    background-size: 27px 27px;
+    background-position: 50%;
+  }
+
   .prices__option-text {
     display: none;
   }
@@ -142,7 +217,9 @@
 @media (min-width: $ff_large) {
   .prices {
     padding: 147px 0 76px;
-    background-color: $c_gray;
+    background: url('../../img/bg-triangle-white.svg') no-repeat $c_gray;
+    background-position: 0% 0%;
+    background-size: contain;
   }
 
   .prices__table {
@@ -154,11 +231,34 @@
   }
 
   .prices__heading {
+    position: relative;
     width: 233px;
     padding: 16px 0 20px;
     background-color: $c_darkBlue1;
     border: 2px solid $c_darkGray1;
     border-top: none;
+  }
+
+  .prices__hit-mark-small-large {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+  }
+
+  .prices__hit-mark-medium {
+    display: none;
+  }
+
+  .prices__hit-text {
+    position: absolute;
+    top: 2px;
+    left: 11px;
+    z-index: 10;
+    font: $f_reg14;
+    color: $c_white;
+    text-transform: uppercase;
+    transform: rotate(-45deg);
   }
 
   .prices__heading.offset {
@@ -191,6 +291,18 @@
     letter-spacing: 0.1px;
     background-color: $c_white;
     border: 2px solid $c_darkGray1;
+  }
+
+  .prices__option.yes {
+    background: url('../../img/icon-yes.svg') no-repeat $c_white;
+    background-size: 31px 21px;
+    background-position: 50%;
+  }
+
+  .prices__option.no {
+    background: url('../../img/icon-no.svg') no-repeat $c_white;
+    background-size: 27px 27px;
+    background-position: 50%;
   }
 
   .prices__option-text {

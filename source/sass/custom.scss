@@ -1,3 +1,5 @@
+// GLOBAL DOCUMENT | Interactive elements custom styling
+
 // Input Text
 .custom__input-text {
   padding: 18px;
@@ -110,46 +112,98 @@
 }
 
 // Input range
-.custom__input-range {
-  appearance: none;
-  height: 2px;
-  background-color: $c_black;
-}
-
-.custom__input-range::-moz-range-track {
-  appearance: none;
-  height: 2px;
-  background-color: $c_black;
-}
-
-.custom__input-range::-ms-track {
-  appearance: none;
-  height: 2px;
-  background-color: $c_black;
-}
-
 .custom__input-range::-ms-fill-lower {
   appearance: none;
   height: 2px;
   background-color: $c_black;
+  border: none;
+  border-top: 8px solid $c_gray;
+  border-bottom: 8px solid $c_gray;
 }
 
 .custom__input-range::-ms-fill-upper {
   appearance: none;
   height: 2px;
   background-color: $c_black;
+  border: none;
+  border-top: 8px solid $c_gray;
+  border-bottom: 8px solid $c_gray;
 }
 
-.custom__input-range::-webkit-slider-thumb {
+.custom__input-range::-ms-thumb {
   appearance: none;
-  width: 14px;
-  height: 14px;
+  width: 10px;
+  height: 10px;
+  margin-top: 2px;
   background-color: $c_white;
   border: 2px solid $c_red;
   border-radius: 50%;
 
+  &:focus {
+    outline: none;
+    background-color: $c_red;
+  }
+
   &:active {
     background-color: $c_red;
+  }
+}
+
+.custom__input-range::-ms-track {
+  appearance: none;
+  height: 0px;
+  color: transparent;
+  background-color: $c_black;
+  border: none;
+  border-top: 8px solid $c_gray;
+  border-bottom: 8px solid $c_gray;
+}
+
+.custom__input-range {
+  -webkit-appearance: none;
+  padding: 0;
+  background-color: transparent;
+}
+
+.custom__input-range::-webkit-slider-runnable-track {
+  -webkit-appearance: none;
+  height: 2px;
+  background-color: $c_black;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.custom__input-range::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 14px;
+  height: 14px;
+  margin-top: -6px;
+  background-color: $c_white;
+  border: 2px solid $c_red;
+  border-radius: 50%;
+
+  &:focus {
+    background-color: $c_red;
+    outline: none;
+  }
+
+  &:active {
+    background-color: $c_red;
+  }
+}
+
+.custom__input-range::-moz-range-track {
+  appearance: none;
+  height: 2px;
+  padding: 0;
+  background-color: $c_black;
+  border: none;
+  outline: none;
+
+  &:focus {
+    outline: none;
   }
 }
 
@@ -158,25 +212,23 @@
   width: 14px;
   height: 14px;
   background-color: $c_white;
+  border-color: transparent;
+  color: transparent;
   border: 2px solid $c_red;
   border-radius: 50%;
+
+  &:focus {
+    background-color: $c_red;
+    outline: none;
+  }
 
   &:active {
     background-color: $c_red;
   }
 }
 
-.custom__input-range::-ms-thumb {
-  appearance: none;
-  width: 14px;
-  height: 14px;
-  background-color: $c_white;
-  border: 2px solid $c_red;
-  border-radius: 50%;
-
-  &:active {
-    background-color: $c_red;
-  }
+.custom__input-range::-moz-focus-outer {
+  border: none;
 }
 
 // Slider
@@ -197,3 +249,85 @@
 .custom__hr {
   border: 1px solid $c_darkGray1;
 }
+
+
+
+
+
+
+
+// .custom__input-range {
+//   -webkit-appearance: none;
+//   height: 2px;
+//   background-color: $c_black;
+// }
+
+// .custom__input-range::-webkit-slider-runnable-track {
+
+// }
+
+// .custom__input-range::-webkit-slider-thumb {
+//   -webkit-appearance: none;
+//   width: 14px;
+//   height: 14px;
+//   background-color: $c_white;
+//   border: 2px solid $c_red;
+//   border-radius: 50%;
+
+//   &:active {
+//     background-color: $c_red;
+//   }
+// }
+
+// .custom__input-range:focus::-webkit-slider-runnable-track {
+//   background: #ac51b5;
+// }
+
+// .custom__input-range::-moz-range-track {
+//   -webkit-appearance: none;
+//   height: 2px;
+//   background-color: $c_black;
+// }
+
+// .custom__input-range::-moz-range-thumb {
+//   appearance: none;
+//   width: 14px;
+//   height: 14px;
+//   background-color: $c_white;
+//   border: 2px solid $c_red;
+//   border-radius: 50%;
+
+//   &:active {
+//     background-color: $c_red;
+//   }
+// }
+
+// .custom__input-range::-ms-track {
+//   appearance: none;
+//   height: 2px;
+//   background-color: red;
+// }
+
+// .custom__input-range::-ms-fill-lower {
+//   appearance: none;
+//   height: 2px;
+//   background-color: red;
+// }
+
+// .custom__input-range::-ms-fill-upper {
+//   appearance: none;
+//   height: 2px;
+//   background-color: red;
+// }
+
+// .custom__input-range::-ms-thumb {
+//   background-color: red;
+// }
+
+// .custom__input-range:focus::-ms-fill-lower {
+//   background: #ac51b5;
+// }
+
+// .custom__input-range:focus::-ms-fill-upper {
+//   background: #ac51b5;
+// }

@@ -5,15 +5,57 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <link href="css/style.css" rel="stylesheet">
+
+    <!-- Script for SVG (IE fix) -->
+    <script src="js/svg4everybody.js"></script>
+    <!-- Scripts for WebP (IE fix) -->
+    <script src="https://unpkg.com/webp-hero@0.0.0-dev.21/dist-cjs/polyfills.js"></script>
+    <script src="https://unpkg.com/webp-hero@0.0.0-dev.21/dist-cjs/webp-hero.bundle.js"></script>
+    <script src="js/webp-hero-start.js"></script>
   </head>
   <body>
     <header class="header">
       <div class="header-upside">
         <div class="header-upside__alignment">
+          <!--
+            Принцип работы меню средствами JS:
+            1) Загрузка страницы:
+            Установлены свойства по умолчанию, обеспечивающие
+            работоспособность при отключенном JS.
+            Хедер со стилем "открыто".
+            Отображение кнопки отключено.
+            Навигация открыта.
+
+            2) Подключение JS-файла:
+            Устанавливаются свойства для хедера, кнопки и навигация
+            на статус "закрыто", CSS классом "closed".
+
+            3) Работа JS-файла:
+            Статус хедера, кнопки и навигации переключается классами
+            "opened" - для открытого и "closed" - для закрытого состояния.
+
+            4) Для версии ff_large все стили устанавливаются в
+            единообразное состояние вне зависимости от сопутствующих классов.
+          -->
           <div class="header-upside__menu opened">
-            <a class="header-upside__logo" href="index.html">
+            <a class="header-upside__logo" href="index.html" aria-label="Перейти на главную страницу">
+              <svg class="header-upside__logo-svg-small" width="75" height="23">
+                <use xlink:href="img/logo-sprite.svg#logo__for-small"></use>
+              </svg>
+              <svg class="header-upside__logo-svg-medium" width="147" height="40">
+                <use xlink:href="img/logo-sprite.svg#logo__for-medium"></use>
+              </svg>
+              <svg class="header-upside__logo-svg-large" width="147" height="40">
+                <use xlink:href="img/logo-sprite.svg#logo__for-large"></use>
+              </svg>
             </a>
             <button class="header-upside__nav-btn" type="button" aria-label="Открыть выпадающее меню">
+              <svg class="header-upside__nav-btn-svg-burger" width="50" height="24">
+                <use xlink:href="img/menu-btn.svg#menu-btn-burger"></use>
+              </svg>
+              <svg class="header-upside__nav-btn-svg-cross" width="24" height="24">
+                <use xlink:href="img/menu-btn.svg#menu-btn-cross"></use>
+              </svg>
             </button>
           </div>
           <nav class="header-upside__nav">
@@ -45,19 +87,20 @@
     <main>
       <h1 class="visually-hidden">Фотографии пользователей</h1>
       <section class="user-posts">
-        <h2 class="user-posts__intro">Взгляните на фотографии, которые выкладывают пользователи! Видите, как не хватает ваших?</h2>
+        <h2 class="user-posts__intro">Взгляните на фотографии, которые выкладывают пользователи!<br>Видите, как не хватает ваших?</h2>
 
         <article class="post full-width">
           <h2 class="visually-hidden">Пост пользователя</h2>
           <a class="post__link-img" href="#" aria-label="Перейти на полноразмерную версию">
             <p class="post__mark">Панорама дня</p>
             <picture>
-              <source srcset="img/panorama-desktop@1x.webp 1x, img/panorama-desktop@2x.webp 2x" media="(min-width: 960px)">
-              <source srcset="img/panorama-desktop@1x.jpg 1x, img/panorama-desktop@2x.jpg 2x" media="(min-width: 960px)">
-              <source srcset="img/panorama-tablet@1x.webp 1x, img/panorama-tablet@2x.webp 2x" media="(min-width: 660px) and (max-width: 959px)">
-              <source srcset="img/panorama-tablet@1x.jpg 1x, img/panorama-tablet@2x.jpg 2x" media="(min-width: 660px) and (max-width: 959px)">
-              <source srcset="img/panorama-mobile@1x.webp 1x, img/panorama-mobile@2x.webp 2x">
-              <img class="post__user-img panorama" src="img/panorama-mobile@1x.jpg" srcset="img/panorama-mobile@2x.jpg 2x" alt="">
+              <source srcset="img/panorama-desktop@1x.webp 1x, img/panorama-desktop@2x.webp 2x" type="image/webp" media="(min-width: 960px)">
+              <source srcset="img/panorama-desktop@1x.jpg 1x, img/panorama-desktop@2x.jpg 2x" type="image/jpg" media="(min-width: 960px)">
+              <source srcset="img/panorama-tablet@1x.webp 1x, img/panorama-tablet@2x.webp 2x" type="image/webp" media="(min-width: 660px) and (max-width: 959px)">
+              <source srcset="img/panorama-tablet@1x.jpg 1x, img/panorama-tablet@2x.jpg 2x" type="image/jpg" media="(min-width: 660px) and (max-width: 959px)">
+              <source srcset="img/panorama-mobile@1x.webp 1x, img/panorama-mobile@2x.webp 2x" type="image/webp">
+              <source srcset="img/panorama-mobile@2x.jpg 2x">
+              <img class="post__user-img panorama" src="img/panorama-mobile@1x.jpg" width="320" height="137" alt="">
             </picture>
           </a>
           <div class="post__msg-wrapper">
@@ -68,7 +111,9 @@
             <form method="get" action="https://echo.htmlacademy.ru" name="reaction">
               <label class="post__btn-like">
                 <input class="visually-hidden post__input-like" type="checkbox" name="like" value="liked" aria-label="Поставить лайк">
-                <span class="TEMP post__decor-like"></span>
+                <svg class="post__decor-like" width="13" height="12">
+                  <use xlink:href="img/icon-heart.svg#post__decor-like"></use>
+                </svg>
                 <span class="post__count">Нравится: 215</span>
               </label>
             </form>
@@ -81,12 +126,12 @@
               <h2 class="visually-hidden">Пост пользователя</h2>
               <a class="post__link-img" href="#" aria-label="Перейти на полноразмерную версию">
                 <picture>
-                  <source srcset="img/photo-car-desktop@1x.webp 1x, img/photo-car-desktop@2x.webp 2x" media="(min-width: 960px)">
-                  <source srcset="img/photo-car-desktop@1x.jpg 1x, img/photo-car-desktop@2x.jpg 2x" media="(min-width: 960px)">
-                  <source srcset="img/photo-car-tablet@1x.webp 1x, img/photo-car-tablet@2x.webp 2x" media="(min-width: 660px) and (max-width: 959px)">
-                  <source srcset="img/photo-car-tablet@1x.jpg 1x, img/photo-car-tablet@2x.jpg 2x" media="(min-width: 660px) and (max-width: 959px)">
-                  <source srcset="img/photo-car-mobile@1x.webp 1x, img/photo-car-mobile@2x.webp 2x">
-                  <img class="post__user-img" src="img/photo-car-mobile@1x.jpg" srcset="img/photo-car-mobile@2x.jpg 2x" alt="">
+                  <source srcset="img/photo-car-desktop@1x.webp 1x, img/photo-car-desktop@2x.webp 2x" type="image/webp" media="(min-width: 960px)">
+                  <source srcset="img/photo-car-desktop@1x.jpg 1x, img/photo-car-desktop@2x.jpg 2x" type="image/jpg" media="(min-width: 960px)">
+                  <source srcset="img/photo-car-tablet@1x.webp 1x, img/photo-car-tablet@2x.webp 2x" type="image/webp" media="(min-width: 660px) and (max-width: 959px)">
+                  <source srcset="img/photo-car-tablet@1x.jpg 1x, img/photo-car-tablet@2x.jpg 2x" type="image/jpg" media="(min-width: 660px) and (max-width: 959px)">
+                  <source srcset="img/photo-car-mobile@1x.webp 1x, img/photo-car-mobile@2x.webp 2x" type="image/webp">
+                  <img class="post__user-img" src="img/photo-car-mobile@1x.jpg" srcset="img/photo-car-mobile@2x.jpg 2x" width="280" height="180" alt="">
                 </picture>
               </a>
               <div class="post__msg-wrapper">
@@ -97,7 +142,9 @@
                 <form method="get" action="https://echo.htmlacademy.ru" name="reaction">
                   <label class="post__btn-like">
                     <input class="visually-hidden post__input-like" type="checkbox" name="like" value="liked" aria-label="Поставить лайк">
-                    <span class="TEMP post__decor-like"></span>
+                    <svg class="post__decor-like" width="13" height="12">
+                      <use xlink:href="img/icon-heart.svg#post__decor-like"></use>
+                    </svg>
                     <span class="post__count">Нравится: 356</span>
                   </label>
                 </form>
@@ -110,12 +157,12 @@
               <h2 class="visually-hidden">Пост пользователя</h2>
               <a class="post__link-img" href="#" aria-label="Перейти на полноразмерную версию">
                 <picture>
-                  <source srcset="img/photo-drumset-desktop@1x.webp 1x, img/photo-drumset-desktop@2x.webp 2x" media="(min-width: 960px)">
-                  <source srcset="img/photo-drumset-desktop@1x.jpg 1x, img/photo-drumset-desktop@2x.jpg 2x" media="(min-width: 960px)">
-                  <source srcset="img/photo-drumset-tablet@1x.webp 1x, img/photo-drumset-tablet@2x.webp 2x" media="(min-width: 660px) and (max-width: 959px)">
-                  <source srcset="img/photo-drumset-tablet@1x.jpg 1x, img/photo-drumset-tablet@2x.jpg 2x" media="(min-width: 660px) and (max-width: 959px)">
-                  <source srcset="img/photo-drumset-mobile@1x.webp 1x, img/photo-drumset-mobile@2x.webp 2x">
-                  <img class="post__user-img" src="img/photo-drumset-mobile@1x.jpg" srcset="img/photo-drumset-mobile@2x.jpg 2x" alt="">
+                  <source srcset="img/photo-drumset-desktop@1x.webp 1x, img/photo-drumset-desktop@2x.webp 2x" type="image/webp" media="(min-width: 960px)">
+                  <source srcset="img/photo-drumset-desktop@1x.jpg 1x, img/photo-drumset-desktop@2x.jpg 2x" type="image/jpg" media="(min-width: 960px)">
+                  <source srcset="img/photo-drumset-tablet@1x.webp 1x, img/photo-drumset-tablet@2x.webp 2x" type="image/webp" media="(min-width: 660px) and (max-width: 959px)">
+                  <source srcset="img/photo-drumset-tablet@1x.jpg 1x, img/photo-drumset-tablet@2x.jpg 2x" type="image/jpg" media="(min-width: 660px) and (max-width: 959px)">
+                  <source srcset="img/photo-drumset-mobile@1x.webp 1x, img/photo-drumset-mobile@2x.webp 2x" type="image/webp">
+                  <img class="post__user-img" src="img/photo-drumset-mobile@1x.jpg" srcset="img/photo-drumset-mobile@2x.jpg 2x" width="280" height="180" alt="">
                 </picture>
               </a>
               <div class="post__msg-wrapper">
@@ -126,7 +173,9 @@
                 <form method="get" action="https://echo.htmlacademy.ru" name="reaction">
                   <label class="post__btn-like">
                     <input class="visually-hidden post__input-like" type="checkbox" name="like" value="liked" aria-label="Поставить лайк">
-                    <span class="TEMP post__decor-like"></span>
+                    <svg class="post__decor-like" width="13" height="12">
+                      <use xlink:href="img/icon-heart.svg#post__decor-like"></use>
+                    </svg>
                     <span class="post__count">Нравится: 666</span>
                   </label>
                 </form>
@@ -139,12 +188,12 @@
               <h2 class="visually-hidden">Пост пользователя</h2>
               <a class="post__link-img" href="#" aria-label="Перейти на полноразмерную версию">
                 <picture>
-                  <source srcset="img/photo-window-desktop@1x.webp 1x, img/photo-window-desktop@2x.webp 2x" media="(min-width: 960px)">
-                  <source srcset="img/photo-window-desktop@1x.jpg 1x, img/photo-window-desktop@2x.jpg 2x" media="(min-width: 960px)">
-                  <source srcset="img/photo-window-tablet@1x.webp 1x, img/photo-window-tablet@2x.webp 2x" media="(min-width: 660px) and (max-width: 959px)">
-                  <source srcset="img/photo-window-tablet@1x.jpg 1x, img/photo-window-tablet@2x.jpg 2x" media="(min-width: 660px) and (max-width: 959px)">
-                  <source srcset="img/photo-window-mobile@1x.webp 1x, img/photo-window-mobile@2x.webp 2x">
-                  <img class="post__user-img" src="img/photo-window-mobile@1x.jpg" srcset="img/photo-window-mobile@2x.jpg 2x" alt="">
+                  <source srcset="img/photo-window-desktop@1x.webp 1x, img/photo-window-desktop@2x.webp 2x" type="image/webp" media="(min-width: 960px)">
+                  <source srcset="img/photo-window-desktop@1x.jpg 1x, img/photo-window-desktop@2x.jpg 2x" type="image/jpg" media="(min-width: 960px)">
+                  <source srcset="img/photo-window-tablet@1x.webp 1x, img/photo-window-tablet@2x.webp 2x" type="image/webp" media="(min-width: 660px) and (max-width: 959px)">
+                  <source srcset="img/photo-window-tablet@1x.jpg 1x, img/photo-window-tablet@2x.jpg 2x" type="image/jpg" media="(min-width: 660px) and (max-width: 959px)">
+                  <source srcset="img/photo-window-mobile@1x.webp 1x, img/photo-window-mobile@2x.webp 2x" type="image/webp">
+                  <img class="post__user-img" src="img/photo-window-mobile@1x.jpg" srcset="img/photo-window-mobile@2x.jpg 2x" width="280" height="180" alt="">
                 </picture>
               </a>
               <div class="post__msg-wrapper">
@@ -155,7 +204,9 @@
                 <form method="get" action="https://echo.htmlacademy.ru" name="reaction">
                   <label class="post__btn-like">
                     <input class="visually-hidden post__input-like" type="checkbox" name="like" value="liked" aria-label="Поставить лайк">
-                    <span class="TEMP post__decor-like"></span>
+                    <svg class="post__decor-like" width="13" height="12">
+                      <use xlink:href="img/icon-heart.svg#post__decor-like"></use>
+                    </svg>
                     <span class="post__count">Нравится: 215</span>
                   </label>
                 </form>
@@ -168,12 +219,12 @@
               <h2 class="visually-hidden">Пост пользователя</h2>
               <a class="post__link-img" href="#" aria-label="Перейти на полноразмерную версию">
                 <picture>
-                  <source srcset="img/photo-fair-desktop@1x.webp 1x, img/photo-fair-desktop@2x.webp 2x" media="(min-width: 960px)">
-                  <source srcset="img/photo-fair-desktop@1x.jpg 1x, img/photo-fair-desktop@2x.jpg 2x" media="(min-width: 960px)">
-                  <source srcset="img/photo-fair-tablet@1x.webp 1x, img/photo-fair-tablet@2x.webp 2x" media="(min-width: 660px) and (max-width: 959px)">
-                  <source srcset="img/photo-fair-tablet@1x.jpg 1x, img/photo-fair-tablet@2x.jpg 2x" media="(min-width: 660px) and (max-width: 959px)">
-                  <source srcset="img/photo-fair-mobile@1x.webp 1x, img/photo-fair-mobile@2x.webp 2x">
-                  <img class="post__user-img" src="img/photo-fair-mobile@1x.jpg" srcset="img/photo-fair-mobile@2x.jpg 2x" alt="">
+                  <source srcset="img/photo-fair-desktop@1x.webp 1x, img/photo-fair-desktop@2x.webp 2x" type="image/webp" media="(min-width: 960px)">
+                  <source srcset="img/photo-fair-desktop@1x.jpg 1x, img/photo-fair-desktop@2x.jpg 2x" type="image/jpg" media="(min-width: 960px)">
+                  <source srcset="img/photo-fair-tablet@1x.webp 1x, img/photo-fair-tablet@2x.webp 2x" type="image/webp" media="(min-width: 660px) and (max-width: 959px)">
+                  <source srcset="img/photo-fair-tablet@1x.jpg 1x, img/photo-fair-tablet@2x.jpg 2x" type="image/jpg" media="(min-width: 660px) and (max-width: 959px)">
+                  <source srcset="img/photo-fair-mobile@1x.webp 1x, img/photo-fair-mobile@2x.webp 2x" type="image/webp">
+                  <img class="post__user-img" src="img/photo-fair-mobile@1x.jpg" srcset="img/photo-fair-mobile@2x.jpg 2x" width="280" height="180" alt="">
                 </picture>
               </a>
               <div class="post__msg-wrapper">
@@ -184,7 +235,9 @@
                 <form method="get" action="https://echo.htmlacademy.ru" name="reaction">
                   <label class="post__btn-like">
                     <input class="visually-hidden post__input-like" type="checkbox" name="like" value="liked" aria-label="Поставить лайк">
-                    <span class="TEMP post__decor-like"></span>
+                    <svg class="post__decor-like" width="13" height="12">
+                      <use xlink:href="img/icon-heart.svg#post__decor-like"></use>
+                    </svg>
                     <span class="post__count">Нравится: 4</span>
                   </label>
                 </form>
@@ -197,12 +250,12 @@
               <h2 class="visually-hidden">Пост пользователя</h2>
               <a class="post__link-img" href="#" aria-label="Перейти на полноразмерную версию">
                 <picture>
-                  <source srcset="img/photo-pov-desktop@1x.webp 1x, img/photo-pov-desktop@2x.webp 2x" media="(min-width: 960px)">
-                  <source srcset="img/photo-pov-desktop@1x.jpg 1x, img/photo-pov-desktop@2x.jpg 2x" media="(min-width: 960px)">
-                  <source srcset="img/photo-pov-tablet@1x.webp 1x, img/photo-pov-tablet@2x.webp 2x" media="(min-width: 660px) and (max-width: 959px)">
-                  <source srcset="img/photo-pov-tablet@1x.jpg 1x, img/photo-pov-tablet@2x.jpg 2x" media="(min-width: 660px) and (max-width: 959px)">
-                  <source srcset="img/photo-pov-mobile@1x.webp 1x, img/photo-pov-mobile@2x.webp 2x">
-                  <img class="post__user-img" src="img/photo-pov-mobile@1x.jpg" srcset="img/photo-pov-mobile@2x.jpg 2x" alt="">
+                  <source srcset="img/photo-pov-desktop@1x.webp 1x, img/photo-pov-desktop@2x.webp 2x" type="image/webp" media="(min-width: 960px)">
+                  <source srcset="img/photo-pov-desktop@1x.jpg 1x, img/photo-pov-desktop@2x.jpg 2x" type="image/jpg" media="(min-width: 960px)">
+                  <source srcset="img/photo-pov-tablet@1x.webp 1x, img/photo-pov-tablet@2x.webp 2x" type="image/webp" media="(min-width: 660px) and (max-width: 959px)">
+                  <source srcset="img/photo-pov-tablet@1x.jpg 1x, img/photo-pov-tablet@2x.jpg 2x" type="image/jpg" media="(min-width: 660px) and (max-width: 959px)">
+                  <source srcset="img/photo-pov-mobile@1x.webp 1x, img/photo-pov-mobile@2x.webp 2x" type="image/webp">
+                  <img class="post__user-img" src="img/photo-pov-mobile@1x.jpg" srcset="img/photo-pov-mobile@2x.jpg 2x" width="280" height="180" alt="">
                 </picture>
               </a>
               <div class="post__msg-wrapper">
@@ -213,7 +266,9 @@
                 <form method="get" action="https://echo.htmlacademy.ru" name="reaction">
                   <label class="post__btn-like">
                     <input class="visually-hidden post__input-like" type="checkbox" name="like" value="liked" aria-label="Поставить лайк">
-                    <span class="TEMP post__decor-like"></span>
+                    <svg class="post__decor-like" width="13" height="12">
+                      <use xlink:href="img/icon-heart.svg#post__decor-like"></use>
+                    </svg>
                     <span class="post__count">Нравится: 150</span>
                   </label>
                 </form>
@@ -226,12 +281,12 @@
               <h2 class="visually-hidden">Пост пользователя</h2>
               <a class="post__link-img" href="#" aria-label="Перейти на полноразмерную версию">
                 <picture>
-                  <source srcset="img/photo-wing-desktop@1x.webp 1x, img/photo-wing-desktop@2x.webp 2x" media="(min-width: 960px)">
-                  <source srcset="img/photo-wing-desktop@1x.jpg 1x, img/photo-wing-desktop@2x.jpg 2x" media="(min-width: 960px)">
-                  <source srcset="img/photo-wing-tablet@1x.webp 1x, img/photo-wing-tablet@2x.webp 2x" media="(min-width: 660px) and (max-width: 959px)">
-                  <source srcset="img/photo-wing-tablet@1x.jpg 1x, img/photo-wing-tablet@2x.jpg 2x" media="(min-width: 660px) and (max-width: 959px)">
-                  <source srcset="img/photo-wing-mobile@1x.webp 1x, img/photo-wing-mobile@2x.webp 2x">
-                  <img class="post__user-img" src="img/photo-wing-mobile@1x.jpg" srcset="img/photo-wing-mobile@2x.jpg 2x" alt="">
+                  <source srcset="img/photo-wing-desktop@1x.webp 1x, img/photo-wing-desktop@2x.webp 2x" type="image/webp" media="(min-width: 960px)">
+                  <source srcset="img/photo-wing-desktop@1x.jpg 1x, img/photo-wing-desktop@2x.jpg 2x" type="image/jpg" media="(min-width: 960px)">
+                  <source srcset="img/photo-wing-tablet@1x.webp 1x, img/photo-wing-tablet@2x.webp 2x" type="image/webp" media="(min-width: 660px) and (max-width: 959px)">
+                  <source srcset="img/photo-wing-tablet@1x.jpg 1x, img/photo-wing-tablet@2x.jpg 2x" type="image/jpg" media="(min-width: 660px) and (max-width: 959px)">
+                  <source srcset="img/photo-wing-mobile@1x.webp 1x, img/photo-wing-mobile@2x.webp 2x" type="image/webp">
+                  <img class="post__user-img" src="img/photo-wing-mobile@1x.jpg" srcset="img/photo-wing-mobile@2x.jpg 2x" width="280" height="180" alt="">
                 </picture>
               </a>
               <div class="post__msg-wrapper">
@@ -242,7 +297,9 @@
                 <form method="get" action="https://echo.htmlacademy.ru" name="reaction">
                   <label class="post__btn-like">
                     <input class="visually-hidden post__input-like" type="checkbox" name="like" value="liked" aria-label="Поставить лайк">
-                    <span class="TEMP post__decor-like"></span>
+                    <svg class="post__decor-like" width="13" height="12">
+                      <use xlink:href="img/icon-heart.svg#post__decor-like"></use>
+                    </svg>
                     <span class="post__count">Нравится: 2560</span>
                   </label>
                 </form>
@@ -261,39 +318,51 @@
         <h2 class="visually-hidden">Обработать изображение</h2>
         <a class="editor__link-img" href="#" aria-label="Перейти на полноразмерную версию">
           <picture>
-            <source srcset="img/photo-road-desktop@1x.webp 1x, img/photo-road-desktop@2x.webp 2x" media="(min-width: 960px)">
-            <source srcset="img/photo-road-desktop@1x.jpg 1x, img/photo-road-desktop@2x.jpg 2x" media="(min-width: 960px)">
-            <source srcset="img/photo-road-tablet@1x.webp 1x, img/photo-road-tablet@2x.webp 2x" media="(min-width: 660px) and (max-width: 959px)">
-            <source srcset="img/photo-road-tablet@1x.jpg 1x, img/photo-road-tablet@2x.jpg 2x" media="(min-width: 660px) and (max-width: 959px)">
-            <source srcset="img/photo-road-mobile@1x.webp 1x, img/photo-road-mobile@2x.webp 2x">
+            <source srcset="img/photo-road-desktop@1x.webp 1x, img/photo-road-desktop@2x.webp 2x" type="image/webp" media="(min-width: 960px)">
+            <source srcset="img/photo-road-desktop@1x.jpg 1x, img/photo-road-desktop@2x.jpg 2x" type="image/jpg" media="(min-width: 960px)">
+            <source srcset="img/photo-road-tablet@1x.webp 1x, img/photo-road-tablet@2x.webp 2x" type="image/webp" media="(min-width: 660px) and (max-width: 959px)">
+            <source srcset="img/photo-road-tablet@1x.jpg 1x, img/photo-road-tablet@2x.jpg 2x" type="image/jpg" media="(min-width: 660px) and (max-width: 959px)">
+            <source srcset="img/photo-road-mobile@1x.webp 1x, img/photo-road-mobile@2x.webp 2x" type="image/webp">
             <img class="editor__user-img" src="img/photo-road-mobile@1x.jpg" srcset="img/photo-road-mobile@2x.jpg 2x" width="280" height="374" alt="Изображение пользователя">
           </picture>
         </a>
         <form class="editor__form" method="get" action="https://echo.htmlacademy.ru" name="editor" autocomplete="off">
           <ul class="editor__control">
             <li class="editor__control-item">
-              <svg class="TEMP editor__icon-vignette" width="22" height="22"></svg>
+              <svg class="editor__icon-vignette" width="24" height="22" viewBox="0 0 44 44">
+                <use xlink:href="img/icon-editor-crop.svg#editor__icon-vignette"></use>
+              </svg>
               <input class="visually-hidden editor__switcher vignette" id="editor__switcher-vignette" type="radio" name="editor__switcher" aria-label="Выбрать виньетирование" checked>
               <label class="editor__btn" for="editor__switcher-vignette">
-                <svg class="TEMP" width="44" height="44"></svg>
+                <svg class="editor__icon-vignette-switcher" width="48" height="44">
+                  <use xlink:href="img/icon-editor-crop.svg#editor__icon-vignette"></use>
+                </svg>
               </label>
               <input class="editor__range custom__input-range vignette" type="range" name="editor__range-vignette" min="0" max="100" step="1" value="0" aria-label="Ползунок виньетирования">
             </li>
             <li class="editor__control-item">
-              <svg class="TEMP editor__icon-fill" width="24" height="22"></svg>
+              <svg class="editor__icon-fill" width="24" height="22" viewBox="0 0 48 43">
+                <use xlink:href="img/icon-editor-fill.svg#editor__icon-fill"></use>
+              </svg>
               <input class="visually-hidden editor__switcher fill" id="editor__switcher-fill" type="radio" name="editor__switcher" aria-label="Выбрать заливку">
               <label class="editor__btn" for="editor__switcher-fill">
-                <svg class="TEMP" width="48" height="43"></svg>
+                <svg class="editor__icon-fill-switcher" width="48" height="44">
+                  <use xlink:href="img/icon-editor-fill.svg#editor__icon-fill"></use>
+                </svg>
               </label>
               <input class="editor__range custom__input-range fill" type="range" name="editor__range-fill" min="0" max="100" step="1" value="0" aria-label="Ползунок заливки">
             </li>
             <li class="editor__control-item">
-              <svg class="TEMP editor__icon-contrast" width="16" height="16"></svg>
-              <input class="visually-hidden editor__switcher contrast" id="editor__switcher-contrast" type="radio" name="editor__switcher" aria-label="Выбрать контраст">
+              <svg class="editor__icon-contrast" width="24" height="22" viewBox="-40 -15 48 43">
+                <use xlink:href="img/icon-editor-contrast.svg#editor__icon-contrast"></use>
+              </svg>
+              <input class="visually-hidden editor__switcher contrast" id="editor__switcher-contrast" type="radio" name="editor__switcher" aria-label="Выбрать заливку">
               <label class="editor__btn" for="editor__switcher-contrast">
-                <svg class="TEMP" width="32" height="32"></svg>
+                <svg class="editor__icon-contrast-switcher" width="48" height="44" viewBox="-30 -10 40 40">
+                  <use xlink:href="img/icon-editor-contrast.svg#editor__icon-contrast"></use>
+                </svg>
               </label>
-              <input class="editor__range custom__input-range contrast" type="range" name="editor__range-contrast" min="0" max="100" step="1" value="0" aria-label="Ползунок контраста">
+              <input class="editor__range custom__input-range contrast" type="range" name="editor__range-contrast" min="0" max="100" step="1" value="0" aria-label="Ползунок заливки">
             </li>
           </ul>
           <hr class="custom__hr">
@@ -308,8 +377,9 @@
     <footer class="footer">
       <div class="footer__alignment">
         <a class="footer__logo" href="index.html" aria-label="Перейти на главную страницу">
-          <object class="footer__logo-blended" data="img/logo-pink-blue-mobile.svg" type="image/svg+xml"></object>
-          <object class="footer__logo-desktop" data="img/logo-pink-blue-desktop.svg" type="image/svg+xml"></object>
+          <svg class="footer__logo-svg" id="logo__footer" width="147" height="40">
+            <use xlink:href="img/logo-sprite.svg#logo__footer"></use>
+          </svg>
         </a>
 
         <ul class="footer__social-list">
@@ -324,14 +394,15 @@
           </li>
         </ul>
 
-        <a class="footer__dev-link" href="https://htmlacademy.ru/intensive/adaptive">
+        <a class="footer__dev-link" href="https://htmlacademy.ru/intensive/adaptive" aria-label="Перейти на сайт Эйч-Ти-Эм-Эл Академи, интерактивные курсы веб-разработки">
           <p class="footer__dev">Разработано</p>
-          <object class="footer__dev-logo" data="img/htmlacademy.svg" type="image/svg+xml" width="27" height="34"></object>
+          <svg class="footer__logo-htmlacademy" width="27" height="34">
+            <use xlink:href="img/htmlacademy.svg#logo__htmlacademy"></use>
+          </svg>
         </a>
       </div>
     </footer>
 
-    <script src="js/picturefill-min.js"></script>
     <script src="js/header-menu.js"></script>
   </body>
 </html>

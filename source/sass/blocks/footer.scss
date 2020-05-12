@@ -15,8 +15,19 @@
     height: 40px;
   }
 
-  .footer__logo-desktop {
-    display: none;
+  .footer__logo-svg {
+    width: 147px;
+    height: 40px;
+    fill: $c_darkBlue1;
+  }
+
+  .footer__logo:hover .footer__logo-svg {
+    fill: $c_red;
+  }
+
+  .footer__logo:active .footer__logo-svg {
+    fill: $c_darkBlue1;
+    opacity: 30%;
   }
 
   .footer__social-list {
@@ -64,6 +75,8 @@
 
   .footer__dev-link {
     @include flex(row, center);
+    @include h-spacing();
+    width: max-content;
     text-decoration: none;
   }
 
@@ -72,6 +85,18 @@
     font: $f_reg14;
     color: $c_darkBlue1;
     line-height: 18px;
+  }
+
+  .footer__logo-htmlacademy {
+    fill: $c_red;
+  }
+
+  .footer__dev-link:hover .footer__logo-htmlacademy {
+    fill: $c_darkBlue1;
+  }
+
+  .footer__dev-link:active .footer__logo-htmlacademy {
+    fill: #bfc3c8;
   }
 }
 
@@ -95,8 +120,19 @@
     margin-top: -15px;
   }
 
-  .footer__logo-desktop {
-    display: none;
+  .footer__logo-svg {
+    width: 147px;
+    height: 40px;
+    fill: $c_darkBlue1;
+  }
+
+  .footer__logo:hover .footer__logo-svg {
+    fill: $c_red;
+  }
+
+  .footer__logo:active .footer__logo-svg {
+    fill: $c_darkBlue1;
+    opacity: 30%;
   }
 
   .footer__social-list {
@@ -153,6 +189,18 @@
     color: $c_darkBlue1;
     line-height: 18px;
   }
+
+  .footer__logo-htmlacademy {
+    fill: $c_red;
+  }
+
+  .footer__dev-link:hover .footer__logo-htmlacademy {
+    fill: $c_darkBlue1;
+  }
+
+  .footer__dev-link:active .footer__logo-htmlacademy {
+    fill: #bfc3c8;
+  }
 }
 
 @media (min-width: $ff_large) {
@@ -175,8 +223,19 @@
     margin-top: -15px;
   }
 
-  .footer__logo-blended {
-    display: none;
+  .footer__logo-svg {
+    width: 147px;
+    height: 40px;
+    fill: $c_darkBlue1;
+  }
+
+  .footer__logo:hover .footer__logo-svg {
+    fill: $c_red;
+  }
+
+  .footer__logo:active .footer__logo-svg {
+    fill: $c_darkBlue1;
+    opacity: 30%;
   }
 
   .footer__social-list {
@@ -232,5 +291,17 @@
     font: $f_reg18;
     color: $c_darkBlue1;
     line-height: 18px;
+  }
+
+  .footer__logo-htmlacademy {
+    fill: $c_red;
+  }
+
+  .footer__dev-link:hover .footer__logo-htmlacademy {
+    fill: $c_darkBlue1;
+  }
+
+  .footer__dev-link:active .footer__logo-htmlacademy {
+    fill: #bfc3c8;
   }
 }

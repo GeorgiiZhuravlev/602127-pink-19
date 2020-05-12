@@ -21,7 +21,8 @@
   .contest-device__list {
     @include resetSize();
     @include h-spacing();
-    width: calc(100% - 35px);
+    width: 281px;
+    width: max-content;
     list-style: none;
   }
 
@@ -56,21 +57,26 @@
     @include resetSize();
     @include v-spacing(43px);
     @include h-spacing();
-    width: fit-content;
+    width: 100%;
     margin-top: -10px;
-    padding: 0 25px 0;
     font: $f_light14;
     color: $c_red;
     text-align: center;
     text-transform: uppercase;
     letter-spacing: 0.3px;
+    background-color: transparent;
+  }
+
+  .contest-device__intro.quasi-legend {
+    padding: 0 20px;
     background-color: #ffffff;
   }
 
   .contest-device__list {
     @include resetSize();
     @include h-spacing();
-    width: calc(100% - 53px);
+    width: 281px;
+    width: max-content;
     list-style: none;
   }
 
@@ -104,14 +110,18 @@
     @include resetSize();
     @include v-spacing(43px);
     @include h-spacing();
-    width: fit-content;
+    width: 100%;
     margin-top: -10px;
-    padding: 0 25px 0;
     font: $f_light14;
     color: $c_red;
     text-align: center;
     text-transform: uppercase;
     letter-spacing: 0.3px;
+    background-color: transparent;
+  }
+
+  .contest-device__intro.quasi-legend {
+    padding: 0 20px;
     background-color: #ffffff;
   }
 

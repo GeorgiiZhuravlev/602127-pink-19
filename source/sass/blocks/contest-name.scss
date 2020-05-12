@@ -9,6 +9,7 @@
   .contest-name__list {
     @include resetSize();
     @include v-spacing(20px);
+    padding: 0 20px;
     list-style: none;
   }
 
@@ -16,7 +17,7 @@
     @include flex(row, flex-start);
     @include v-spacing(22px);
     @include h-spacing();
-    width: $align_small-fields;
+    width: 100%;
   }
 
   .contest-name__item:last-child {

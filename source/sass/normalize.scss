@@ -1,15 +1,36 @@
+// GLOBAL DOCUMENT
+
+// Sizing set
 *,
 *:before,
 *:after {
   box-sizing: border-box;
 }
 
+// Set browser default to zero and limiting minimal size of viewport
 body {
+  min-width: 320px;
   margin: 0;
   padding: 0;
 }
 
+// Save image proportions
 img {
   max-width: 100%;
   height: auto;
+}
+
+// Delete borders in IFrame
+iframe {
+  border: none;
+}
+
+// Set cursor for interactive elements
+input[type=range],
+input[type=checkbox],
+input[type=radio],
+button,
+label,
+a {
+  cursor: pointer;
 }

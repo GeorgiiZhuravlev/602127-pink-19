@@ -1,13 +1,13 @@
 @media (max-width: $ff_until-medium) {
   .contest {
-    padding: 46px 0 20px;
+    padding: 0 0 20px;
   }
 
   .contest__intro {
     @include resetSize();
-    @include v-spacing(39px);
     @include h-spacing();
-    width: $align_small-fields;
+    max-width: 500px;
+    padding: 46px 20px 39px;
     font: $f_light14;
     color: $c_darkBlue1;
     text-align: center;
@@ -23,7 +23,7 @@
     @include v-spacing(40px);
     @include h-spacing();
     @include btnConfirm($c_green);
-    width: $align_small-fields;
+    width: calc(100% - 40px);
 
     &:hover {
       @include btnConfirm($c_darkGreen);
@@ -104,7 +104,7 @@
     @include flex();
     @include h-spacing();
     order: 2;
-    width: calc(100% - 40px);
+    width: 620px;
   }
 
   .contest__annotation {

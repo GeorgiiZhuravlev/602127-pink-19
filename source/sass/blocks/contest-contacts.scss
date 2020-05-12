@@ -10,12 +10,13 @@
 
   .contest-contacts__list {
     @include resetSize();
+    padding: 0 20px;
     list-style: none;
   }
 
   .contest-contacts__item {
     @include h-spacing();
-    width: $align_small-fields;
+    width: 100%;
   }
 
   .contest-contacts__label {
@@ -52,12 +53,17 @@
     @include resetSize();
     @include v-spacing(36px);
     @include h-spacing();
-    width: fit-content;
+    width: 100%;
     margin-top: -17px;
-    padding: 0 25px 0;
     font: $f_reg14;
     color: $c_red;
+    text-align: center;
     text-transform: uppercase;
+    background-color: transparent;
+  }
+
+  .contest-contacts__intro.quasi-legend {
+    padding: 0 20px;
     background-color: #ffffff;
   }
 
@@ -132,12 +138,17 @@
     @include resetSize();
     @include v-spacing(32px);
     @include h-spacing();
-    width: fit-content;
+    width: 100%;
     margin-top: -12px;
-    padding: 0 25px 0;
     font: $f_reg14;
     color: $c_red;
+    text-align: center;
     text-transform: uppercase;
+    background-color: transparent;
+  }
+
+  .contest-contacts__intro.quasi-legend {
+    padding: 0 20px;
     background-color: #ffffff;
   }
 

@@ -1,4 +1,6 @@
-// Скрыть элемент
+// GLOBAL DOCUMENT
+
+// Hide element
 .visually-hidden {
   position: absolute;
   clip: rect(1px, 1px, 1px, 1px);
@@ -9,7 +11,7 @@
   overflow: hidden;
 }
 
-// Убрать элемент
+// Delete element from flow
 .vis-off {
   display: none;
 }

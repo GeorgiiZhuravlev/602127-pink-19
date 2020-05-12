@@ -5,15 +5,57 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <link href="css/style.css" rel="stylesheet">
+
+    <!-- Script for SVG (IE fix) -->
+    <script src="js/svg4everybody.js"></script>
+    <!-- Scripts for WebP (IE fix) -->
+    <script src="https://unpkg.com/webp-hero@0.0.0-dev.21/dist-cjs/polyfills.js"></script>
+    <script src="https://unpkg.com/webp-hero@0.0.0-dev.21/dist-cjs/webp-hero.bundle.js"></script>
+    <script src="js/webp-hero-start.js"></script>
   </head>
   <body>
     <header class="header index">
       <div class="header-upside">
         <div class="header-upside__alignment">
+          <!--
+            Принцип работы меню средствами JS:
+            1) Загрузка страницы:
+            Установлены свойства по умолчанию, обеспечивающие
+            работоспособность при отключенном JS.
+            Хедер со стилем "открыто".
+            Отображение кнопки отключено.
+            Навигация открыта.
+
+            2) Подключение JS-файла:
+            Устанавливаются свойства для хедера, кнопки и навигация
+            на статус "закрыто", CSS классом "closed".
+
+            3) Работа JS-файла:
+            Статус хедера, кнопки и навигации переключается классами
+            "opened" - для открытого и "closed" - для закрытого состояния.
+
+            4) Для версии ff_large все стили устанавливаются в
+            единообразное состояние вне зависимости от сопутствующих классов.
+          -->
           <div class="header-upside__menu opened">
-            <a class="header-upside__logo" tabindex="-1"></a>
+            <a class="header-upside__logo" tabindex="-1">
+              <svg class="header-upside__logo-svg-small" width="75" height="23">
+                <use xlink:href="img/logo-sprite.svg#logo__for-small"></use>
+              </svg>
+              <svg class="header-upside__logo-svg-medium" width="147" height="40">
+                <use xlink:href="img/logo-sprite.svg#logo__for-medium"></use>
+              </svg>
+              <svg class="header-upside__logo-svg-large" width="147" height="40">
+                <use xlink:href="img/logo-sprite.svg#logo__for-large"></use>
+              </svg>
+            </a>
             <button class="header-upside__nav-btn" type="button" aria-label="Открыть выпадающее меню">
-              <!-- SVG -->
+              <svg class="header-upside__nav-btn-svg-burger" width="50" height="24">
+                <use xlink:href="img/menu-btn.svg#menu-btn-burger"></use>
+              </svg>
+              <svg class="header-upside__nav-btn-svg-cross" width="24" height="24">
+                <use xlink:href="img/menu-btn.svg#menu-btn-cross"></use>
+              </svg>
             </button>
           </div>
           <nav class="header-upside__nav opened">
@@ -41,7 +83,7 @@
 
           <article class="app-download">
             <h2 class="visually-hidden">Скачать приложение Pink</h2>
-            <a class="app-download__btn-download" href="https://www.apple.com/ru/ios/app-store/" aria-label="Перейти на страницу скачивания">Скачать приложение</a>
+            <a class="app-download__btn-download" href="https://www.apple.com/ru/ios/app-store/" aria-label="Перейти на страницу скачивания приложения Пинк">Скачать приложение</a>
             <ul class="app-download__list">
               <li class="app-download__item">
                 <a class="app-download__link apple" href="https://www.apple.com/ru/ios/app-store/" aria-label="Перейти в Эпл Стор"></a>
@@ -71,28 +113,33 @@
           <ul class="features__list">
             <li class="features__item">
               <picture>
-                <source srcset="img/iphone-screen-1-desktop@1x.webp 1x, img/iphone-screen-1-desktop@2x.webp 2x">
-                <img class="features__img" src="img/iphone-screen-1-desktop@1x.png" srcset="img/iphone-screen-1-desktop@2x.png 2x" alt="IPhone image">
+                <source srcset="img/iphone-screen-1-desktop@1x.webp 1x, img/iphone-screen-1-desktop@2x.webp 2x" type="image/webp">
+                <source srcset="img/iphone-screen-1-desktop@2x.png 2x" type="image/png">
+                <img class="features__img" src="img/iphone-screen-1-desktop@1x.png" srcset="img/iphone-screen-1-desktop@2x.png 2x" width="290" height="300" alt="IPhone image">
               </picture>
               <h3 class="features__ttl">Поднимает настроение</h3>
               <p class="features__desc">Приложение позволит вам победить осеннюю хандру и депрессию буквально в несколько кликов!</p>
             </li>
             <li class="features__item">
               <picture>
-                <source srcset="img/iphone-screen-2-desktop@1x.webp 1x, img/iphone-screen-2-desktop@2x.webp 2x">
-                <img class="features__img" src="img/iphone-screen-2-desktop@1x.png" srcset="img/iphone-screen-2-desktop@2x.png 2x" alt="IPhone image">
+                <source srcset="img/iphone-screen-2-desktop@1x.webp 1x, img/iphone-screen-2-desktop@2x.webp 2x" type="image/webp">
+                <img class="features__img" src="img/iphone-screen-2-desktop@1x.png" srcset="img/iphone-screen-2-desktop@2x.png 2x" width="290" height="300" alt="IPhone image">
               </picture>
               <h3 class="features__ttl">Меняет мир вокруг</h3>
               <p class="features__desc">Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить&nbsp;эффект</p>
             </li>
             <li class="features__item">
               <picture>
-                <source srcset="img/iphone-screen-3-desktop@1x.webp 1x, img/iphone-screen-3-desktop@2x.webp 2x" media="(min-width: 960px)">
-                <source srcset="img/iphone-screen-3-desktop@1x.png 1x, img/iphone-screen-3-desktop@2x.png 2x" media="(min-width: 960px)">
-                <source srcset="img/iphone-screen-3-tablet@1x.webp 1x, img/iphone-screen-3-tablet@2x.webp 2x" media="(min-width: 660px) and (max-width: 959px)">
-                <source srcset="img/iphone-screen-3-tablet@1x.png 1x, img/iphone-screen-3-tablet@2x.png 2x" media="(min-width: 660px) and (max-width: 959px)">
-                <source srcset="img/iphone-screen-mobile@1x.webp 1x, img/iphone-screen-mobile@2x.webp 2x">
-                <img class="features__img single" src="img/iphone-screen-mobile@1x.png" srcset="img/iphone-screen-mobile@2x.png 2x" width="157" height="320" alt="IPhone image">
+                <source srcset="img/iphone-screen-mobile@1x.webp 1x, img/iphone-screen-mobile@2x.webp 2x" type="image/webp">
+                <img class="features__img single ie-small" src="img/iphone-screen-mobile@1x.png" srcset="img/iphone-screen-mobile@2x.png 2x" width="157" height="320" alt="IPhone image">
+              </picture>
+              <picture>
+                <source srcset="img/iphone-screen-3-tablet@1x.webp 1x, img/iphone-screen-3-tablet@2x.webp 2x" type="image/webp" media="(min-width: 660px) and (max-width: 959px)">
+                <img class="features__img single ie-medium" src="img/iphone-screen-3-tablet@1x.png" srcset="img/iphone-screen-3-tablet@2x.png 2x" width="268" height="481" alt="IPhone image">
+              </picture>
+              <picture>
+                <source srcset="img/iphone-screen-3-desktop@1x.webp 1x, img/iphone-screen-3-desktop@2x.webp 2x" type="image/webp" media="(min-width: 960px)">
+                <img class="features__img single ie-large" src="img/iphone-screen-3-desktop@1x.png" srcset="img/iphone-screen-3-desktop@2x.png 2x" width="290" height="300" alt="IPhone image">
               </picture>
               <h3 class="features__ttl">Заводит новых друзей</h3>
               <p class="features__desc">Ставьте лайки, комментируйте, делитесь фотографиями с друзьями и заводите новых</p>
@@ -104,8 +151,8 @@
       <section class="research">
         <div class="research__alignment">
           <div class="research__timer-wrapper">
-            <svg class="research__timer-svg" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="238" height="276" viewBox="0 0 298 345.097" enable-background="new 0 0 298 345.097" xml:space="preserve">
-              <path d="M264.568,102.055l5.355-5.355c7.717-7.717,9.124-18.938,3.126-24.935c-5.997-5.997-17.217-4.59-24.934,3.127l-5.386,5.385 C221.768,63.292,196.11,51.875,168,48.297v-9.583h7.658c10.914,0,19.843-8.711,19.843-19.357S186.573,0,175.659,0h-53.317  c-10.913,0-19.842,8.711-19.842,19.357s8.929,19.357,19.842,19.357H130v9.583C56.681,57.629,0,120.244,0,196.097  c0,82.291,66.709,149,149,149c82.29,0,149-66.709,149-149C298,160.434,285.465,127.703,264.568,102.055z M149,306.264 c-60.844,0-110.167-49.323-110.167-110.167S88.156,85.93,149,85.93c60.843,0,110.167,49.323,110.167,110.167  S209.843,306.264,149,306.264z"/>
+            <svg class="research__timer-svg" width="238" height="276" viewBox="0 0 298 345">
+              <use xlink:href="img/icon-timer.svg#research__icon-timer"></use>
             </svg>
             <div class="research__timer-24">24</div>
           </div>
@@ -130,15 +177,18 @@
             </li>
           </ul>
 
-          <button class="reviews__bw-btn">
-            <!-- SVG -->
+          <button class="reviews__bw-btn" type="button" aria-label="Слайдер отзывов: кнопка назад">
+            <svg class="reviews__bw-btn-svg" width="22" height="41">
+              <use xlink:href="img/icon-review-arrow-left.svg#reviews__arrow-left"></use>
+            </svg>
           </button>
-          <button class="reviews__fw-btn">
-            <!-- SVG -->
+          <button class="reviews__fw-btn" type="button" aria-label="Слайдер отзывов: кнопка вперед">
+            <svg class="reviews__fw-btn-svg" width="22" height="41">
+              <use xlink:href="img/icon-review-arrow-right.svg#reviews__arrow-right"></use>
+            </svg>
           </button>
 
           <ul class="reviews__slider-bullets custom__slider-bullets">
-            <!-- SVG -->
             <li class="custom__slider-bullets-item">
               <label>
                 <input class="visually-hidden custom__slider-bullets-input" type="radio" name="reviews__slider-input" aria-label="Переключить слайдер" checked>
@@ -163,7 +213,6 @@
 
       <section class="prices">
         <h2 class="visually-hidden">Тарифы</h2>
-        <!-- SVG -->
         <table class="prices__table">
           <tr>
             <th class="prices__heading offset"></th>
@@ -171,7 +220,14 @@
               <p class="prices__ttl">База</p>
               <p class="prices__price">1,99 USD</p>
             </th>
-            <th class="prices__heading hit">
+            <th class="prices__heading">
+              <svg class="prices__hit-mark-small-large" width="74" height="73">
+                <use xlink:href="img/bg-hit.svg#prices__hit-mark-small-large"></use>
+              </svg>
+              <svg class="prices__hit-mark-medium" width="61" height="61">
+                <use xlink:href="img/bg-hit-tablet.svg#prices__hit-mark-medium"></use>
+              </svg>
+              <p class="prices__hit-text">Хит</p>
               <p class="prices__ttl">Стандарт</p>
               <p class="prices__price">3,99 USD</p>
             </th>
@@ -245,8 +301,9 @@
     <footer class="footer index">
       <div class="footer__alignment">
         <a class="footer__logo" aria-label="Перейти на главную страницу">
-          <object class="footer__logo-blended" data="img/logo-pink-blue-mobile.svg" type="image/svg+xml"></object>
-          <object class="footer__logo-desktop" data="img/logo-pink-blue-desktop.svg" type="image/svg+xml"></object>
+          <svg class="footer__logo-svg" width="147" height="40">
+            <use xlink:href="img/logo-sprite.svg#logo__footer"></use>
+          </svg>
         </a>
 
         <ul class="footer__social-list">
@@ -261,14 +318,23 @@
           </li>
         </ul>
 
-        <a class="footer__dev-link" href="https://htmlacademy.ru/intensive/adaptive">
+        <a class="footer__dev-link" href="https://htmlacademy.ru/intensive/adaptive" aria-label="Перейти на сайт Эйч-Ти-Эм-Эл Академи, интерактивные курсы веб-разработки">
           <p class="footer__dev">Разработано</p>
-          <!-- SVG -->
+          <svg class="footer__logo-htmlacademy" width="27" height="34">
+            <use xlink:href="img/htmlacademy.svg#logo__htmlacademy"></use>
+          </svg>
         </a>
       </div>
     </footer>
 
-    <script src="js/picturefill-min.js"></script>
+    <div class="module__bg-off vis-off" id="module__map" tabindex="0">
+      <article class="module__window map">
+        <h2 class="visually-hidden">Модальное окно: Интерактивная карта</h2>
+        <iframe class="module__map" src="https://yandex.ru/map-widget/v1/?um=constructor%3A30e3c82cd630417a0783e7b8d314872e75b9305fd66e131939092392ab6a9050&amp;source=constructor"></iframe>
+      </article>
+    </div>
+
     <script src="js/header-menu.js"></script>
+    <script src="js/modules.js"></script>
   </body>
 </html>

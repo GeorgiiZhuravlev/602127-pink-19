@@ -1,3 +1,5 @@
+// GLOBAL DOCUMENT
+
 // Form factor
 $ff_small: 320px;
 $ff_until-medium: 659px;
@@ -17,10 +19,6 @@ $align_medium: 660px;
 $align_medium-fields: calc(#{$align_medium} - 20px);
 $align_large: 960px;
 $align_large-fields: calc(#{$align_large} - 20px);
-// В будущем будет заменено на
-// $align_borders: 100%;
-// $align_borders-fields: calc(100% - 20px);
-// Для резиновой верстки.
 
 // Colors
 $c_white: #ffffff;

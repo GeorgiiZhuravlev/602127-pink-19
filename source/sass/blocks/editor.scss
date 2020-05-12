@@ -8,15 +8,14 @@
     @include v-spacing(42px);
     @include h-spacing();
     display: block;
-    width: $align_small-fields;
+    height: 374px;
   }
 
   .editor__control {
     @include flex(row, center);
     @include resetSize();
-    @include v-spacing(40px);
     position: relative;
-    padding-bottom: 30px;
+    padding-bottom: 70px;
     list-style: none;
   }
 
@@ -28,6 +27,27 @@
   .editor__icon-fill,
   .editor__icon-contrast {
     display: none;
+  }
+
+  .editor__icon-vignette-switcher,
+  .editor__icon-fill-switcher,
+  .editor__icon-contrast-switcher {
+    fill: $c_darkBlue1;
+    opacity: 30%;
+  }
+
+  .editor__btn:hover .editor__icon-vignette-switcher,
+  .editor__btn:hover .editor__icon-fill-switcher,
+  .editor__btn:hover .editor__icon-contrast-switcher {
+    fill: $c_darkBlue1;
+    opacity: 50%;
+  }
+
+  .editor__switcher:checked ~ .editor__btn .editor__icon-vignette-switcher,
+  .editor__switcher:checked ~ .editor__btn .editor__icon-fill-switcher,
+  .editor__switcher:checked ~ .editor__btn .editor__icon-contrast-switcher {
+    fill: $c_red;
+    opacity: 100%;
   }
 
   .editor__switcher ~ .editor__btn ~ .editor__range {
@@ -42,7 +62,7 @@
     @include h-spacing();
     position: absolute;
     left: 38px;
-    bottom: -9px;
+    top: 80px;
     display: block;
     width: calc(100% - 80px);
   }
@@ -50,7 +70,8 @@
   .editor__submit-btn {
     @include h-spacing();
     @include btnGrand($c_red, $c_red);
-    width: $align_small-fields;
+    width: calc(100% - 40px);
+    max-width: 500px;
     margin-top: 38px;
     margin-bottom: 13px;
 
@@ -70,7 +91,8 @@
   .editor__reset-btn {
     @include h-spacing();
     @include btnGrand($c_darkGray1, $c_darkGray1);
-    width: $align_small-fields;
+    width: calc(100% - 40px);
+    max-width: 500px;
 
     &:hover {
       @include btnGrand($c_darkGray2, $c_darkGray2);
@@ -88,31 +110,35 @@
 
 @media (min-width: $ff_medium) and (max-width: $ff_until-large) {
   .editor {
-    @include flex(row, space-between, flex-start);
-    padding: 57px 20px 12px;
+    @include flex(row, space-between, stretch);
+    flex-wrap: nowrap;
+    padding: 57px 20px 56px;
     background-color: $c_gray;
   }
 
   .editor__user-img {
-    @include v-spacing(42px);
-    @include h-spacing();
     display: block;
     width: 300px;
+    margin-right: 47px;
+  }
+
+  .editor__form {
+    @include flex(column);
+    flex-grow: 1;
   }
 
   .editor__control {
     @include flex(column, flex-start, flex-end);
     @include resetSize();
-    @include v-spacing(72px);
     position: relative;
-    width: 300px;
-    padding-left: 27px;
+    width: 100%;
     list-style: none;
   }
 
   .editor__control-item {
-    @include flex(row, flex-end);
+    @include flex(row, space-between);
     @include resetSize();
+    width: 100%;
     padding: 9px 20px 22px 0;
     border-bottom: 1px solid $c_darkGray1;
   }
@@ -125,6 +151,7 @@
   .editor__icon-fill,
   .editor__icon-contrast {
     display: block;
+    fill: $c_red;
   }
 
   .editor__switcher.vignette,
@@ -141,15 +168,17 @@
 
   .editor__switcher ~ .editor__btn ~ .editor__range,
   .editor__switcher:checked ~ .editor__btn ~ .editor__range {
-    @include h-spacing();
     position: static;
     display: block;
-    width: 202px;
-    margin-left: 25px;
+    width: calc(100% - 92px);
   }
 
   .editor .custom__hr {
     display: none;
+  }
+
+  .editor__btns-wrapper {
+    width: 100%;
   }
 
   .editor__submit-btn {
@@ -157,8 +186,6 @@
     @include h-spacing();
     @include btnGrand($c_red, $c_red);
     width: calc(100% - 40px);
-    margin-top: 38px;
-    margin-left: 26px;
 
     &:hover {
       @include btnGrand($c_white, $c_red, $c_red);
@@ -177,7 +204,6 @@
     @include h-spacing();
     @include btnGrand($c_darkGray1, $c_darkGray1);
     width: calc(100% - 40px);
-    margin-left: 26px;
 
     &:hover {
       @include btnGrand($c_darkGray2, $c_darkGray2);
@@ -195,29 +221,27 @@
 
 @media (min-width: $ff_large) {
   .editor {
-    @include flex(row, space-between, flex-start);
+    @include flex(row, space-between, stretch);
     @include v-spacing(28px);
     @include h-spacing();
     width: 940px;
-    padding: 57px 60px 15px 80px;
+    padding: 57px 60px 55px 80px;
     background-color: $c_gray;
   }
 
   .editor__form {
+    @include flex(column);
     width: 410px;
   }
 
   .editor__user-img {
-    @include v-spacing(42px);
     @include h-spacing();
     display: block;
-    width: 300px;
   }
 
   .editor__control {
     @include flex(column, flex-start, flex-end);
     @include resetSize();
-    @include v-spacing(147px);
     position: relative;
     width: 100%;
     list-style: none;
@@ -238,19 +262,12 @@
     padding-bottom: 11px;
   }
 
-  .editor__icon-vignette {
-    width: 44px;
-    height: 44px;
-  }
-
-  .editor__icon-fill {
-    width: 48px;
-    height: 43px;
-  }
-
+  .editor__icon-vignette,
+  .editor__icon-fill,
   .editor__icon-contrast {
-    width: 32px;
-    height: 32px;
+    width: 48px;
+    height: 44px;
+    fill: $c_red;
   }
 
   .editor__switcher.vignette,
@@ -278,6 +295,7 @@
 
   .editor__btns-wrapper {
     @include flex();
+    width: 100%;
   }
 
   .editor__submit-btn {

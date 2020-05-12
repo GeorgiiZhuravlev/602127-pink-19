@@ -30,7 +30,7 @@
   .post__user-img {
     @include h-spacing();
     display: block;
-    width: $align_small-fields;
+    width: calc(100% - 40px);
   }
 
   .post__user-img.panorama {
@@ -40,7 +40,7 @@
 
   .post__msg-wrapper {
     @include h-spacing();
-    width: $align_small-fields;
+    width: calc(100% - 40px);
     padding: 18px 10px 25px 18px;
     background-color: $c_gray;
   }
@@ -76,6 +76,7 @@
     display: block;
     width: 13px;
     height: 12px;
+    fill: $c_red;
   }
 
   .post__count {
@@ -208,10 +209,7 @@
     display: block;
     width: 13px;
     height: 12px;
-  }
-
-  .post.full-width .post__decor-like {
-    order: 1;
+    fill: $c_red;
   }
 
   .post__count {
@@ -350,10 +348,7 @@
     display: block;
     width: 13px;
     height: 12px;
-  }
-
-  .post.full-width .post__decor-like {
-    order: 1;
+    fill: $c_red;
   }
 
   .post__count {
@@ -370,9 +365,4 @@
     @include h-spacing(0, 15px);
     width: auto;
   }
-
-  // .post.full-width .post__msg-wrapper {
-  //   width: 940px;
-  //   padding-bottom: 0;
-  // }
 }

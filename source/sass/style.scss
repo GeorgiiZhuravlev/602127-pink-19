@@ -1,9 +1,10 @@
+// GLOBAL DOCUMENT | Processing global and block documents for "style.css"
+
 @import "normalize.scss";
 @import "variables.scss";
 @import "mixins.scss";
 @import "fonts.scss";
 @import "visually-hidden.scss";
-@import "form-factor.scss";
 @import "custom.scss";
 @import "blocks/header.scss";
 @import "blocks/header-upside.scss";
