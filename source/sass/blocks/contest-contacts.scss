@@ -79,7 +79,7 @@
     width: calc(100% - 20px);
 
     &::after {
-      content: '';
+      content: "";
       position: absolute;
       top: 2px;
       right: 39px;
@@ -91,11 +91,11 @@
   }
 
   .contest-contacts__item.tel::after {
-    background: url('../../img/icon-contacts-phone.svg') 50% no-repeat $c_darkGray1;
+    background: url("../../img/icon-contacts-phone.svg") 50% no-repeat $c_darkGray1;
   }
 
   .contest-contacts__item.email::after {
-    background: url('../../img/icon-contacts-mail.svg') 50% no-repeat $c_darkGray1;
+    background: url("../../img/icon-contacts-mail.svg") 50% no-repeat $c_darkGray1;
   }
 
   .contest-contacts__item:not(:last-child) {
@@ -114,9 +114,9 @@
   }
 
   .contest-contacts__input {
-    order: -1;
     @include v-spacing(15px);
     @include h-spacing();
+    order: -1;
     display: block;
     width: calc(100% - 75px);
   }
@@ -163,8 +163,8 @@
     position: relative;
     width: 375px;
 
-    &:after {
-      content: '';
+    &::after {
+      content: "";
       position: absolute;
       top: 2px;
       right: 2px;
@@ -176,11 +176,11 @@
   }
 
   .contest-contacts__item.tel::after {
-    background: url('../../img/icon-contacts-phone.svg') 50% no-repeat $c_darkGray1;
+    background: url("../../img/icon-contacts-phone.svg") 50% no-repeat $c_darkGray1;
   }
 
   .contest-contacts__item.email::after {
-    background: url('../../img/icon-contacts-mail.svg') 50% no-repeat $c_darkGray1;
+    background: url("../../img/icon-contacts-mail.svg") 50% no-repeat $c_darkGray1;
   }
 
   .contest-contacts__label {

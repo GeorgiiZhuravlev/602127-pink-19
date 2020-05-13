@@ -35,7 +35,7 @@
     font: $f_reg14;
     color: $c_darkBlue1;
     line-height: 30px;
-    letter-spacing: 0px;
+    letter-spacing: 0;
   }
 
   .reviews__slider-bullets .custom__slider-bullets-input ~ .custom__slider-bullet {
@@ -130,7 +130,7 @@
 @media (min-width: $ff_large) {
   .reviews {
     padding: 185px 0 2px;
-    background: url('../../img/icon-quotes.svg') no-repeat;
+    background: url("../../img/icon-quotes.svg") no-repeat;
     background-position: 50% 72px;
   }
 

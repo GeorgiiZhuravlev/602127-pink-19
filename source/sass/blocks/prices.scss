@@ -2,7 +2,7 @@
   .prices {
     @include v-spacing(41px);
     padding: 90px 0 47px;
-    background: url('../../img/bg-triangle-white.svg') no-repeat;
+    background: url("../../img/bg-triangle-white.svg") no-repeat;
     background-position: 0% 0%;
     background-size: contain;
     background-color: $c_gray;
@@ -81,13 +81,13 @@
   }
 
   .prices__option.yes {
-    background: url('../../img/icon-yes.svg') no-repeat $c_white;
+    background: url("../../img/icon-yes.svg") no-repeat $c_white;
     background-size: 31px 21px;
     background-position: 94% 50%;
   }
 
   .prices__option.no {
-    background: url('../../img/icon-no.svg') no-repeat $c_white;
+    background: url("../../img/icon-no.svg") no-repeat $c_white;
     background-size: 27px 27px;
     background-position: 93% 50%;
   }
@@ -116,7 +116,7 @@
 @media (min-width: $ff_medium) and (max-width: $ff_until-large) {
   .prices {
     padding: 88px 20px 50px;
-    background: url('../../img/bg-triangle-white.svg') no-repeat $c_gray;
+    background: url("../../img/bg-triangle-white.svg") no-repeat $c_gray;
     background-position: 0% 0%;
     background-size: contain;
   }
@@ -194,13 +194,13 @@
   }
 
   .prices__option.yes {
-    background: url('../../img/icon-yes.svg') no-repeat $c_white;
+    background: url("../../img/icon-yes.svg") no-repeat $c_white;
     background-size: 31px 21px;
     background-position: 50%;
   }
 
   .prices__option.no {
-    background: url('../../img/icon-no.svg') no-repeat $c_white;
+    background: url("../../img/icon-no.svg") no-repeat $c_white;
     background-size: 27px 27px;
     background-position: 50%;
   }
@@ -217,7 +217,7 @@
 @media (min-width: $ff_large) {
   .prices {
     padding: 147px 0 76px;
-    background: url('../../img/bg-triangle-white.svg') no-repeat $c_gray;
+    background: url("../../img/bg-triangle-white.svg") no-repeat $c_gray;
     background-position: 0% 0%;
     background-size: contain;
   }
@@ -294,13 +294,13 @@
   }
 
   .prices__option.yes {
-    background: url('../../img/icon-yes.svg') no-repeat $c_white;
+    background: url("../../img/icon-yes.svg") no-repeat $c_white;
     background-size: 31px 21px;
     background-position: 50%;
   }
 
   .prices__option.no {
-    background: url('../../img/icon-no.svg') no-repeat $c_white;
+    background: url("../../img/icon-no.svg") no-repeat $c_white;
     background-size: 27px 27px;
     background-position: 50%;
   }

@@ -9,7 +9,7 @@
   }
 
   .features__wrapper {
-    background: url('../../img/bg-triangle-white.svg') no-repeat;
+    background: url("../../img/bg-triangle-white.svg") no-repeat;
     background-position: 0% 0%;
     background-size: contain;
   }
@@ -97,11 +97,11 @@
   }
 
   .features__intro:not(:last-child) {
-    @include v-spacing(0px);
+    @include v-spacing(0);
   }
 
   .features__wrapper {
-    background: url('../../img/bg-triangle-white.svg') no-repeat $c_gray;
+    background: url("../../img/bg-triangle-white.svg") no-repeat $c_gray;
     background-position: 0% 0%;
     background-size: contain;
   }
@@ -177,7 +177,7 @@
   }
 
   .features__wrapper {
-    background: url('../../img/bg-triangle-white.svg') no-repeat $c_gray;
+    background: url("../../img/bg-triangle-white.svg") no-repeat $c_gray;
     background-position: 0% 0%;
     background-size: contain;
   }

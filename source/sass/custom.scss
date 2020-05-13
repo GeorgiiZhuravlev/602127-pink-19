@@ -58,22 +58,22 @@
   background-color: $c_white;
 }
 
-.custom__input[type=checkbox]:hover ~ .custom__label .custom__checkbox {
+.custom__input[type="checkbox"]:hover ~ .custom__label .custom__checkbox {
   border-color: $c_darkBlue1;
 }
 
-.custom__input[type=checkbox]:focus ~ .custom__label .custom__checkbox,
-.custom__input[type=checkbox]:active ~ .custom__label .custom__checkbox {
+.custom__input[type="checkbox"]:focus ~ .custom__label .custom__checkbox,
+.custom__input[type="checkbox"]:active ~ .custom__label .custom__checkbox {
   border-color: $c_red;
   outline: none;
 }
 
-.custom__input[type=checkbox]:disabled ~ .custom__label .custom__checkbox {
+.custom__input[type="checkbox"]:disabled ~ .custom__label .custom__checkbox {
   border: 2px solid $c_darkGray2;
 }
 
-.custom__input[type=checkbox]:checked ~ .custom__label .custom__checkbox {
-  background: url('../../img/icon-yes-checkbox.svg') no-repeat;
+.custom__input[type="checkbox"]:checked ~ .custom__label .custom__checkbox {
+  background: url("../../img/icon-yes-checkbox.svg") no-repeat;
   background-position: 50%;
 }
 
@@ -88,22 +88,22 @@
   background-color: $c_white;
 }
 
-.custom__input[type=radio]:hover ~ .custom__label .custom__radio {
+.custom__input[type="radio"]:hover ~ .custom__label .custom__radio {
   border-color: $c_darkBlue1;
 }
 
-.custom__input[type=radio]:focus ~ .custom__label .custom__radio,
-.custom__input[type=radio]:active ~ .custom__label .custom__radio {
+.custom__input[type="radio"]:focus ~ .custom__label .custom__radio,
+.custom__input[type="radio"]:active ~ .custom__label .custom__radio {
   border-color: $c_red;
   outline: none;
 }
 
-.custom__input[type=radio]:disabled ~ .custom__label .custom__radio {
+.custom__input[type="radio"]:disabled ~ .custom__label .custom__radio {
   border: 2px solid $c_darkGray2;
 }
 
-.custom__input[type=radio]:checked ~ .custom__label .custom__radio:before {
-  content: '';
+.custom__input[type="radio"]:checked ~ .custom__label .custom__radio::before {
+  content: "";
   display: block;
   width: 15px;
   height: 15px;
@@ -151,7 +151,7 @@
 
 .custom__input-range::-ms-track {
   appearance: none;
-  height: 0px;
+  height: 0;
   color: transparent;
   background-color: $c_black;
   border: none;
@@ -160,13 +160,13 @@
 }
 
 .custom__input-range {
-  -webkit-appearance: none;
+  appearance: none;
   padding: 0;
   background-color: transparent;
 }
 
 .custom__input-range::-webkit-slider-runnable-track {
-  -webkit-appearance: none;
+  appearance: none;
   height: 2px;
   background-color: $c_black;
 
@@ -176,7 +176,7 @@
 }
 
 .custom__input-range::-webkit-slider-thumb {
-  -webkit-appearance: none;
+  appearance: none;
   width: 14px;
   height: 14px;
   margin-top: -6px;
@@ -249,85 +249,3 @@
 .custom__hr {
   border: 1px solid $c_darkGray1;
 }
-
-
-
-
-
-
-
-// .custom__input-range {
-//   -webkit-appearance: none;
-//   height: 2px;
-//   background-color: $c_black;
-// }
-
-// .custom__input-range::-webkit-slider-runnable-track {
-
-// }
-
-// .custom__input-range::-webkit-slider-thumb {
-//   -webkit-appearance: none;
-//   width: 14px;
-//   height: 14px;
-//   background-color: $c_white;
-//   border: 2px solid $c_red;
-//   border-radius: 50%;
-
-//   &:active {
-//     background-color: $c_red;
-//   }
-// }
-
-// .custom__input-range:focus::-webkit-slider-runnable-track {
-//   background: #ac51b5;
-// }
-
-// .custom__input-range::-moz-range-track {
-//   -webkit-appearance: none;
-//   height: 2px;
-//   background-color: $c_black;
-// }
-
-// .custom__input-range::-moz-range-thumb {
-//   appearance: none;
-//   width: 14px;
-//   height: 14px;
-//   background-color: $c_white;
-//   border: 2px solid $c_red;
-//   border-radius: 50%;
-
-//   &:active {
-//     background-color: $c_red;
-//   }
-// }
-
-// .custom__input-range::-ms-track {
-//   appearance: none;
-//   height: 2px;
-//   background-color: red;
-// }
-
-// .custom__input-range::-ms-fill-lower {
-//   appearance: none;
-//   height: 2px;
-//   background-color: red;
-// }
-
-// .custom__input-range::-ms-fill-upper {
-//   appearance: none;
-//   height: 2px;
-//   background-color: red;
-// }
-
-// .custom__input-range::-ms-thumb {
-//   background-color: red;
-// }
-
-// .custom__input-range:focus::-ms-fill-lower {
-//   background: #ac51b5;
-// }
-
-// .custom__input-range:focus::-ms-fill-upper {
-//   background: #ac51b5;
-// }

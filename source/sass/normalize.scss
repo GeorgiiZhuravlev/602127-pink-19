@@ -2,8 +2,8 @@
 
 // Sizing set
 *,
-*:before,
-*:after {
+*::before,
+*::after {
   box-sizing: border-box;
 }
 
@@ -26,9 +26,9 @@ iframe {
 }
 
 // Set cursor for interactive elements
-input[type=range],
-input[type=checkbox],
-input[type=radio],
+input[type="range"],
+input[type="checkbox"],
+input[type="radio"],
 button,
 label,
 a {
