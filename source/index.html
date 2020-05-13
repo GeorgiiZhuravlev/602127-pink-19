@@ -4,7 +4,7 @@
     <title>Pink: Главная</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <link href="css/style.css" rel="stylesheet">
+    <link href="css/style.min.css" rel="stylesheet">
 
     <!-- Script for SVG (IE fix) -->
     <script src="js/svg4everybody.js"></script>
@@ -14,6 +14,9 @@
     <script src="js/webp-hero-start.js"></script>
   </head>
   <body>
+    <div style="display: none">
+      <include src="build/img/sprite.svg"></include>
+    </div>
     <header class="header index">
       <div class="header-upside">
         <div class="header-upside__alignment">
@@ -152,7 +155,7 @@
         <div class="research__alignment">
           <div class="research__timer-wrapper">
             <svg class="research__timer-svg" width="238" height="276" viewBox="0 0 298 345">
-              <use xlink:href="img/icon-timer.svg#research__icon-timer"></use>
+              <use xlink:href="img/sprite.svg#icon-timer">
             </svg>
             <div class="research__timer-24">24</div>
           </div>
