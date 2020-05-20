@@ -5,14 +5,18 @@ var plumber = require('gulp-plumber');
 var sourcemap = require('gulp-sourcemaps');
 var rename = require('gulp-rename');
 var sass = require('gulp-sass');
+
 var postcss = require('gulp-postcss');
 var autoprefixer = require('autoprefixer');
+
 var csso = require('gulp-csso');
 var imagemin = require('gulp-imagemin');
 var webp = require('gulp-webp');
 var svgstore = require('gulp-svgstore');
+
 var posthtml = require('gulp-posthtml');
 var include = require('posthtml-include');
+
 var del = require('del');
 var minify = require('gulp-minifier');
 var server = require('browser-sync').create();
