@@ -38,16 +38,6 @@ function IEFix() {
           let svgEditor = evt.currentTarget.querySelector('svg');
           svgEditor.style.opacity = '0.3';
         }
-
-        // btnEditor[i].addEventListener('mouseover', function (evt) {
-        //   let svgEditor = evt.currentTarget.querySelector('svg');
-        //   svgEditor.style.opacity = '0.5';
-        // })
-
-        // btnEditor[i].addEventListener('mouseout', function (evt) {
-        //   let svgEditor = evt.currentTarget.querySelector('svg');
-        //   svgEditor.style.opacity = '0.3';
-        // })
       }
     }
 

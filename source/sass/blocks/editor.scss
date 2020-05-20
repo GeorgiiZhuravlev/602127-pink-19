@@ -240,7 +240,7 @@
 
   .editor__form {
     @include flex(column);
-    @include h-spacing(110px)
+    @include h-spacing(110px);
     width: 410px;
   }
 
