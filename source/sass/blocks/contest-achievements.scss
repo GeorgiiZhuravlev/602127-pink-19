@@ -1,6 +1,6 @@
 @media (max-width: $ff_until-medium) {
   .contest-achievements {
-    padding: 36px 0 43px;
+    padding: 36px 50px 43px;
     background-color: $c_gray;
     border: none;
   }
@@ -10,17 +10,16 @@
     @include v-spacing(37px);
     @include h-spacing();
     width: calc(100% - 80px);
-    font: $f_light14;
+    font: $f_reg14;
     color: $c_red;
     text-align: center;
     text-transform: uppercase;
-    letter-spacing: 0.3px;
+    letter-spacing: 0.1px;
   }
 
   .contest-achievements__list {
     @include resetSize();
     @include h-spacing();
-    width: 281px;
     width: max-content;
     list-style: none;
   }
@@ -46,7 +45,7 @@
     @include h-spacing();
     order: 2;
     width: calc(100% - 38px);
-    padding-bottom: 50px;
+    padding: 0 50px 50px;
     background-color: transparent;
     border: 2px solid $c_darkGray1;
     border-radius: 3px;
@@ -74,7 +73,6 @@
   .contest-achievements__list {
     @include resetSize();
     @include h-spacing();
-    width: 281px;
     width: max-content;
     list-style: none;
   }

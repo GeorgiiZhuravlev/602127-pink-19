@@ -69,10 +69,10 @@
 
   .post__btn-like {
     @include flex(row, flex-start);
+    width: max-content;
   }
 
   .post__decor-like {
-    @include h-spacing(0, 18px);
     display: block;
     width: 13px;
     height: 12px;
@@ -81,6 +81,7 @@
 
   .post__count {
     @include resetSize();
+    @include h-spacing(18px);
     font: $f_light12;
     color: $c_red;
     text-transform: uppercase;
@@ -191,7 +192,7 @@
   }
 
   .post__btn-like {
-    @include flex(row, flex-start);
+    @include flex(row-reverse);
   }
 
   .post.full-width .post__btn-like {
@@ -202,7 +203,6 @@
   }
 
   .post__decor-like {
-    order: 1;
     display: block;
     width: 13px;
     height: 12px;
@@ -211,7 +211,6 @@
 
   .post__count {
     @include resetSize();
-    @include h-spacing(0, 28px);
     width: 200px;
     font: $f_light12;
     color: $c_red;
@@ -220,7 +219,7 @@
   }
 
   .post.full-width .post__count {
-    @include h-spacing(0, 15px);
+    @include h-spacing(15px);
     width: auto;
   }
 }
@@ -294,7 +293,7 @@
     position: relative;
     width: $align_large-fields;
     height: auto;
-    padding: 23px 27px 0;
+    padding: 23px 27px 25px;
   }
 
   .post__username {
@@ -326,11 +325,12 @@
 
   .post.full-width .post__msg {
     width: 100%;
-    min-height: none;
+    min-height: 0;
+    margin: 0;
   }
 
   .post__btn-like {
-    @include flex(row, flex-start);
+    @include flex(row-reverse);
   }
 
   .post.full-width .post__btn-like {
@@ -341,7 +341,6 @@
   }
 
   .post__decor-like {
-    order: 1;
     display: block;
     width: 13px;
     height: 12px;
@@ -350,7 +349,6 @@
 
   .post__count {
     @include resetSize();
-    @include h-spacing(0, 28px);
     width: 200px;
     font: $f_light12;
     color: $c_red;
@@ -359,7 +357,7 @@
   }
 
   .post.full-width .post__count {
-    @include h-spacing(0, 15px);
+    @include h-spacing(15px);
     width: auto;
   }
 }

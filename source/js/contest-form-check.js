@@ -16,9 +16,6 @@ var userText = document.querySelector('.contest-emotions__user-text');
 // Define submit button
 var btn_submit = document.querySelector('.contest__submit-btn');
 
-// Prevent form redirect safely (progressive)
-btn_submit.setAttribute('type', 'button');
-
 // Include saved data by page loading
 window.addEventListener('load', LocStorageSet);
 
@@ -86,8 +83,16 @@ btn_submit.addEventListener('click', FormCheck);
 
 function FormCheck() {
   if (form.checkValidity()) {
+    btn_submit.preventDefault();
     moduleControl.confirm.open();
   } else {
-    moduleControl.error.open();
+    let inputRequired = document.querySelectorAll('input[required]');
+    let k = 0;
+
+    for (let i = 0; i < inputRequired.length; i++) {
+      if (inputRequired[i].validity.valueMissing) {
+        moduleControl.error.open();
+      }
+    }
   }
 }

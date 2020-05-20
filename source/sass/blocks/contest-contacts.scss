@@ -85,7 +85,7 @@
       right: 39px;
       display: block;
       width: 60px;
-      height: 60px;
+      height: calc(100% - 48px);
       background-color: $c_darkGray1;
     }
   }
@@ -170,7 +170,7 @@
       right: 2px;
       display: block;
       width: 60px;
-      height: 60px;
+      height: calc(100% - 60px);
       background-color: $c_darkGray1;
     }
   }

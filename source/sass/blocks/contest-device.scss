@@ -1,6 +1,6 @@
 @media (max-width: $ff_until-medium) {
   .contest-device {
-    padding: 38px 0 42px;
+    padding: 38px 50px 42px;
     background-color: $c_gray;
     border: none;
   }
@@ -10,18 +10,17 @@
     @include v-spacing(33px);
     @include h-spacing();
     width: $align_small-fields;
-    font: $f_light14;
+    font: $f_reg14;
     color: $c_red;
     text-align: center;
     text-transform: uppercase;
-    letter-spacing: 0.3px;
+    letter-spacing: 0.1px;
     background-color: transparent;
   }
 
   .contest-device__list {
     @include resetSize();
     @include h-spacing();
-    width: 281px;
     width: max-content;
     list-style: none;
   }
@@ -47,7 +46,7 @@
     @include h-spacing();
     order: 0;
     width: calc(100% - 40px);
-    padding: 0 30px 54px;
+    padding: 0 50px 54px;
     background-color: transparent;
     border: 2px solid $c_darkGray1;
     border-radius: 3px;
@@ -59,11 +58,11 @@
     @include h-spacing();
     width: 100%;
     margin-top: -10px;
-    font: $f_light14;
+    font: $f_reg14;
     color: $c_red;
     text-align: center;
     text-transform: uppercase;
-    letter-spacing: 0.3px;
+    letter-spacing: 0.1px;
     background-color: transparent;
   }
 
@@ -75,7 +74,6 @@
   .contest-device__list {
     @include resetSize();
     @include h-spacing();
-    width: 281px;
     width: max-content;
     list-style: none;
   }
@@ -112,11 +110,11 @@
     @include h-spacing();
     width: 100%;
     margin-top: -10px;
-    font: $f_light14;
+    font: $f_reg14;
     color: $c_red;
     text-align: center;
     text-transform: uppercase;
-    letter-spacing: 0.3px;
+    letter-spacing: 0.1px;
     background-color: transparent;
   }
 

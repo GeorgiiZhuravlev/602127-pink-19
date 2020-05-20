@@ -15,11 +15,11 @@ var headerBtn = document.querySelector('.header-upside__nav-btn');
 var headerNav = document.querySelector('.header-upside__nav');
 
 // Media-query
-var locCheck = document.location.href.match(/index.html/gi);
+var currentLocation = document.location.href;
 var body = document.body;
 
 function Resize() {
-  if (locCheck) {
+  if (currentLocation === 'http://localhost:3000/' || currentLocation === 'http://localhost:3000/index.html') {
     if (document.body.clientWidth <= 659) {
       headerIndex.style.paddingBottom = '272px';
       appDownload.style.top = '459px';

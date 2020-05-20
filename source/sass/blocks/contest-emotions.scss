@@ -9,11 +9,11 @@
     @include v-spacing(15px);
     @include h-spacing();
     width: $align_small-fields;
-    font: $f_light14;
+    font: $f_reg14;
     color: $c_red;
     text-align: center;
     text-transform: uppercase;
-    letter-spacing: 0.3px;
+    letter-spacing: 0.1px;
   }
 
   .contest-emotions__user-text {
@@ -43,11 +43,11 @@
     @include h-spacing();
     width: 100%;
     margin-top: -15px;
-    font: $f_light14;
+    font: $f_reg14;
     color: $c_red;
     text-align: center;
     text-transform: uppercase;
-    letter-spacing: 0.3px;
+    letter-spacing: 0.1px;
     background-color: transparent;
   }
 
@@ -83,11 +83,11 @@
     @include h-spacing();
     width: 100%;
     margin-top: -15px;
-    font: $f_light14;
+    font: $f_reg14;
     color: $c_red;
     text-align: center;
     text-transform: uppercase;
-    letter-spacing: 0.3px;
+    letter-spacing: 0.1px;
     background-color: transparent;
   }
 

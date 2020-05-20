@@ -21,6 +21,10 @@
     fill: $c_darkBlue1;
   }
 
+  .footer__logo-svg.large {
+    display: none;
+  }
+
   .footer__logo:hover .footer__logo-svg {
     fill: $c_red;
   }
@@ -126,6 +130,10 @@
     fill: $c_darkBlue1;
   }
 
+  .footer__logo-svg.large {
+    display: none;
+  }
+
   .footer__logo:hover .footer__logo-svg {
     fill: $c_red;
   }
@@ -227,6 +235,10 @@
     width: 147px;
     height: 40px;
     fill: $c_darkBlue1;
+  }
+
+  .footer__logo-svg.small-medium {
+    display: none;
   }
 
   .footer__logo:hover .footer__logo-svg {

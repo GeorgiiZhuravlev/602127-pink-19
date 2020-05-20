@@ -7,15 +7,16 @@
     <link href="css/style.min.css" rel="stylesheet">
 
     <!-- Script for SVG (IE fix) -->
-    <script src="js/svg4everybody.js"></script>
+    <script src="js/svg4everybody.min.js"></script>
     <!-- Scripts for WebP (IE fix) -->
     <script src="https://unpkg.com/webp-hero@0.0.0-dev.21/dist-cjs/polyfills.js"></script>
     <script src="https://unpkg.com/webp-hero@0.0.0-dev.21/dist-cjs/webp-hero.bundle.js"></script>
-    <script src="js/webp-hero-start.js"></script>
+    <script src="js/webp-hero-start.min.js"></script>
   </head>
   <body>
     <div style="display: none">
-      <include src="build/img/sprite.svg"></include>
+      <include src="build/img/icon-sprite.svg"></include>
+      <include src="build/img/logo-sprite.svg"></include>
     </div>
     <header class="header">
       <div class="header-upside">
@@ -43,21 +44,21 @@
           <div class="header-upside__menu opened">
             <a class="header-upside__logo" href="index.html" aria-label="Перейти на главную страницу">
               <svg class="header-upside__logo-svg-small" width="75" height="23">
-                <use xlink:href="img/logo-sprite.svg#logo__for-small"></use>
+                <use xlink:href="img/logo-sprite.svg#logo-pink-white-mobile"></use>
               </svg>
               <svg class="header-upside__logo-svg-medium" width="147" height="40">
-                <use xlink:href="img/logo-sprite.svg#logo__for-medium"></use>
+                <use xlink:href="img/logo-sprite.svg#logo-pink-white-tablet"></use>
               </svg>
               <svg class="header-upside__logo-svg-large" width="147" height="40">
-                <use xlink:href="img/logo-sprite.svg#logo__for-large"></use>
+                <use xlink:href="img/logo-sprite.svg#logo-pink-white-desktop"></use>
               </svg>
             </a>
             <button class="header-upside__nav-btn" type="button" aria-label="Открыть выпадающее меню">
               <svg class="header-upside__nav-btn-svg-burger" width="50" height="24">
-                <use xlink:href="img/menu-btn.svg#menu-btn-burger"></use>
+                <use xlink:href="img/icon-sprite.svg#icon-menu-burger"></use>
               </svg>
               <svg class="header-upside__nav-btn-svg-cross" width="24" height="24">
-                <use xlink:href="img/menu-btn.svg#menu-btn-cross"></use>
+                <use xlink:href="img/icon-sprite.svg#icon-menu-cross"></use>
               </svg>
             </button>
           </div>
@@ -73,7 +74,7 @@
                 <a class="header-upside__nav-link" tabindex="-1" aria-hidden="true">Конкурс</a>
               </li>
               <li class="header-upside__nav-item">
-                <a class="header-upside__nav-link" href="https://htmlacademy.ru/intensive/adaptive" aria-label="Перейти на страницу Эйч-Ти-Эм-Эл Академи">HTML Academy</a>
+                <a class="header-upside__nav-link" href="https://htmlacademy.ru/intensive/adaptive" target="_blank" aria-label="Перейти на страницу Эйч-Ти-Эм-Эл Академи">HTML Academy</a>
               </li>
             </ul>
           </nav>
@@ -212,27 +213,30 @@
     <footer class="footer">
       <div class="footer__alignment">
         <a class="footer__logo" href="index.html" aria-label="Перейти на главную страницу">
-          <svg class="footer__logo-svg" width="147" height="40">
-            <use xlink:href="img/logo-sprite.svg#logo__footer"></use>
+          <svg class="footer__logo-svg small-medium" width="147" height="40">
+            <use xlink:href="img/logo-sprite.svg#logo-pink-blue-mobile"></use>
+          </svg>
+          <svg class="footer__logo-svg large" width="147" height="40">
+            <use xlink:href="img/logo-sprite.svg#logo-pink-blue-desktop"></use>
           </svg>
         </a>
 
         <ul class="footer__social-list">
           <li class="footer__social-item">
-            <a class="footer__social-link twitter" href="#" aria-label="Перейти на нашу страницу в Твиттере"></a>
+            <a class="footer__social-link twitter" href="#" target="_blank" aria-label="Перейти на нашу страницу в Твиттере"></a>
           </li>
           <li class="footer__social-item">
-            <a class="footer__social-link facebook" href="#" aria-label="Перейти на нашу страницу в Фейсбуке"></a>
+            <a class="footer__social-link facebook" href="#" target="_blank" aria-label="Перейти на нашу страницу в Фейсбуке"></a>
           </li>
           <li class="footer__social-item">
-            <a class="footer__social-link youtube" href="#" aria-label="Перейти на наш канал на Ютюбе"></a>
+            <a class="footer__social-link youtube" href="#" target="_blank" aria-label="Перейти на наш канал на Ютюбе"></a>
           </li>
         </ul>
 
-        <a class="footer__dev-link" href="https://htmlacademy.ru/intensive/adaptive" aria-label="Перейти на сайт Эйч-Ти-Эм-Эл Академи, интерактивные курсы веб-разработки">
+        <a class="footer__dev-link" href="https://htmlacademy.ru/intensive/adaptive" target="_blank" aria-label="Перейти на сайт Эйч-Ти-Эм-Эл Академи, интерактивные курсы веб-разработки">
           <p class="footer__dev">Разработано</p>
           <svg class="footer__logo-htmlacademy" width="27" height="34">
-            <use xlink:href="img/htmlacademy.svg#logo__htmlacademy"></use>
+            <use xlink:href="img/logo-sprite.svg#logo-htmlacademy"></use>
           </svg>
         </a>
       </div>
@@ -270,8 +274,8 @@
       </article>
     </div>
 
-    <script src="js/header-menu.js"></script>
-    <script src="js/modules.js"></script>
-    <script src="js/contest-form-check.js"></script>
+    <script src="js/header-menu.min.js"></script>
+    <script src="js/modules.min.js"></script>
+    <script src="js/contest-form-check.min.js"></script>
   </body>
 </html>

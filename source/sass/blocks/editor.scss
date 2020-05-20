@@ -4,11 +4,18 @@
     background-color: $c_gray;
   }
 
-  .editor__user-img {
+  .editor__link-img {
     @include v-spacing(42px);
     @include h-spacing();
     display: block;
-    height: 374px;
+    max-width: 320px;
+    width: max-content;
+    max-height: 374px;
+  }
+
+  .editor__user-img {
+    @include h-spacing();
+    display: block;
   }
 
   .editor__control {
@@ -52,10 +59,6 @@
 
   .editor__switcher ~ .editor__btn ~ .editor__range {
     display: none;
-  }
-
-  .editor__switcher:checked ~ .editor__btn {
-    display: block;
   }
 
   .editor__switcher:checked ~ .editor__btn ~ .editor__range {
@@ -116,15 +119,21 @@
     background-color: $c_gray;
   }
 
+  .editor__link-img {
+    display: block;
+    max-width: 300px;
+    width: max-content;
+    max-height: 374px;
+  }
+
   .editor__user-img {
     display: block;
-    width: 300px;
-    margin-right: 47px;
   }
 
   .editor__form {
     @include flex(column);
     flex-grow: 1;
+    margin-left: 47px;
   }
 
   .editor__control {
@@ -231,11 +240,17 @@
 
   .editor__form {
     @include flex(column);
+    @include h-spacing(110px)
     width: 410px;
   }
 
+  .editor__link-img {
+    max-width: 300px;
+    width: max-content;
+    max-height: 374px;
+  }
+
   .editor__user-img {
-    @include h-spacing();
     display: block;
   }
 
@@ -263,10 +278,15 @@
   }
 
   .editor__icon-vignette,
-  .editor__icon-fill,
-  .editor__icon-contrast {
+  .editor__icon-fill {
     width: 48px;
     height: 44px;
+    fill: $c_red;
+  }
+
+  .editor__icon-contrast {
+    width: 35px;
+    height: 35px;
     fill: $c_red;
   }
 
