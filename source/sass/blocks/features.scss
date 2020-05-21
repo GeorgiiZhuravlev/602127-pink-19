@@ -4,7 +4,7 @@
   }
 
   .features__intro-wrapper {
-    padding: 40px 0 32px;
+    padding: 39px 0 32px;
     background-color: #ffffff;
   }
 
@@ -25,7 +25,7 @@
   }
 
   .features__intro:not(:last-child) {
-    @include v-spacing(30px);
+    @include v-spacing(28px);
   }
 
   .features__list {
@@ -34,14 +34,14 @@
     @include v-spacing(28px);
     @include h-spacing();
     position: relative;
-    padding: 82px 0 287px;
+    padding: 82px 0 290px;
     list-style: none;
     text-align: center;
     overflow: hidden;
   }
 
   .features__item {
-    @include v-spacing(31px);
+    @include v-spacing(33px);
     @include h-spacing();
     width: calc(100% - 50px);
     max-width: 450px;
@@ -75,7 +75,7 @@
     @include resetSize();
     font: $f_reg14;
     color: $c_darkBlue1;
-    line-height: 24px;
+    line-height: 23px;
     letter-spacing: 0.05px;
   }
 }
@@ -110,7 +110,7 @@
     @include resetSize();
     @include h-spacing();
     position: relative;
-    width: 620px;
+    width: 660px;
     padding-top: 74px;
     padding-bottom: 42px;
     list-style: none;
@@ -216,7 +216,7 @@
     padding: 0 30px;
     font: $f_bold30;
     text-align: center;
-    line-height: 30px;
+    line-height: 29px;
   }
 
   .features__desc {

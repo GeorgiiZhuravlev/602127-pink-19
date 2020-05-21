@@ -1,6 +1,6 @@
 @media (max-width: $ff_until-medium) {
   .contest-contacts {
-    padding: 38px 0 20px;
+    padding: 37px 0 20px;
     border: none;
   }
 
@@ -31,7 +31,7 @@
   }
 
   .contest-contacts__input {
-    @include v-spacing(21px);
+    @include v-spacing(24px);
     @include h-spacing();
     display: block;
     width: 100%;
@@ -51,7 +51,7 @@
 
   .contest-contacts__intro {
     @include resetSize();
-    @include v-spacing(36px);
+    @include v-spacing(38px);
     @include h-spacing();
     width: 100%;
     margin-top: -17px;
@@ -114,7 +114,7 @@
   }
 
   .contest-contacts__input {
-    @include v-spacing(15px);
+    @include v-spacing(17px);
     @include h-spacing();
     order: -1;
     display: block;
@@ -136,7 +136,7 @@
 
   .contest-contacts__intro {
     @include resetSize();
-    @include v-spacing(32px);
+    @include v-spacing(34px);
     @include h-spacing();
     width: 100%;
     margin-top: -12px;
@@ -148,7 +148,7 @@
   }
 
   .contest-contacts__intro.quasi-legend {
-    padding: 0 20px;
+    padding: 0 32px;
     background-color: #ffffff;
   }
 
@@ -184,7 +184,7 @@
   }
 
   .contest-contacts__label {
-    @include v-spacing(20px);
+    @include v-spacing(19px);
     display: block;
     width: 100%;
     padding-left: 20px;

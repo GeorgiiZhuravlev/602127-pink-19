@@ -5,7 +5,7 @@
   }
 
   .editor__link-img {
-    @include v-spacing(42px);
+    @include v-spacing(40px);
     @include h-spacing();
     display: block;
     max-width: 320px;
@@ -22,12 +22,12 @@
     @include flex(row, center);
     @include resetSize();
     position: relative;
-    padding-bottom: 70px;
+    padding-bottom: 61px;
     list-style: none;
   }
 
   .editor__control-item:not(:last-child) {
-    @include h-spacing(0, 40px);
+    @include h-spacing(0, 35px);
   }
 
   .editor__icon-vignette,
@@ -65,7 +65,7 @@
     @include h-spacing();
     position: absolute;
     left: 38px;
-    top: 80px;
+    top: 82px;
     display: block;
     width: calc(100% - 80px);
   }
@@ -119,15 +119,10 @@
     background-color: $c_gray;
   }
 
-  .editor__link-img {
-    display: block;
-    max-width: 300px;
-    width: max-content;
-    max-height: 374px;
-  }
-
   .editor__user-img {
     display: block;
+    width: 300px;
+    max-height: 400px;
   }
 
   .editor__form {
@@ -148,12 +143,12 @@
     @include flex(row, space-between);
     @include resetSize();
     width: 100%;
-    padding: 9px 20px 22px 0;
+    padding: 9px 16px 22px 0;
     border-bottom: 1px solid $c_darkGray1;
   }
 
   .editor__control-item:not(:first-child) {
-    padding: 28px 20px 22px 0;
+    padding: 28px 16px 22px 0;
   }
 
   .editor__icon-vignette,
@@ -161,6 +156,10 @@
   .editor__icon-contrast {
     display: block;
     fill: $c_red;
+  }
+
+  .editor__icon-contrast {
+    margin-left: 6px;
   }
 
   .editor__switcher.vignette,
@@ -179,10 +178,10 @@
   .editor__switcher:checked ~ .editor__btn ~ .editor__range {
     position: static;
     display: block;
-    width: calc(100% - 92px);
+    width: calc(100% - 55px);
   }
 
-  .editor .custom__hr {
+  .editor .custom-hr {
     display: none;
   }
 
@@ -191,10 +190,9 @@
   }
 
   .editor__submit-btn {
-    @include v-spacing(24px);
-    @include h-spacing();
+    @include v-spacing(26px);
     @include btnGrand($c_red, $c_red);
-    width: calc(100% - 40px);
+    width: calc(100% - 13px);
 
     &:hover {
       @include btnGrand($c_white, $c_red, $c_red);
@@ -210,9 +208,8 @@
   }
 
   .editor__reset-btn {
-    @include h-spacing();
     @include btnGrand($c_darkGray1, $c_darkGray1);
-    width: calc(100% - 40px);
+    width: calc(100% - 13px);
 
     &:hover {
       @include btnGrand($c_darkGray2, $c_darkGray2);
@@ -240,18 +237,14 @@
 
   .editor__form {
     @include flex(column);
-    @include h-spacing(110px);
+    @include h-spacing(90px);
     width: 410px;
-  }
-
-  .editor__link-img {
-    max-width: 300px;
-    width: max-content;
-    max-height: 374px;
   }
 
   .editor__user-img {
     display: block;
+    width: 300px;
+    max-height: 400px;
   }
 
   .editor__control {
@@ -259,6 +252,7 @@
     @include resetSize();
     position: relative;
     width: 100%;
+    margin-top: -5px;
     list-style: none;
   }
 
@@ -266,9 +260,7 @@
     @include flex(row, space-between);
     @include resetSize();
     width: 100%;
-    padding-top: 15px;
-    padding-bottom: 18px;
-    padding-right: 30px;
+    padding: 10px 30px 6px 0;
     border-bottom: 1px solid $c_darkGray1;
   }
 
@@ -277,16 +269,29 @@
     padding-bottom: 11px;
   }
 
-  .editor__icon-vignette,
-  .editor__icon-fill {
+  .editor__control-item:nth-child(3) {
+    padding: 15px 30px 16px 0;
+  }
+
+  .editor__icon-vignette {
     width: 48px;
-    height: 44px;
+    height: 48px;
+    fill: $c_red;
+  }
+
+  .editor__icon-fill {
+    width: 53px;
+    height: 53px;
+    margin-top: 3px;
+    margin-left: -2px;
     fill: $c_red;
   }
 
   .editor__icon-contrast {
     width: 35px;
     height: 35px;
+    margin-top: 3px;
+    margin-left: 5px;
     fill: $c_red;
   }
 
@@ -309,7 +314,7 @@
     width: 288px;
   }
 
-  .editor .custom__hr {
+  .editor .custom-hr {
     display: none;
   }
 

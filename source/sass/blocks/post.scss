@@ -1,6 +1,6 @@
 @media (max-width: $ff_until-medium) {
   .post {
-    @include v-spacing(20px);
+    @include v-spacing(20.5px);
   }
 
   .post.full-width {
@@ -151,7 +151,7 @@
     position: relative;
     width: 100%;
     height: auto;
-    padding: 25px 27px 23px;
+    padding: 25px 32px 23px 27px;
     background-color: $c_gray;
   }
 
@@ -285,7 +285,7 @@
     position: relative;
     width: 100%;
     height: auto;
-    padding: 25px 27px 26px;
+    padding: 25px 31px 26px 27px;
     background-color: $c_gray;
   }
 
@@ -320,7 +320,7 @@
     font: $f_reg14;
     color: $c_darkBlue1;
     line-height: 24px;
-    letter-spacing: 0.05px;
+    letter-spacing: 0.01px;
   }
 
   .post.full-width .post__msg {
@@ -334,7 +334,7 @@
   }
 
   .post.full-width .post__btn-like {
-    @include flex();
+    @include flex(row-reverse);
     position: absolute;
     top: 28px;
     right: 30px;
@@ -347,6 +347,10 @@
     fill: $c_red;
   }
 
+  .post.full-width .post__decor-like {
+    @include h-spacing(18px);
+  }
+
   .post__count {
     @include resetSize();
     width: 200px;
@@ -357,7 +361,6 @@
   }
 
   .post.full-width .post__count {
-    @include h-spacing(15px);
     width: auto;
   }
 }

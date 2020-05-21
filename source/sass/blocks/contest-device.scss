@@ -1,6 +1,6 @@
 @media (max-width: $ff_until-medium) {
   .contest-device {
-    padding: 38px 50px 42px;
+    padding: 36px 0 42px;
     background-color: $c_gray;
     border: none;
   }
@@ -9,7 +9,7 @@
     @include resetSize();
     @include v-spacing(33px);
     @include h-spacing();
-    width: $align_small-fields;
+    width: 185px;
     font: $f_reg14;
     color: $c_red;
     text-align: center;
@@ -21,8 +21,13 @@
   .contest-device__list {
     @include resetSize();
     @include h-spacing();
-    width: max-content;
+    max-width: 320px;
+    padding: 0 20px;
     list-style: none;
+  }
+
+  .contest-device__item {
+    width: max-content;
   }
 
   .contest-device__item:not(:last-child) {
@@ -36,7 +41,7 @@
   }
 
   .contest-device__radio {
-    @include h-spacing(0, 30px);
+    @include h-spacing(0, 28px);
   }
 }
 
@@ -46,7 +51,7 @@
     @include h-spacing();
     order: 0;
     width: calc(100% - 40px);
-    padding: 0 50px 54px;
+    padding: 0 58px 54px;
     background-color: transparent;
     border: 2px solid $c_darkGray1;
     border-radius: 3px;
@@ -57,25 +62,27 @@
     @include v-spacing(43px);
     @include h-spacing();
     width: 100%;
-    margin-top: -10px;
+    margin-top: -11px;
     font: $f_reg14;
     color: $c_red;
     text-align: center;
     text-transform: uppercase;
-    letter-spacing: 0.1px;
+    letter-spacing: 0.01px;
     background-color: transparent;
   }
 
   .contest-device__intro.quasi-legend {
-    padding: 0 20px;
+    padding: 0 24px;
     background-color: #ffffff;
   }
 
   .contest-device__list {
     @include resetSize();
-    @include h-spacing();
-    width: max-content;
     list-style: none;
+  }
+
+  .contest-device__item {
+    width: max-content;
   }
 
   .contest-device__item:not(:last-child) {
@@ -98,7 +105,7 @@
     @include v-spacing(42px);
     order: 0;
     width: 435px;
-    padding: 0 30px 54px;
+    padding: 0 30px 53px;
     background-color: transparent;
     border: 2px solid $c_darkGray1;
     border-radius: 3px;
@@ -106,7 +113,7 @@
 
   .contest-device__intro {
     @include resetSize();
-    @include v-spacing(43px);
+    @include v-spacing(45px);
     @include h-spacing();
     width: 100%;
     margin-top: -10px;
@@ -131,7 +138,7 @@
   }
 
   .contest-device__item {
-    margin-left: 17px;
+    margin-left: 19px;
   }
 
   .contest-device__item:not(:last-child) {

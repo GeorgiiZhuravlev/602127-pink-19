@@ -2,7 +2,6 @@
   .contest-name {
     @include resetSize();
     @include v-spacing(22px);
-    padding: 1px 0;
     border: none;
   }
 
@@ -15,7 +14,7 @@
 
   .contest-name__item {
     @include flex(row, flex-start);
-    @include v-spacing(22px);
+    @include v-spacing(24px);
     @include h-spacing();
     width: 100%;
   }
@@ -57,7 +56,7 @@
 
   .contest-name__item {
     @include flex();
-    @include v-spacing(50px);
+    @include v-spacing(53px);
     @include h-spacing();
     flex-wrap: nowrap;
     width: calc(100% - 40px);
@@ -95,12 +94,13 @@
 
   .contest-name__list {
     @include resetSize();
+    margin-bottom: -3px;
     list-style: none;
   }
 
   .contest-name__item {
     @include flex();
-    @include v-spacing(50px);
+    @include v-spacing(54px);
     flex-wrap: nowrap;
     width: calc(100% - 40px);
   }

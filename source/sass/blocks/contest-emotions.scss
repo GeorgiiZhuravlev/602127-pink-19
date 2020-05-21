@@ -42,7 +42,7 @@
     @include v-spacing(35px);
     @include h-spacing();
     width: 100%;
-    margin-top: -15px;
+    margin-top: -16px;
     font: $f_reg14;
     color: $c_red;
     text-align: center;
@@ -52,7 +52,7 @@
   }
 
   .contest-emotions__intro.quasi-legend {
-    padding: 0 20px;
+    padding: 0 36px;
     background-color: #ffffff;
   }
 
@@ -92,7 +92,7 @@
   }
 
   .contest-emotions__intro.quasi-legend {
-    padding: 0 20px;
+    padding: 0 35px;
     background-color: #ffffff;
   }
 

@@ -81,9 +81,9 @@ var form = document.querySelector('.contest__form');
 
 btn_submit.addEventListener('click', FormCheck);
 
-function FormCheck() {
+function FormCheck(evt) {
   if (form.checkValidity()) {
-    btn_submit.preventDefault();
+    evt.preventDefault();
     moduleControl.confirm.open();
   } else {
     let inputRequired = document.querySelectorAll('input[required]');

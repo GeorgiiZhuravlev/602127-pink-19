@@ -1,5 +1,5 @@
 @media (max-width: $ff_until-medium) {
-  .module__bg-off {
+  .module {
     @include flex(row, center);
     position: fixed;
     top: 0;
@@ -9,7 +9,7 @@
     height: 100vh;
   }
 
-  .module__bg-off.vis-off {
+  .module.vis-off {
     display: none;
   }
 
@@ -81,7 +81,7 @@
 }
 
 @media (min-width: $ff_medium) and (max-width: $ff_until-large) {
-  .module__bg-off {
+  .module {
     @include flex(row, center);
     position: fixed;
     top: 0;
@@ -91,7 +91,7 @@
     height: 100vh;
   }
 
-  .module__bg-off.vis-off {
+  .module.vis-off {
     display: none;
   }
 
@@ -163,7 +163,7 @@
 }
 
 @media (min-width: $ff_large) {
-  .module__bg-off {
+  .module {
     @include flex(row, center);
     position: fixed;
     top: 0;
@@ -173,7 +173,7 @@
     height: 100vh;
   }
 
-  .module__bg-off.vis-off {
+  .module.vis-off {
     display: none;
   }
 

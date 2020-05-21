@@ -91,7 +91,7 @@
     <main>
       <h1 class="visually-hidden">Фотографии пользователей</h1>
       <section class="user-posts">
-        <h2 class="user-posts__intro">Взгляните на фотографии, которые выкладывают пользователи!<br>Видите, как не хватает ваших?</h2>
+        <h2 class="user-posts__intro">Взгляните на фотографии, которые выкладывают пользователи! Видите, как не хватает ваших?</h2>
 
         <article class="post full-width">
           <h2 class="visually-hidden">Пост пользователя</h2>
@@ -346,16 +346,16 @@
         <form class="editor__form" method="get" action="https://echo.htmlacademy.ru" name="editor" autocomplete="off">
           <ul class="editor__control">
             <li class="editor__control-item">
-              <svg class="editor__icon-vignette" width="24" height="22" viewBox="0 0 44 44">
+              <svg class="editor__icon-vignette" width="24" height="24" viewBox="0 0 44 44">
                 <use xlink:href="img/icon-sprite.svg#icon-editor-crop"></use>
               </svg>
               <input class="visually-hidden editor__switcher vignette" id="editor__switcher-vignette" type="radio" name="editor__switcher" aria-label="Выбрать виньетирование" checked>
               <label class="editor__btn" for="editor__switcher-vignette">
-                <svg class="editor__icon-vignette-switcher" width="48" height="44">
+                <svg class="editor__icon-vignette-switcher" width="48" height="48">
                   <use xlink:href="img/icon-sprite.svg#icon-editor-crop"></use>
                 </svg>
               </label>
-              <input class="editor__range custom__input-range vignette" type="range" name="editor__range-vignette" min="0" max="100" step="1" value="0" aria-label="Ползунок виньетирования">
+              <input class="editor__range custom-input-range vignette" type="range" name="editor__range-vignette" min="0" max="100" step="1" value="0" aria-label="Ползунок виньетирования">
             </li>
             <li class="editor__control-item">
               <svg class="editor__icon-fill" width="24" height="22" viewBox="0 0 48 43">
@@ -363,26 +363,26 @@
               </svg>
               <input class="visually-hidden editor__switcher fill" id="editor__switcher-fill" type="radio" name="editor__switcher" aria-label="Выбрать заливку">
               <label class="editor__btn" for="editor__switcher-fill">
-                <svg class="editor__icon-fill-switcher" width="48" height="44">
+                <svg class="editor__icon-fill-switcher" width="48" height="48">
                   <use xlink:href="img/icon-sprite.svg#icon-editor-fill"></use>
                 </svg>
               </label>
-              <input class="editor__range custom__input-range fill" type="range" name="editor__range-fill" min="0" max="100" step="1" value="0" aria-label="Ползунок заливки">
+              <input class="editor__range custom-input-range fill" type="range" name="editor__range-fill" min="0" max="100" step="1" value="0" aria-label="Ползунок заливки">
             </li>
             <li class="editor__control-item">
-              <svg class="editor__icon-contrast" width="24" height="22">
+              <svg class="editor__icon-contrast" width="17" height="17">
                 <use xlink:href="img/icon-sprite.svg#icon-editor-contrast"></use>
               </svg>
               <input class="visually-hidden editor__switcher contrast" id="editor__switcher-contrast" type="radio" name="editor__switcher" aria-label="Выбрать заливку">
               <label class="editor__btn" for="editor__switcher-contrast">
-                <svg class="editor__icon-contrast-switcher" width="44" height="40">
+                <svg class="editor__icon-contrast-switcher" width="36" height="36">
                   <use xlink:href="img/icon-sprite.svg#icon-editor-contrast"></use>
                 </svg>
               </label>
-              <input class="editor__range custom__input-range contrast" type="range" name="editor__range-contrast" min="0" max="100" step="1" value="0" aria-label="Ползунок заливки">
+              <input class="editor__range custom-input-range contrast" type="range" name="editor__range-contrast" min="0" max="100" step="1" value="0" aria-label="Ползунок заливки">
             </li>
           </ul>
-          <hr class="custom__hr">
+          <hr class="editor__hr custom-hr">
           <div class="editor__btns-wrapper">
             <button class="editor__submit-btn" type="submit" aria-label="Запостить фотографию">Запостить</button>
             <button class="editor__reset-btn" type="reset" aria-label="Отменить изменения">Отмена</button>

@@ -38,7 +38,7 @@
     letter-spacing: 0;
   }
 
-  .reviews__slider-bullets .custom__slider-bullets-input ~ .custom__slider-bullet {
+  .reviews__slider-bullets .custom-slider-bullets-input ~ .custom-slider-bullet {
     @include slider-bullet($c_darkGray2);
 
     &:hover {
@@ -50,7 +50,7 @@
     }
   }
 
-  .reviews__slider-bullets .custom__slider-bullets-input:checked ~ .custom__slider-bullet {
+  .reviews__slider-bullets .custom-slider-bullets-input:checked ~ .custom-slider-bullet {
     @include slider-bullet-active();
   }
 }
@@ -78,6 +78,7 @@
   }
 
   .reviews__user-wrapper {
+    @include v-spacing(5px);
     @include h-spacing();
     order: 1;
     width: 100%;
@@ -85,7 +86,7 @@
 
   .reviews__name {
     @include resetSize();
-    @include v-spacing(2px);
+    @include v-spacing(7px);
     font: $f_bold20;
     text-align: center;
     line-height: 30px;
@@ -101,16 +102,16 @@
 
   .reviews__text {
     @include resetSize();
-    @include v-spacing(35px);
+    @include v-spacing(33px);
     width: 640px;
     font: $f_reg18;
     color: $c_darkBlue1;
     text-align: center;
-    line-height: 30px;
+    line-height: 31px;
     letter-spacing: 0.05px;
   }
 
-  .reviews__slider-bullets .custom__slider-bullets-input ~ .custom__slider-bullet {
+  .reviews__slider-bullets .custom-slider-bullets-input ~ .custom-slider-bullet {
     @include slider-bullet($c_darkGray2);
 
     &:hover {
@@ -122,7 +123,7 @@
     }
   }
 
-  .reviews__slider-bullets .custom__slider-bullets-input:checked ~ .custom__slider-bullet {
+  .reviews__slider-bullets .custom-slider-bullets-input:checked ~ .custom-slider-bullet {
     @include slider-bullet-active();
   }
 }
@@ -210,7 +211,7 @@
     @include v-spacing(3px);
     font: $f_bold24;
     text-align: center;
-    line-height: 30px;
+    line-height: 31px;
   }
 
   .reviews__about {

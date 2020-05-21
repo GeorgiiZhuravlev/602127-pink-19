@@ -1,7 +1,7 @@
 @media (max-width: $ff_until-medium) {
   .prices {
     @include v-spacing(41px);
-    padding: 90px 0 47px;
+    padding: 89px 0 47px;
     background: url("../../img/bg-triangle-white.svg") no-repeat;
     background-position: 0% 0%;
     background-size: contain;
@@ -25,7 +25,7 @@
   .prices__heading {
     position: relative;
     width: 275px;
-    padding: 15px 0 20px;
+    padding: 19px 0 20px;
     background-color: $c_darkBlue1;
     border: 2px solid $c_darkGray1;
   }
@@ -96,7 +96,7 @@
     @include resetSize();
   }
 
-  .prices__slider-bullets .custom__slider-bullets-input ~ .custom__slider-bullet {
+  .prices__slider-bullets .custom-slider-bullets-input ~ .custom-slider-bullet {
     @include slider-bullet($c_darkGray2);
 
     &:hover {
@@ -108,7 +108,7 @@
     }
   }
 
-  .prices__slider-bullets .custom__slider-bullets-input:checked ~ .custom__slider-bullet {
+  .prices__slider-bullets .custom-slider-bullets-input:checked ~ .custom-slider-bullet {
     @include slider-bullet-active();
   }
 }
@@ -133,7 +133,7 @@
     @include v-spacing(8px);
     position: relative;
     width: 153px;
-    padding: 12px 0 10px;
+    padding: 18px 0 13px;
     background-color: $c_darkBlue1;
     border: 2px solid $c_darkGray1;
     border-top: none;
@@ -168,7 +168,7 @@
 
   .prices__ttl {
     @include resetSize();
-    @include v-spacing(-3px);
+    @include v-spacing(3px);
     font: $f_bold16;
     color: $c_white;
     text-transform: uppercase;
@@ -216,7 +216,7 @@
 
 @media (min-width: $ff_large) {
   .prices {
-    padding: 147px 0 76px;
+    padding: 148px 0 76px;
     background: url("../../img/bg-triangle-white.svg") no-repeat $c_gray;
     background-position: 0% 0%;
     background-size: contain;
@@ -233,7 +233,7 @@
   .prices__heading {
     position: relative;
     width: 233px;
-    padding: 16px 0 20px;
+    padding: 19px 0 20px;
     background-color: $c_darkBlue1;
     border: 2px solid $c_darkGray1;
     border-top: none;

@@ -24,9 +24,9 @@
   .user-posts__outro {
     @include resetSize();
     @include h-spacing();
-    width: calc(100% - 70px);
+    width: calc(100% - 50px);
     max-width: 500px;
-    padding: 23px 0 42px;
+    padding: 20px 0 42px;
     font: $f_reg14;
     color: $c_darkBlue1;
     text-align: center;
@@ -83,7 +83,7 @@
     @include h-spacing();
     width: 100%;
     max-width: 600px;
-    padding: 93px 0 89px;
+    padding: 93px 0 88px;
     font: $f_reg18;
     color: $c_darkBlue1;
     text-align: center;

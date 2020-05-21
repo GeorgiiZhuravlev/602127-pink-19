@@ -1,13 +1,14 @@
 @media (max-width: $ff_until-medium) {
   .contest-achievements {
-    padding: 36px 50px 43px;
+    padding: 38px 0 43px;
+    margin: 0;
     background-color: $c_gray;
     border: none;
   }
 
   .contest-achievements__intro {
     @include resetSize();
-    @include v-spacing(37px);
+    @include v-spacing(38px);
     @include h-spacing();
     width: calc(100% - 80px);
     font: $f_reg14;
@@ -20,8 +21,13 @@
   .contest-achievements__list {
     @include resetSize();
     @include h-spacing();
-    width: max-content;
+    max-width: 320px;
+    padding: 0 20px;
     list-style: none;
+  }
+
+  .contest-achievements__item {
+    width: max-content;
   }
 
   .contest-achievements__item:not(:last-child) {
@@ -35,7 +41,7 @@
   }
 
   .contest-achievements__checkbox {
-    @include h-spacing(0, 30px);
+    @include h-spacing(0, 32px);
   }
 }
 
@@ -45,7 +51,7 @@
     @include h-spacing();
     order: 2;
     width: calc(100% - 38px);
-    padding: 0 50px 50px;
+    padding: 0 58px 50px;
     background-color: transparent;
     border: 2px solid $c_darkGray1;
     border-radius: 3px;
@@ -56,25 +62,28 @@
     @include v-spacing(43px);
     @include h-spacing();
     width: 100%;
-    margin-top: -15px;
+    margin-top: -11px;
     font: $f_reg14;
     color: $c_red;
     text-align: center;
     text-transform: uppercase;
-    letter-spacing: 0.05px;
+    letter-spacing: 0.01px;
     background-color: transparent;
   }
 
   .contest-achievements__intro.quasi-legend {
-    padding: 0 20px;
+    padding: 0 31px;
     background-color: #ffffff;
   }
 
   .contest-achievements__list {
     @include resetSize();
-    @include h-spacing();
     width: max-content;
     list-style: none;
+  }
+
+  .contest-achievements__item {
+    width: max-content;
   }
 
   .contest-achievements__item:not(:last-child) {
@@ -94,11 +103,11 @@
 
 @media (min-width: $ff_large) {
   .contest-achievements {
-    @include v-spacing(67px);
+    @include v-spacing(65px);
     @include h-spacing();
     order: 2;
     width: 100%;
-    padding-bottom: 4px;
+    padding-bottom: 7px;
     background-color: transparent;
     border: 2px solid $c_darkGray1;
     border-radius: 3px;
@@ -119,7 +128,7 @@
   }
 
   .contest-achievements__intro.quasi-legend {
-    padding: 0 20px;
+    padding: 0 30px;
     background-color: #ffffff;
   }
 

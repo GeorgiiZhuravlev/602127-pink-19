@@ -1,6 +1,6 @@
 @media (max-width: $ff_until-medium) {
   .contest {
-    padding: 0 0 20px;
+    padding-bottom: 20px;
   }
 
   .contest__intro {
@@ -67,7 +67,7 @@
     @include v-spacing(39px);
     @include h-spacing();
     width: calc(100% - 100px);
-    padding: 48px 0 30px;
+    padding: 47px 0 30px;
     font: $f_reg18;
     color: $c_darkBlue1;
     text-align: center;
@@ -137,7 +137,7 @@
     @include v-spacing(50px);
     @include h-spacing();
     width: calc(100% - 180px);
-    padding: 92px 0 30px;
+    padding: 94px 0 28px;
     font: $f_reg18;
     color: $c_darkBlue1;
     text-align: center;
