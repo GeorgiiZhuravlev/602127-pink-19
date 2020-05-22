@@ -97,14 +97,14 @@
   }
 
   .prices__slider-bullets .custom-slider-bullets-input ~ .custom-slider-bullet {
-    @include slider-bullet($c_darkGray2);
+    @include slider-bullet($c_darkGray2, $c_gray);
 
     &:hover {
-      @include slider-bullet($c_darkBlue1);
+      @include slider-bullet($c_darkBlue1, $c_gray);
     }
 
     &:active {
-      @include slider-bullet($c_gray);
+      @include slider-bullet($c_gray, $c_gray);
     }
   }
 
